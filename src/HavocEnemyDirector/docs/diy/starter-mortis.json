@@ -1,0 +1,564 @@
+{
+  "description": {
+    "en": "Examples are selected individually. Enable only the effects you want.",
+    "zh-cn": "逐项选择所需示例，再启用配置库。",
+    "zh-tw": "逐項選擇所需示例，再啓用配置庫。"
+  },
+  "entries": [
+    {
+      "availability": {
+        "resources": [
+          "ammo",
+          "reload"
+        ]
+      },
+      "conditions": [],
+      "description": {
+        "en": "10% faster reload, half recoil and 10 percentage points of ranged critical chance.",
+        "zh-cn": "换弹速度提高 10%，后坐力降低 50%，远程暴击率增加 10 个百分点。",
+        "zh-tw": "換彈速度提高 10%，後坐力降低 50%，遠程暴擊率增加 10 個百分點。"
+      },
+      "enabled": true,
+      "id": "steady_aim",
+      "match": "all",
+      "name": {
+        "en": "Steady aim",
+        "zh-cn": "稳健射手",
+        "zh-tw": "穩健射手"
+      },
+      "passive": {
+        "stats": {
+          "ranged_critical_strike_chance": 0.1,
+          "recoil_modifier": -0.5,
+          "reload_speed": 0.1
+        }
+      },
+      "rules": [],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "While in coherency with at least two units, heal 0.3 health and remove 0.3 corruption each second.",
+        "zh-cn": "连携单位至少 2 个时，每秒恢复 0.3 生命并清除 0.3 腐化；遵守原生治疗限制。",
+        "zh-tw": "連攜單位至少 2 個時，每秒恢復 0.3 生命並清除 0.3 腐化；遵守原生治療限制。"
+      },
+      "enabled": true,
+      "id": "coherent_medic",
+      "match": "all",
+      "name": {
+        "en": "Coherent medic",
+        "zh-cn": "连携医师",
+        "zh-tw": "連攜醫師"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": 0.3,
+              "type": "heal"
+            },
+            {
+              "amount": 0.3,
+              "type": "corruption"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "coherency",
+              "op": "ge",
+              "value": 2
+            }
+          ],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "mend",
+          "interval": 1,
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "availability": {
+        "resources": [
+          "melee"
+        ]
+      },
+      "conditions": [],
+      "description": {
+        "en": "A melee kill grants three seconds of invisibility, with a five-second cooldown.",
+        "zh-cn": "近战击杀后隐身 3 秒，冷却 5 秒；隐身关键词遵守原版感知规则。",
+        "zh-tw": "近戰擊殺後隱身 3 秒，冷卻 5 秒；隱身關鍵詞遵守原版感知規則。"
+      },
+      "enabled": true,
+      "id": "melee_shelter",
+      "match": "all",
+      "name": {
+        "en": "Melee shelter",
+        "zh-cn": "近战庇护",
+        "zh-tw": "近戰庇護"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "duration": 3,
+              "effects": {
+                "keywords": [
+                  "invisible"
+                ]
+              },
+              "type": "effect"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "attack_type",
+              "op": "eq",
+              "value": "melee"
+            }
+          ],
+          "cooldown": 5,
+          "delay": 0,
+          "event": "on_kill",
+          "id": "hide",
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 3,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Recover toughness equal to 10% of damage dealt, at most ten triggers per second.",
+        "zh-cn": "回复相当于伤害值 10% 的韧性，每秒最多触发 10 次。",
+        "zh-tw": "回覆相當於傷害值 10% 的韌性，每秒最多觸發 10 次。"
+      },
+      "enabled": true,
+      "id": "battle_siphon",
+      "match": "all",
+      "name": {
+        "en": "Battle siphon",
+        "zh-cn": "战斗虹吸",
+        "zh-tw": "戰鬥虹吸"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": 0.1,
+              "amount_kind": "event_damage",
+              "type": "toughness"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0.1,
+          "delay": 0,
+          "event": "on_damage_dealt",
+          "id": "leech",
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "availability": {
+        "resources": [
+          "melee"
+        ]
+      },
+      "conditions": [],
+      "description": {
+        "en": "Taking damage grants 15% melee power for four seconds, stacking three times.",
+        "zh-cn": "受到伤害后获得 15% 近战能量，持续 4 秒，最多叠加 3 层。",
+        "zh-tw": "受到傷害後獲得 15% 近戰能量，持續 4 秒，最多疊加 3 層。"
+      },
+      "enabled": true,
+      "id": "charged_counter",
+      "match": "all",
+      "name": {
+        "en": "Charged counter",
+        "zh-cn": "受击反攻",
+        "zh-tw": "受擊反攻"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "duration": 4,
+              "effects": {
+                "stats": {
+                  "melee_power_level_modifier": 0.15
+                }
+              },
+              "max_stacks": 3,
+              "type": "effect"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0.5,
+          "delay": 0,
+          "event": "on_damage_taken",
+          "id": "counter",
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "availability": {
+        "resources": [
+          "ammo",
+          "grenade_charges",
+          "combat_ability"
+        ]
+      },
+      "conditions": [],
+      "description": {
+        "en": "Every 30 seconds restore 10% ammunition, one grenade, 20% stamina and five seconds of ability cooldown.",
+        "zh-cn": "每 30 秒补充 10% 弹药、1 颗手雷、20% 体力，并减少技能冷却 5 秒。",
+        "zh-tw": "每 30 秒補充 10% 彈藥、1 顆手雷、20% 體力，並減少技能冷卻 5 秒。"
+      },
+      "enabled": true,
+      "id": "resource_drill",
+      "match": "all",
+      "name": {
+        "en": "Resource drill",
+        "zh-cn": "资源训练",
+        "zh-tw": "資源訓練"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": 0.1,
+              "amount_kind": "fraction",
+              "type": "ammo"
+            },
+            {
+              "amount": 1,
+              "type": "grenades"
+            },
+            {
+              "amount": 0.2,
+              "amount_kind": "fraction",
+              "type": "stamina"
+            },
+            {
+              "amount": 5,
+              "type": "ability_cooldown"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "resources",
+          "interval": 30,
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "availability": {
+        "any_resources": [
+          "warp_charge",
+          "overheat"
+        ]
+      },
+      "conditions": [],
+      "description": {
+        "en": "Every two seconds quell 5 percentage points of peril and vent 5 percentage points of heat. Unsupported resources are skipped.",
+        "zh-cn": "每 2 秒消退 5 个百分点的危机值和热量；角色或武器不具有相应资源时跳过。",
+        "zh-tw": "每 2 秒消退 5 個百分點的危機值和熱量；角色或武器不具有相應資源時跳過。"
+      },
+      "enabled": true,
+      "id": "cooling_cycle",
+      "match": "all",
+      "name": {
+        "en": "Cooling cycle",
+        "zh-cn": "冷却循环",
+        "zh-tw": "冷卻循環"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": -5,
+              "type": "warp_charge"
+            },
+            {
+              "amount": -5,
+              "type": "overheat"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "vent",
+          "interval": 2,
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "availability": {
+        "resources": [
+          "melee"
+        ]
+      },
+      "conditions": [],
+      "description": {
+        "en": "Critical melee hits apply the native bleed status for up to five seconds.",
+        "zh-cn": "近战暴击施加原生流血，最长保留 5 秒；原生状态可提前结束。",
+        "zh-tw": "近戰暴擊施加原生流血，最長保留 5 秒；原生狀態可提前結束。"
+      },
+      "enabled": true,
+      "id": "bleeding_edge",
+      "match": "all",
+      "name": {
+        "en": "Bleeding edge",
+        "zh-cn": "流血锋刃",
+        "zh-tw": "流血鋒刃"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "duration": 5,
+              "name": "bleed",
+              "target": "target",
+              "type": "native_buff"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "attack_type",
+              "op": "eq",
+              "value": "melee"
+            },
+            {
+              "field": "critical",
+              "op": "eq",
+              "value": true
+            }
+          ],
+          "cooldown": 0.25,
+          "delay": 0,
+          "event": "on_hit",
+          "id": "bleed",
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "availability": {
+        "archetypes": [
+          "veteran"
+        ]
+      },
+      "conditions": [
+        {
+          "field": "health",
+          "op": "lt",
+          "value": 0.5
+        }
+      ],
+      "description": {
+        "en": "Veteran-only example: 15% ranged damage while below half health.",
+        "zh-cn": "职业限制示例：老兵在生命低于 50% 时，远程伤害提高 15%。",
+        "zh-tw": "職業限制示例：老兵在生命低於 50% 時，遠程傷害提高 15%。"
+      },
+      "enabled": true,
+      "id": "veteran_resolve",
+      "match": "all",
+      "name": {
+        "en": "Veteran resolve",
+        "zh-cn": "老兵决心",
+        "zh-tw": "老兵決心"
+      },
+      "passive": {
+        "stats": {
+          "ranged_damage": 0.15
+        }
+      },
+      "rules": [],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Drop one native ammo crate by this player on first spawn. A global cap of 32 DIY pickups applies per mission.",
+        "zh-cn": "该玩家首次生成时，身旁落下一个原生弹药箱。每个配置库每局最多生成 32 个拾取物。",
+        "zh-tw": "該玩家首次生成時，身旁落下一個原生彈藥箱。每個配置庫每局最多生成 32 個拾取物。"
+      },
+      "enabled": true,
+      "id": "opening_supply",
+      "match": "all",
+      "name": {
+        "en": "Opening supply",
+        "zh-cn": "开局补给",
+        "zh-tw": "開局補給"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "name": "ammo_cache_pocketable",
+              "type": "pickup"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "mission_start",
+          "id": "supply",
+          "match": "all",
+          "max_triggers": 1
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "availability": {
+        "resources": [
+          "ammo",
+          "overheat",
+          "combat_ability"
+        ]
+      },
+      "conditions": [],
+      "description": {
+        "en": "No ammunition consumption, no heat gain and 80% shorter combat ability cooldown.",
+        "zh-cn": "不消耗弹药、不增加热量，战斗技能冷却缩短 80%；用于测试和自定义玩法。",
+        "zh-tw": "不消耗彈藥、不增加熱量，戰鬥技能冷卻縮短 80%；用於測試和自定義玩法。"
+      },
+      "enabled": true,
+      "id": "infinite_test",
+      "match": "all",
+      "name": {
+        "en": "Infinite-fire test",
+        "zh-cn": "无限火力测试",
+        "zh-tw": "無限火力測試"
+      },
+      "passive": {
+        "keywords": [
+          "no_ammo_consumption"
+        ],
+        "stats": {
+          "ability_cooldown_modifier": -0.8,
+          "overheat_amount": 0
+        }
+      },
+      "rules": [],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 4,
+      "weight": 1
+    },
+    {
+      "availability": {
+        "resources": [
+          "ranged"
+        ]
+      },
+      "conditions": [],
+      "description": {
+        "en": "Copy every native ranged attack five times, including staff attacks. Spend ammunition, warp charge and overheat once. Native extra projectiles multiply: Surge critical shots produce ten projectiles. Shotgun copies share the original pellet pattern; flame and lightning attacks repeat their native hit pulses, retaining native status stack limits.",
+        "zh-cn": "每次远程攻击产生 5 份原有攻击，包括法杖；弹药、灵能与过热仍只消耗一次。原生额外弹体参与乘算，激涌暴击共射出 10 发。霰弹复制沿用原散布；火焰与闪电重复原生命中脉冲，状态叠层仍受原版上限约束。",
+        "zh-tw": "每次遠程攻擊產生 5 份原有攻擊，包括法杖；彈藥、靈能與過熱仍只消耗一次。原生額外彈體參與乘算，激湧暴擊共射出 10 發。霰彈複製沿用原散佈；火焰與閃電重複原生命中脈衝，狀態疊層仍受原版上限約束。"
+      },
+      "enabled": true,
+      "exclusive_group": "ranged_salvo",
+      "id": "fivefold_salvo",
+      "match": "all",
+      "name": {
+        "en": "Fivefold salvo",
+        "zh-cn": "五重齐射",
+        "zh-tw": "五重齊射"
+      },
+      "passive": {
+        "modifiers": {
+          "ranged_salvo_count": 5
+        }
+      },
+      "rules": [],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 4,
+      "weight": 1
+    }
+  ],
+  "format": "Darktide.DIY",
+  "id": "starter_mortis",
+  "kind": "mortis",
+  "name": {
+    "en": "DIY starter library",
+    "zh-cn": "DIY 入门配置库",
+    "zh-tw": "DIY 入門配置庫"
+  },
+  "version": 1
+}

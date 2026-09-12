@@ -1,0 +1,2 @@
+# Preserve the exact bytes verified against immutable release archives.
+* -text

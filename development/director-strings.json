@@ -1,0 +1,1306 @@
+{
+  "overview": [
+    "Director",
+    "导演总览"
+  ],
+  "formations": [
+    "Formation library",
+    "编队库"
+  ],
+  "deployments": [
+    "Deployment rules",
+    "投放规则"
+  ],
+  "native": [
+    "Native templates",
+    "原版模板"
+  ],
+  "presets": [
+    "Presets & changes",
+    "方案与变更"
+  ],
+  "general": [
+    "Run settings",
+    "运行设置"
+  ],
+  "pressure": [
+    "Pressure phases",
+    "压力阶段"
+  ],
+  "seeds": [
+    "Random seeds",
+    "随机种子"
+  ],
+  "summary": [
+    "Configuration summary",
+    "配置摘要"
+  ],
+  "enabled": [
+    "Enable extra encounters",
+    "启用额外编队导演"
+  ],
+  "mode": [
+    "Director mode",
+    "导演模式"
+  ],
+  "rules": [
+    "Rule-driven",
+    "按投放规则运行"
+  ],
+  "adaptive": [
+    "Adaptive pressure",
+    "根据压力自适应"
+  ],
+  "selection": [
+    "Competing rules",
+    "多条规则同时满足时"
+  ],
+  "priority": [
+    "Priority, then weight",
+    "先比优先级，再按权重抽取"
+  ],
+  "weighted": [
+    "Weight only",
+    "直接按权重抽取"
+  ],
+  "admission_interval": [
+    "Minimum gap between admissions (s)",
+    "全局两次接纳间隔（秒）"
+  ],
+  "max_active_groups": [
+    "Maximum active HED encounters",
+    "HED 同时活跃遭遇上限"
+  ],
+  "load_ceiling": [
+    "Hold new arrivals at combat load",
+    "暂缓新增敌人的战斗负担门槛"
+  ],
+  "capable_min": [
+    "Minimum capable players",
+    "至少需要的有效玩家人数"
+  ],
+  "allow_events": [
+    "Allow arrivals during mission events",
+    "允许在任务事件期间额外投放"
+  ],
+  "status_help": [
+    "Changes are saved for the next mission. Native spawns still run. HED adds only encounters referenced by enabled deployment rules.",
+    "修改保存后于下一局生效。原版刷怪继续运行；HED 只额外安排已启用规则所引用的编队。"
+  ],
+  "empty_help": [
+    "Start with a formation, then add a deployment rule. Finally enable the director. Templates and HCM multipliers can also be used on their own.",
+    "先在编队库选择敌人，再建立投放规则，最后启用导演。原版模板编辑和 HCM 倍率也可以单独使用。"
+  ],
+  "limits_help": [
+    "Pending and living encounters both occupy this limit. Native permissions, enemy capacity and valid spawn positions can delay an arrival.",
+    "待生成与仍有存活成员的遭遇都会占用额度。原版刷怪许可、敌人容量与有效出生位置仍可能延后到场。"
+  ],
+  "phase_help": [
+    "Adaptive mode cycles through build, pressure and recovery. High load or too few capable players starts recovery early. Recovery waits for its minimum duration and low load.",
+    "自适应模式依次经历蓄压、施压、恢复。战斗负担过高或有效玩家过少会提前恢复；恢复须满足最低时长与低负担条件才会结束。"
+  ],
+  "build": [
+    "Build",
+    "蓄压"
+  ],
+  "pressure_phase": [
+    "Pressure",
+    "施压"
+  ],
+  "recovery": [
+    "Recovery",
+    "恢复"
+  ],
+  "any": [
+    "Any phase",
+    "不限阶段"
+  ],
+  "low_load": [
+    "Leave recovery below this load",
+    "结束恢复所需的低负担门槛"
+  ],
+  "high_load": [
+    "Enter recovery at this load",
+    "提前进入恢复的高负担门槛"
+  ],
+  "duration_min": [
+    "Minimum phase duration (s)",
+    "阶段最短时长（秒）"
+  ],
+  "duration_max": [
+    "Maximum phase duration (s)",
+    "阶段最长时长（秒）"
+  ],
+  "phase_size": [
+    "Encounter size in this phase",
+    "本阶段人数倍率"
+  ],
+  "phase_frequency": [
+    "Arrival frequency; 0 pauses HED",
+    "本阶段频率倍率；0 为暂停"
+  ],
+  "phase_only": [
+    "These settings apply in Adaptive pressure mode.",
+    "这些设置仅在自适应模式中参与运行。"
+  ],
+  "director_seed": [
+    "HED director seed",
+    "HED 导演种子"
+  ],
+  "map_seed": [
+    "Roamer-layout seed",
+    "驻军布局种子"
+  ],
+  "auto_seed": [
+    "Use the mission seed",
+    "沿用任务种子"
+  ],
+  "seed_help": [
+    "0 follows the mission seed. Each deployment has separate timer, variant and member-count streams. Editing another rule does not consume its random sequence.",
+    "0 表示沿用任务种子。每条投放的计时、变体、人数分别使用独立随机流；编辑其他规则不会占用它的随机序列。"
+  ],
+  "map_seed_help": [
+    "The layout seed controls the native roamer layout. It does not change the mission map or seed all native combat systems.",
+    "布局种子用于原版驻军布置，不改变任务地图，也不会统一设定所有原版战斗系统的随机数。"
+  ],
+  "seed_limit": [
+    "Matching seeds and inputs reproduce HED choices. Player movement, native randomness, competing rules and available spawn locations can still change the final encounter.",
+    "相同种子与相同输入可复现 HED 的选择。玩家移动、原版随机、规则竞争与可用出生点仍会影响实际战斗。"
+  ],
+  "seed_reset": [
+    "Set to automatic",
+    "恢复自动种子"
+  ],
+  "counts": [
+    "%d formations · %d deployment rules",
+    "%d 个编队 · %d 条投放规则"
+  ],
+  "overrides": [
+    "%d fixed values · %d relative multipliers · %d native rules",
+    "%d 项固定值 · %d 项相对倍率 · %d 条原版规则"
+  ],
+  "no_formations": [
+    "No formations yet. Choose an enemy category and create one.",
+    "还没有编队。选择敌人类别并创建编队。"
+  ],
+  "no_deployments": [
+    "No deployment rules yet. Create a formation first, then choose it here.",
+    "还没有投放规则。先创建编队，再在这里选择要调用的编队。"
+  ],
+  "new_family": [
+    "Category for a new formation",
+    "新编队的敌人类别"
+  ],
+  "add_formation": [
+    "Create formation",
+    "创建编队"
+  ],
+  "add_deployment": [
+    "Create deployment rule",
+    "创建投放规则"
+  ],
+  "new_formation": [
+    "Formation %d",
+    "编队 %d"
+  ],
+  "new_deployment": [
+    "Deployment %d",
+    "投放 %d"
+  ],
+  "name": [
+    "Name",
+    "名称"
+  ],
+  "save": [
+    "Save",
+    "保存"
+  ],
+  "name_hint": [
+    "Up to 48 characters. Enter saves; Escape cancels.",
+    "最多 48 个字符。回车保存，Esc 取消。"
+  ],
+  "invalid_name": [
+    "Enter a name of 1–48 characters without control characters.",
+    "请输入 1～48 个字符的名称，不含控制字符。"
+  ],
+  "copy": [
+    "Duplicate",
+    "复制"
+  ],
+  "copy_suffix": [
+    " copy",
+    " 副本"
+  ],
+  "delete": [
+    "Delete",
+    "删除"
+  ],
+  "confirm_delete": [
+    "Click again to delete",
+    "再次点击确认删除"
+  ],
+  "referenced": [
+    "Used by %d deployment rules. Remove those rules before deleting this formation.",
+    "被 %d 条投放引用；删除编队前须先删除关联规则。"
+  ],
+  "family_hordes": [
+    "Horde group",
+    "尸潮敌群"
+  ],
+  "family_trickle": [
+    "Trickle group",
+    "小股敌群"
+  ],
+  "family_specials": [
+    "Specialist group",
+    "特感编队"
+  ],
+  "family_monsters": [
+    "Monster group",
+    "怪物编队"
+  ],
+  "family_patrols": [
+    "Patrol group",
+    "巡逻编队"
+  ],
+  "formation_help": [
+    "One encounter draws one variant by weight. Member ranges are counts, not chances. Each deployment controls its own schedule.",
+    "每次遭遇按权重抽取一个变体。成员范围表示人数，不是概率；每条投放规则分别控制到场时机。"
+  ],
+  "variant": [
+    "Variant %d · weight %.3g",
+    "变体 %d · 权重 %.3g"
+  ],
+  "add_variant": [
+    "Add variant",
+    "增加变体"
+  ],
+  "delete_variant": [
+    "Remove variant",
+    "删除变体"
+  ],
+  "variant_weight": [
+    "Variant selection weight",
+    "变体抽取权重"
+  ],
+  "add_member": [
+    "Add member type",
+    "增加成员兵种"
+  ],
+  "min_count": [
+    "Min. count",
+    "人数下限"
+  ],
+  "max_count": [
+    "Max. count",
+    "人数上限"
+  ],
+  "formation_limits": [
+    "Per variant: 300 ordinary troops, 16 specialists or 3 monsters. Runtime admission may reduce or delay the planned force.",
+    "每个变体最多 300 名普通敌人、16 名特感或 3 只怪物。运行时的容量和选点限制可能缩减或延后到场。"
+  ],
+  "formation_immutable": [
+    "Category: %s · create another formation to use a different category",
+    "类别：%s · 更换类别请创建另一编队"
+  ],
+  "rule_enabled": [
+    "Enable this rule",
+    "启用这条规则"
+  ],
+  "formation_ref": [
+    "Formation to deploy",
+    "调用的编队"
+  ],
+  "timing": [
+    "When to arrive",
+    "到场时机"
+  ],
+  "conditions": [
+    "Additional conditions",
+    "附加条件"
+  ],
+  "quotas": [
+    "Limits & selection",
+    "额度与竞争"
+  ],
+  "inheritance": [
+    "HCM linkage",
+    "HCM 联动"
+  ],
+  "trigger": [
+    "Trigger type",
+    "触发方式"
+  ],
+  "timer": [
+    "Elapsed time",
+    "经过时间"
+  ],
+  "progress": [
+    "Forward progress",
+    "向前推进"
+  ],
+  "condition": [
+    "Condition becomes true",
+    "条件由不满足变为满足"
+  ],
+  "first_delay": [
+    "Earliest arrival after mission start (s)",
+    "开局后最早到场时间（秒）"
+  ],
+  "interval_min": [
+    "Minimum interval (s)",
+    "再次投放最短间隔（秒）"
+  ],
+  "interval_max": [
+    "Maximum interval (s)",
+    "再次投放最长间隔（秒）"
+  ],
+  "progress_start": [
+    "First trigger at progress (m)",
+    "首次触发的推进距离（米）"
+  ],
+  "progress_step": [
+    "Further travel for another arrival (m)",
+    "再次投放所需继续推进距离（米）"
+  ],
+  "start_time": [
+    "Window opens after (s)",
+    "有效窗口开始时间（秒）"
+  ],
+  "end_time": [
+    "Window closes after (s); 0 = no end",
+    "有效窗口结束时间（秒）；0 为不限"
+  ],
+  "waves": [
+    "Waves in one encounter",
+    "一次遭遇的波数"
+  ],
+  "wave_gap": [
+    "Gap between waves (s)",
+    "波间等待（秒）"
+  ],
+  "timing_help": [
+    "Intervals begin after the first accepted member. A condition trigger fires once while its conditions stay true; they must become false before it can fire again.",
+    "再次投放的间隔从首名成员被接纳后开始计算。条件触发在持续满足期间只执行一次，必须先变为不满足才能重新触发。"
+  ],
+  "match": [
+    "Combine conditions",
+    "组合条件"
+  ],
+  "all": [
+    "All must pass",
+    "全部满足"
+  ],
+  "any_match": [
+    "At least one must pass",
+    "任意一项满足"
+  ],
+  "add_condition": [
+    "Add a condition",
+    "增加条件"
+  ],
+  "no_conditions": [
+    "No extra conditions. Native permissions and the director limits still apply.",
+    "没有额外条件；原版许可与导演全局限制仍然生效。"
+  ],
+  "condition_help": [
+    "Native slots already accepted keep their lifecycle. Director limits still apply while HED members wait; expired requests do not pile up.",
+    "已被原版槽位接纳的特感沿用原版流程。HED 成员等待时仍受导演全局限制；过期请求不会积压补发。"
+  ],
+  "cooldown": [
+    "Minimum cooldown after arrival (s)",
+    "成功到场后的最短冷却（秒）"
+  ],
+  "max_occurrences": [
+    "Mission quota; 0 = unlimited",
+    "整局成功遭遇额度；0 为不限"
+  ],
+  "max_alive": [
+    "Active encounters for this rule",
+    "本规则同时活跃遭遇上限"
+  ],
+  "rule_priority": [
+    "Priority; higher goes first",
+    "优先级；数值越高越优先"
+  ],
+  "weight": [
+    "Selection weight",
+    "竞争抽取权重"
+  ],
+  "phase": [
+    "Required HED phase",
+    "要求的 HED 阶段"
+  ],
+  "quota_help": [
+    "The quota counts encounters with at least one accepted member. It is separate from enemy count, wave count and concurrent encounters. Fixed priority can delay lower-priority rules.",
+    "额度统计至少已有一名成员被接纳的遭遇，与人数、波数及同时活跃遭遇数分别计算。固定优先级可能使低优先级规则持续等待。"
+  ],
+  "inherit_size": [
+    "Follow HCM member multipliers",
+    "跟随 HCM 的成员人数倍率"
+  ],
+  "inherit_frequency": [
+    "Follow HCM arrival frequency",
+    "跟随 HCM 的触发频率"
+  ],
+  "size_multiplier": [
+    "Additional member multiplier",
+    "在此基础上的人数倍率"
+  ],
+  "frequency_multiplier": [
+    "Additional frequency multiplier",
+    "在此基础上的频率倍率"
+  ],
+  "inherit_help": [
+    "Common horde/trickle members follow their HCM size setting; elites follow Elite members per group. Specialists follow slot capacity; monsters follow encounter count. Patrol ordinary members stay at 1×. Custom waves remain explicit.",
+    "普通尸潮／小股成员跟随各自的 HCM 人数倍率，精英跟随敌群精英人数。特感跟随并行容量，怪物跟随遭遇数；巡逻普通成员保持 1×。自定义波数始终由本规则指定。"
+  ],
+  "frequency_help": [
+    "Horde, trickle and specialist rules follow the matching HCM frequency. Other categories start at 1×. Higher frequency shortens later time or distance intervals; first-arrival and cooldown values stay explicit.",
+    "尸潮、小股潮、特感分别跟随对应的 HCM 频率，其他类别从 1× 开始。频率越高，再次投放的时间或距离间隔越短；首次时间与冷却仍使用本规则的明确值。"
+  ],
+  "budget_help": [
+    "Each HED encounter is bounded to 256 ordinary troops, 16 specialists or 3 monsters across all waves. Native specialist slots and available locations may further limit arrivals.",
+    "每次 HED 遭遇的所有波次合计最多 256 名普通敌人、16 名特感或 3 只怪物。原版特感槽位及出生位置仍可能进一步限制到场。"
+  ],
+  "changed": [
+    "Edited values",
+    "已修改的设置"
+  ],
+  "no_changes": [
+    "No native overrides yet. HCM values are inherited.",
+    "尚未覆盖原版字段，当前跟随 HCM。"
+  ],
+  "value_mode": [
+    "How this value is applied",
+    "此值的应用方式"
+  ],
+  "follow": [
+    "Follow HCM",
+    "跟随 HCM"
+  ],
+  "fixed": [
+    "Use a fixed value",
+    "使用固定值"
+  ],
+  "relative": [
+    "Multiply the HCM value",
+    "在 HCM 结果上乘倍率"
+  ],
+  "original": [
+    "Original: %s",
+    "原版：%s"
+  ],
+  "coarse_value": [
+    "After HCM: %s",
+    "HCM 后：%s"
+  ],
+  "effective": [
+    "HED template result: %s",
+    "HED 模板结果：%s"
+  ],
+  "factor": [
+    "Additional value multiplier",
+    "额外数值倍率"
+  ],
+  "relative_help": [
+    "HCM is applied first, then this multiplier. The field's valid range and integer rounding still apply. Other native mission modifiers may apply afterward.",
+    "先计算 HCM，再乘此倍率；仍受字段有效范围和整数取整约束。之后可能继续叠加原版任务修正。"
+  ],
+  "template_help": [
+    "Choose the source family, then its mode and difficulty branch. Native identifiers are available in details; the numbers here are template values, not guaranteed on-screen counts.",
+    "先选刷怪来源，再选模式与难度分支。此处编辑模板数值，不代表保证同屏人数；原版标识可在详情中查看。"
+  ],
+  "resistance": [
+    "Resistance branch %s",
+    "抗性档 %s"
+  ],
+  "challenge": [
+    "Challenge branch %s",
+    "挑战档 %s"
+  ],
+  "branch": [
+    "Branch %s",
+    "分支 %s"
+  ],
+  "technical": [
+    "Show native identifiers",
+    "显示原版标识"
+  ],
+  "all_fields": [
+    "All fields",
+    "全部字段"
+  ],
+  "common_fields": [
+    "Common controls",
+    "常用参数"
+  ],
+  "modified_fields": [
+    "Edited fields",
+    "已修改"
+  ],
+  "legacy_field": [
+    "No active consumer was confirmed for this field in the audited game version. It is excluded from common controls; editing it may have no effect.",
+    "在已核对的游戏版本中，未确认这个字段的实际读取位置。常用参数已排除它；修改可能不产生效果。"
+  ],
+  "reset_native": [
+    "Remove all native overrides",
+    "清除全部原版覆盖"
+  ],
+  "reset_native_confirm": [
+    "Click again: remove native overrides",
+    "再次点击：清除全部原版覆盖"
+  ],
+  "summary_help": [
+    "Presets include HCM values, native overrides, formations, deployment rules and both seeds. Version 2 native presets can still be imported.",
+    "方案包含 HCM 数值、原版覆盖、编队、投放规则和两类种子。仍支持导入第 2 版原版模板方案。"
+  ],
+  "enabled_rules": [
+    "%d of %d deployment rules enabled",
+    "已启用 %d / %d 条投放规则"
+  ],
+  "unreferenced": [
+    "%d formations have no deployment rule",
+    "%d 个编队尚未被投放规则调用"
+  ],
+  "save_failed": [
+    "The change was not saved: %s",
+    "修改未保存：%s"
+  ],
+  "scope_off": [
+    "Extra director is currently off",
+    "额外编队导演当前关闭"
+  ],
+  "scope_on": [
+    "Extra director will run next mission",
+    "额外编队导演将在下一局运行"
+  ],
+  "breed_chaos_armored_infected": [
+    "Armoured Groaner",
+    "披甲呻吟者"
+  ],
+  "breed_chaos_lesser_mutated_poxwalker": [
+    "Mutated Poxwalker",
+    "变异瘟疫行者"
+  ],
+  "breed_chaos_mutated_poxwalker": [
+    "Tentacled Poxwalker",
+    "触手瘟疫行者"
+  ],
+  "breed_chaos_newly_infected": [
+    "Groaner",
+    "呻吟者"
+  ],
+  "breed_chaos_poxwalker": [
+    "Poxwalker",
+    "瘟疫行者"
+  ],
+  "breed_chaos_ogryn_bulwark": [
+    "Bulwark",
+    "堡垒"
+  ],
+  "breed_chaos_ogryn_executor": [
+    "Crusher",
+    "粉碎者"
+  ],
+  "breed_chaos_ogryn_gunner": [
+    "Reaper",
+    "收割者"
+  ],
+  "breed_chaos_beast_of_nurgle": [
+    "Beast of Nurgle",
+    "纳垢兽"
+  ],
+  "breed_chaos_plague_ogryn": [
+    "Plague Ogryn",
+    "瘟疫欧格林"
+  ],
+  "breed_chaos_spawn": [
+    "Chaos Spawn",
+    "混沌魔物"
+  ],
+  "breed_chaos_hound": [
+    "Pox Hound",
+    "瘟疫猎犬"
+  ],
+  "breed_chaos_armored_hound": [
+    "Armoured Hound",
+    "披甲猎犬"
+  ],
+  "breed_chaos_poxwalker_bomber": [
+    "Poxburster",
+    "瘟疫爆炸者"
+  ],
+  "breed_cultist_assault": [
+    "Dreg Stalker",
+    "渣滓潜行者"
+  ],
+  "breed_cultist_melee": [
+    "Dreg Bruiser",
+    "渣滓格斗兵"
+  ],
+  "breed_cultist_vanguard": [
+    "Dreg Vanguard",
+    "渣滓先锋"
+  ],
+  "breed_cultist_berzerker": [
+    "Dreg Rager",
+    "渣滓狂战士"
+  ],
+  "breed_cultist_flamer": [
+    "Dreg Tox Flamer",
+    "渣滓毒焰喷射手"
+  ],
+  "breed_cultist_grenadier": [
+    "Dreg Tox Bomber",
+    "渣滓毒爆投弹手"
+  ],
+  "breed_cultist_gunner": [
+    "Dreg Gunner",
+    "渣滓机枪手"
+  ],
+  "breed_cultist_mutant": [
+    "Mutant",
+    "变种人"
+  ],
+  "breed_cultist_mutant_mutator": [
+    "Mutant (condition variant)",
+    "变种人（词条变体）"
+  ],
+  "breed_cultist_shocktrooper": [
+    "Dreg Shotgunner",
+    "渣滓霰弹枪兵"
+  ],
+  "breed_renegade_assault": [
+    "Scab Stalker",
+    "血痂潜行者"
+  ],
+  "breed_renegade_melee": [
+    "Scab Bruiser",
+    "血痂格斗兵"
+  ],
+  "breed_renegade_rifleman": [
+    "Scab Shooter",
+    "血痂射手"
+  ],
+  "breed_renegade_vanguard": [
+    "Scab Vanguard",
+    "血痂先锋"
+  ],
+  "breed_renegade_berzerker": [
+    "Scab Rager",
+    "血痂狂战士"
+  ],
+  "breed_renegade_executor": [
+    "Scab Mauler",
+    "血痂重锤兵"
+  ],
+  "breed_renegade_flamer": [
+    "Scab Flamer",
+    "血痂火焰喷射手"
+  ],
+  "breed_renegade_grenadier": [
+    "Scab Bomber",
+    "血痂投弹手"
+  ],
+  "breed_renegade_gunner": [
+    "Scab Gunner",
+    "血痂机枪手"
+  ],
+  "breed_renegade_netgunner": [
+    "Scab Trapper",
+    "血痂陷阱手"
+  ],
+  "breed_renegade_plasma_gunner": [
+    "Scab Plasma Gunner",
+    "血痂等离子枪手"
+  ],
+  "breed_renegade_radio_operator": [
+    "Scab Radio Operator",
+    "血痂通讯兵"
+  ],
+  "breed_renegade_shocktrooper": [
+    "Scab Shotgunner",
+    "血痂霰弹枪兵"
+  ],
+  "breed_renegade_sniper": [
+    "Scab Sniper",
+    "血痂狙击手"
+  ],
+  "native_default": [
+    "Standard missions",
+    "常规任务"
+  ],
+  "native_havoc": [
+    "Havoc",
+    "浩劫"
+  ],
+  "native_expedition": [
+    "Expeditions",
+    "远征"
+  ],
+  "native_terror_events_only": [
+    "Mission events only",
+    "仅任务事件"
+  ],
+  "native_mutator_horde": [
+    "Condition horde",
+    "词条尸潮"
+  ],
+  "native_dummy_auto_event_template": [
+    "Placeholder event",
+    "占位事件"
+  ],
+  "native_live_event_endless_hordes_auto_event_template": [
+    "Endless-horde activity",
+    "无尽尸潮活动"
+  ],
+  "native_live_event_saints_auto_event_template": [
+    "Saints activity",
+    "圣徒活动"
+  ],
+  "native_live_event_skulls_guns_auto_event_template": [
+    "Skulls activity",
+    "颅骨活动"
+  ],
+  "common_hint": [
+    "Common controls are shown first. Use All fields to inspect the complete supported template tree.",
+    "默认显示常用参数；切换全部字段可查看受支持的完整模板结构。"
+  ],
+  "group_fallback": [
+    "Settings group %s",
+    "设置分组 %s"
+  ],
+  "branch_count": [
+    "%s · %d fields",
+    "%s · %d 项参数"
+  ],
+  "scope_pacing": [
+    "Global pacing selects combat stages and which sources may run. Combat load uses breed threat ratings; tension and expedition heat are separate measures.",
+    "全局节奏决定战斗阶段及允许的刷怪来源。战斗负担由兵种威胁评分累加，紧张值与远征热度是另外两套量。"
+  ],
+  "scope_roamers": [
+    "Roamers are planned by route zones, density, pack selection and per-breed limits. Repeated members are part of a pack's composition, not a probability.",
+    "驻军按路线分区、密度、敌群抽取和兵种限制预先布置。敌群内重复的成员表示编成数量，不是兵种抽取概率。"
+  ],
+  "scope_hordes": [
+    "Hordes combine trigger time or travel, waves, compositions and spawn methods. Member count, wave count and active encounters are separate controls.",
+    "尸潮由触发时间或推进距离、波数、编成和出生方式共同组成。成员人数、波数、同时活跃遭遇数分别控制。"
+  ],
+  "scope_specials": [
+    "Specialists refill slots after completion. Capacity, refill time, same-breed limits and coordinated attacks are separate. Some templates use travel instead of seconds.",
+    "特感使用结束后补充的槽位。容量、补充间隔、同类限制与协同攻击分别控制；部分模板用推进距离替代秒数。"
+  ],
+  "scope_monsters": [
+    "Route monsters use a mission allowance and usable map sections. Scripted bosses and specialist monster replacements are separate.",
+    "沿途怪物根据整局额度与可用地图分区安排，与任务脚本 Boss 和特感替换的怪物分别计算。"
+  ],
+  "scope_events": [
+    "Automatic events spend points on enemy categories. Category weights affect budget allocation, not the final percentage of each breed.",
+    "自动事件按点数预算安排敌人类别。类别权重影响预算分配，并不直接等于最终人数占比。"
+  ],
+  "scope_mission_events": [
+    "Mission events are scripted node sequences. Combat nodes spend points or spawn a named breed. Objective flow continues to follow the mission script.",
+    "任务事件是按顺序执行的节点。战斗节点可按点数或指定兵种生成；任务时序与目标流程仍由任务脚本控制。"
+  ],
+  "scope_mutators": [
+    "Condition templates apply only while that condition is active. Pacing multipliers, extra encounters and enemy buffs are different settings.",
+    "词条模板只在对应词条生效时参与运行。节奏倍率、额外遭遇和敌人增益是不同类型的设置。"
+  ],
+  "template_sources": [
+    "These are template inputs. Difficulty, active conditions and runtime admission can still alter the final result.",
+    "这些数值是模板输入；难度、已选词条与运行时接纳条件仍可能影响最终结果。"
+  ],
+  "group_state_settings": [
+    "Combat stages",
+    "战斗阶段"
+  ],
+  "group_combat_state_settings": [
+    "Enemy alert states",
+    "敌人警觉状态"
+  ],
+  "group_heat_settings": [
+    "Heat stages",
+    "热度阶段"
+  ],
+  "group_challenge_rating_thresholds": [
+    "Combat-load gates",
+    "战斗负担门槛"
+  ],
+  "group_allowed_spawn_types": [
+    "Permitted spawn sources",
+    "允许的刷怪来源"
+  ],
+  "group_horde_compositions": [
+    "Horde member lists",
+    "尸潮成员编成"
+  ],
+  "group_trickle_horde_compositions": [
+    "Trickle member lists",
+    "小股潮成员编成"
+  ],
+  "group_composition": [
+    "Event composition",
+    "事件编成"
+  ],
+  "group_breeds": [
+    "Enemy members / candidates",
+    "敌人成员／候选"
+  ],
+  "group_density_settings": [
+    "Zone populations",
+    "区域人数"
+  ],
+  "group_density_order": [
+    "Zone sequence",
+    "区域顺序"
+  ],
+  "group_density_order_overrides": [
+    "Zone sequence overrides",
+    "区域顺序覆盖"
+  ],
+  "group_pack_weights": [
+    "Pack selection weights",
+    "敌群抽取权重"
+  ],
+  "group_packs": [
+    "Roamer packs",
+    "驻军敌群"
+  ],
+  "group_roamer_packs": [
+    "Roamer packs",
+    "驻军敌群"
+  ],
+  "group_breed_limits": [
+    "Breed limits",
+    "兵种额度"
+  ],
+  "group_tag_limits": [
+    "Tag limits",
+    "类别额度"
+  ],
+  "group_faction_breed_lists": [
+    "Faction enemies",
+    "阵营敌人"
+  ],
+  "group_faction_zone_length": [
+    "Faction segment length",
+    "阵营区域长度"
+  ],
+  "group_coordinated_horde_strike_settings": [
+    "Coordinated attacks",
+    "协同攻势"
+  ],
+  "group_coordinated_strike_breeds": [
+    "Coordinated specialist candidates",
+    "协同特感候选"
+  ],
+  "group_ramp_modifiers": [
+    "Escalation rates",
+    "持续加压倍率"
+  ],
+  "group_ramp_up_states": [
+    "Escalation stages",
+    "加压阶段"
+  ],
+  "group_factions": [
+    "Faction choices",
+    "阵营选择"
+  ],
+  "group_renegade": [
+    "Scabs",
+    "血痂"
+  ],
+  "group_cultist": [
+    "Dregs",
+    "渣滓"
+  ],
+  "group_chaos": [
+    "Chaos enemies",
+    "混沌敌人"
+  ],
+  "group_none": [
+    "Base / none",
+    "基础／无"
+  ],
+  "group_low": [
+    "Low",
+    "低档"
+  ],
+  "group_high": [
+    "High",
+    "高档"
+  ],
+  "group_medium": [
+    "Medium",
+    "中档"
+  ],
+  "group_poxwalkers": [
+    "Poxwalkers",
+    "瘟疫行者"
+  ],
+  "group_waiting_for_ramp_clear": [
+    "Waiting for escalation to clear",
+    "等待加压敌群清场"
+  ],
+  "group_undetected": [
+    "Undetected",
+    "未被发现"
+  ],
+  "group_detected": [
+    "Detected",
+    "已被发现"
+  ],
+  "group_alert": [
+    "Alert",
+    "警戒"
+  ],
+  "group_max": [
+    "Maximum",
+    "最高档"
+  ],
+  "group_build_up_tension_low": [
+    "Low build-up",
+    "低压推进"
+  ],
+  "group_build_up_tension": [
+    "Build-up",
+    "逐步升压"
+  ],
+  "group_build_up_tension_high": [
+    "High build-up",
+    "强力升压"
+  ],
+  "group_sustain_tension_peak": [
+    "Hold peak",
+    "维持高峰"
+  ],
+  "group_tension_peak_fade": [
+    "Peak fades",
+    "高峰消退"
+  ],
+  "group_relax": [
+    "Recovery",
+    "恢复"
+  ],
+  "group_ambush_horde": [
+    "Ambush horde",
+    "伏击尸潮"
+  ],
+  "group_far_vector_horde": [
+    "Distant horde",
+    "远端尸潮"
+  ],
+  "group_far_distance_horde": [
+    "Long-range horde",
+    "长距尸潮"
+  ],
+  "group_flood_horde": [
+    "Continuous flood",
+    "持续涌入"
+  ],
+  "group_trickle_horde": [
+    "Trickle wave",
+    "小股潮"
+  ],
+  "group_all": [
+    "All candidates",
+    "全部候选"
+  ],
+  "group_disablers": [
+    "Disabling specialists",
+    "控制型特感"
+  ],
+  "group_scramblers": [
+    "Disrupting specialists",
+    "干扰型特感"
+  ],
+  "group_monsters": [
+    "Monsters",
+    "怪物"
+  ],
+  "group_hordes": [
+    "Hordes",
+    "尸潮"
+  ],
+  "group_specials": [
+    "Specialists",
+    "特感"
+  ],
+  "group_roamers": [
+    "Roamers",
+    "驻军"
+  ],
+  "group_auto_events": [
+    "Automatic events",
+    "自动事件"
+  ],
+  "group_conditions": [
+    "Required conditions",
+    "必要条件"
+  ],
+  "group_high_chance_conditions": [
+    "Higher-chance conditions",
+    "提高概率的条件"
+  ],
+  "group_left": [
+    "Left",
+    "左侧"
+  ],
+  "group_right": [
+    "Right",
+    "右侧"
+  ],
+  "group_ahead": [
+    "Ahead",
+    "前方"
+  ],
+  "group_behind": [
+    "Behind",
+    "后方"
+  ],
+  "group_resistance_templates": [
+    "Resistance branches",
+    "抗性分档"
+  ],
+  "group_challenge_templates": [
+    "Challenge branches",
+    "挑战分档"
+  ],
+  "group_init_modify_pacing": [
+    "Initial pacing modifiers",
+    "初始节奏修正"
+  ],
+  "group_modify_pacing": [
+    "Pacing modifiers",
+    "节奏修正"
+  ],
+  "group_extra_trickle": [
+    "Additional trickle encounters",
+    "额外小股潮"
+  ],
+  "group_limits": [
+    "Population limits",
+    "人数与类别限制"
+  ],
+  "group_horde_setup": [
+    "Attack wave plan",
+    "攻势波次安排"
+  ],
+  "group_trickle_horde_templates": [
+    "Additional trickle patterns",
+    "额外小股潮模式"
+  ],
+  "group_faction_composition": [
+    "Composition by faction",
+    "按阵营分配编成"
+  ],
+  "group_boss_patrols": [
+    "Elite patrol encounters",
+    "精英巡逻遭遇"
+  ],
+  "group_breed_lists": [
+    "Member lists",
+    "成员编成列表"
+  ],
+  "group_melee": [
+    "Melee enemies",
+    "近战敌人"
+  ],
+  "group_ranged": [
+    "Ranged enemies",
+    "远程敌人"
+  ],
+  "group_ranged_push_from_behind": [
+    "Ranged pressure from behind",
+    "后方远程压迫"
+  ],
+  "group_default": [
+    "Default setup",
+    "默认设置"
+  ],
+  "group_heat_stages": [
+    "Heat stages",
+    "热度阶段"
+  ],
+  "group_spread_ambush": [
+    "Dispersed ambush",
+    "分散伏击"
+  ],
+  "group_ranged_trickle_forward_horde_push_from_behind": [
+    "Ranged trickle with rear horde",
+    "远程小股前压与后方尸潮"
+  ],
+  "group_coordinated_special_attack": [
+    "Linked specialist attack",
+    "联动特感攻击"
+  ],
+  "group_elite_roamer_mix_vector": [
+    "Mixed elite and roamer attack",
+    "精英与驻军混合攻势"
+  ],
+  "group_push_from_behind": [
+    "Rear attack",
+    "后方攻势"
+  ],
+  "group_override_roamer_packs": [
+    "Roamer pack replacements",
+    "驻军敌群替换"
+  ],
+  "group_ramp_up_frequency_modifiers": [
+    "Escalation frequency factors",
+    "持续加压频率系数"
+  ],
+  "group_sandwich": [
+    "Attack from both directions",
+    "前后夹击"
+  ],
+  "group_elite_coordinated_special_attack": [
+    "Elite and specialist attack",
+    "精英与特感协同"
+  ],
+  "group_long_horde": [
+    "Extended horde",
+    "持续尸潮"
+  ],
+  "group_next_conditions": [
+    "Conditions to advance",
+    "进入下一阶段的条件"
+  ],
+  "group_elite_sandwich_waves": [
+    "Elite waves from both directions",
+    "精英前后夹击波次"
+  ],
+  "group_roamer_slot_placement_settings": [
+    "Roamer formation positions",
+    "驻军队形位置"
+  ],
+  "group_circle_placement": [
+    "Circular formation",
+    "环形队形"
+  ],
+  "group_elite_spread_ambush": [
+    "Dispersed elite ambush",
+    "分散精英伏击"
+  ],
+  "group_override_trickle_horde_compositions": [
+    "Trickle composition replacements",
+    "小股潮编成替换"
+  ],
+  "group_trickle_horde_overrides": [
+    "Trickle overrides",
+    "小股潮覆盖"
+  ],
+  "group_blockade_push_sandwich": [
+    "Blockade and flank attack",
+    "封锁推进与前后夹击"
+  ],
+  "group_houndmaster_strike": [
+    "Houndmaster attack",
+    "训犬师攻势"
+  ],
+  "group_elite_captain_ambush": [
+    "Elite and captain ambush",
+    "精英与队长伏击"
+  ],
+  "group_back_conditions": [
+    "Conditions to step back",
+    "退回上一阶段的条件"
+  ],
+  "group_special_config": [
+    "Specialist settings",
+    "特感设置"
+  ],
+  "group_spawners": [
+    "Spawn points",
+    "出生点"
+  ],
+  "group_template": [
+    "Encounter settings",
+    "遭遇设置"
+  ],
+  "group_breed_names": [
+    "Enemy candidates",
+    "敌人候选"
+  ],
+  "group_specials_monster_spawn_config": [
+    "Monster replacements for specialists",
+    "特感替换怪物"
+  ],
+  "group_terror_events": [
+    "Mission combat events",
+    "任务战斗事件"
+  ],
+  "group_trickle_hordes": [
+    "Trickle waves",
+    "小股潮"
+  ],
+  "group_override_all_roamer_packs": [
+    "All roamer pack replacements",
+    "全部驻军敌群替换"
+  ],
+  "group_flood_fill": [
+    "Navigable formation area",
+    "可行走队形区域"
+  ],
+  "group_extraction_wait_timings": [
+    "Extraction waiting stages",
+    "撤离等待阶段"
+  ],
+  "group_spawn_settings": [
+    "Spawn settings",
+    "生成设置"
+  ],
+  "group_heat_lookups": [
+    "Heat scaling tables",
+    "热度调节表"
+  ],
+  "group_heat_stage_per_location": [
+    "Heat by location",
+    "各区域热度"
+  ],
+  "group_excluded_breed_tags": [
+    "Excluded enemy categories",
+    "排除的敌人类别"
+  ],
+  "group_flamer": [
+    "Faction flamer",
+    "当前阵营喷火兵"
+  ],
+  "group_grenadier": [
+    "Faction bomber",
+    "当前阵营投弹手"
+  ],
+  "group_gunner": [
+    "Faction gunner",
+    "当前阵营机枪手"
+  ],
+  "group_shotgunner": [
+    "Faction shotgunner",
+    "当前阵营霰弹枪兵"
+  ],
+  "group_rager": [
+    "Faction rager",
+    "当前阵营狂战士"
+  ],
+  "recheck_conditions": [
+    "Continue checking conditions after the first member arrives",
+    "首名成员到场后，继续逐项检查附加条件"
+  ],
+  "condition_horde_active": [
+    "A native horde is being generated",
+    "原版尸潮正在生成"
+  ],
+  "condition_horde_idle": [
+    "No native horde is being generated",
+    "当前没有原版尸潮生成"
+  ],
+  "saved_invalid": [
+    "Stored HED settings were invalid. Defaults are active; the saved data has not been overwritten.",
+    "已保存的 HED 设置无效，当前使用默认设置；原保存数据尚未被覆盖。"
+  ],
+  "navigation_required": [
+    "Extra encounters need the current Havoc Condition Manager with shared navigation support. Update HCM and restart the game.",
+    "额外编队需要带共享寻路支持的当前 HCM。请更新 HCM 并重新启动游戏。"
+  ]
+}

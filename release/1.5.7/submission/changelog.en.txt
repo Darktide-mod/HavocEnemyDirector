@@ -1,0 +1,6 @@
+Version 1.5.7
+
+- Deleted custom generator numbers are now reused, starting with the lowest free number. Surviving generators keep their IDs; old saved counters are recalculated automatically.
+- Added an Add unit selection menu and per-row add/remove buttons. Added units start at weight 1. Removing a unit affects only the current pool; global bans remain separate.
+- Unit selection respects category, forced faction and condition replacement rules. Removed units cannot return through a source unit that conditions replace with them.
+- Reused IDs start without deleted overrides. Updated English, Simplified Chinese and Traditional Chinese controls and offline UI previews. Changes apply next mission.

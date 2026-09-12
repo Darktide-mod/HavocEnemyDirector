@@ -1,0 +1,32 @@
+{
+  "api": {
+    "major": 1,
+    "min_minor": 0
+  },
+  "definitions": "definitions.json",
+  "files": [
+    "definitions.json",
+    "lua/main.lua",
+    "lua/helpers.lua",
+    "resources/amount.txt"
+  ],
+  "format": "Darktide.DIY.Package",
+  "id": "lua-mortis-example",
+  "kind": "mortis",
+  "name": {
+    "en": "Lua training",
+    "zh-cn": "Lua 训练",
+    "zh-tw": "Lua 訓練"
+  },
+  "package_version": "1.0.0",
+  "shared_signals": [],
+  "version": 2,
+  "entrypoint": "lua/main.lua",
+  "capabilities": [
+    "effects.v1",
+    "actions.v1",
+    "resources.v1",
+    "modules.v1",
+    "cleanup.v1"
+  ]
+}

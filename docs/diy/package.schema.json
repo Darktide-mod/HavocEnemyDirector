@@ -1,0 +1,254 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "Darktide.DIY.Package"
+    },
+    "version": {
+      "const": 2
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 64,
+      "pattern": "^[a-z][a-z0-9_-]*$"
+    },
+    "entry_namespace": {
+      "type": "string",
+      "maxLength": 64,
+      "pattern": "^[a-z][a-z0-9_-]*$"
+    },
+    "package_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,3})\\.(0|[1-9][0-9]{0,3})\\.(0|[1-9][0-9]{0,3})$"
+    },
+    "name": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "en": {
+              "type": "string"
+            },
+            "zh-cn": {
+              "type": "string"
+            },
+            "zh-tw": {
+              "type": "string"
+            }
+          },
+          "required": [],
+          "anyOf": [
+            {
+              "required": [
+                "en"
+              ]
+            },
+            {
+              "required": [
+                "zh-cn"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "en": {
+              "type": "string"
+            },
+            "zh-cn": {
+              "type": "string"
+            },
+            "zh-tw": {
+              "type": "string"
+            }
+          },
+          "required": [],
+          "anyOf": [
+            {
+              "required": [
+                "en"
+              ]
+            },
+            {
+              "required": [
+                "zh-cn"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "author": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "kind": {
+      "enum": [
+        "mortis",
+        "conditions"
+      ]
+    },
+    "api": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "major": {
+          "const": 1
+        },
+        "min_minor": {
+          "const": 0
+        }
+      },
+      "required": [
+        "major",
+        "min_minor"
+      ]
+    },
+    "definitions": {
+      "const": "definitions.json"
+    },
+    "entrypoint": {
+      "type": "string",
+      "pattern": "^lua/.+\\.lua$"
+    },
+    "files": {
+      "type": "array",
+      "maxItems": 256,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "maxLength": 192,
+        "pattern": "^(definitions\\.json|lua/.+\\.lua|resources/.+)$"
+      },
+      "contains": {
+        "const": "definitions.json"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "min_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]{0,3})\\.(0|[1-9][0-9]{0,3})\\.(0|[1-9][0-9]{0,3})$"
+          },
+          "before_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]{0,3})\\.(0|[1-9][0-9]{0,3})\\.(0|[1-9][0-9]{0,3})$"
+          }
+        },
+        "required": [
+          "id",
+          "min_version"
+        ]
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "maxLength": 64,
+        "pattern": "^[a-z][a-z0-9_-]*$"
+      }
+    },
+    "requires_mods": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[A-Za-z0-9_-]+$"
+          },
+          "api_major": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "optional": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "actions.v1",
+          "effects.v1",
+          "events.v1",
+          "resources.v1",
+          "modules.v1",
+          "cleanup.v1",
+          "native.v1"
+        ]
+      }
+    },
+    "shared_signals": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "maxLength": 64,
+        "pattern": "^[a-z][a-z0-9_-]*$"
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[A-Za-z0-9_-]+\\.[A-Za-z0-9_.-]+$"
+      }
+    }
+  },
+  "required": [
+    "format",
+    "version",
+    "id",
+    "package_version",
+    "name",
+    "kind",
+    "api",
+    "definitions",
+    "files"
+  ],
+  "title": "Darktide DIY Package v2",
+  "description": "One entry per folder. The Lua runtime requires exactly one entry in definitions.json and additionally validates UTF-8 byte lengths, Windows paths, file inventory and dependency availability. Version 1 aggregate packages remain readable for migration.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "en",
+    "file": "images/01-director.en.png",
+    "kind": "director"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "en",
+    "file": "images/02-number-input.en.png",
+    "kind": "numeric"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "en",
+    "file": "images/03-add-unit.en.png",
+    "kind": "add_unit"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "en",
+    "file": "images/04-native-mode.en.png",
+    "kind": "native"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "en",
+    "file": "images/05-templates.en.png",
+    "kind": "templates"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "en",
+    "file": "images/06-delete-template.en.png",
+    "kind": "delete_template"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-cn",
+    "file": "images/01-director.zh-cn.png",
+    "kind": "director"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-cn",
+    "file": "images/02-number-input.zh-cn.png",
+    "kind": "numeric"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-cn",
+    "file": "images/03-add-unit.zh-cn.png",
+    "kind": "add_unit"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-cn",
+    "file": "images/04-native-mode.zh-cn.png",
+    "kind": "native"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-cn",
+    "file": "images/05-templates.zh-cn.png",
+    "kind": "templates"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-cn",
+    "file": "images/06-delete-template.zh-cn.png",
+    "kind": "delete_template"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-tw",
+    "file": "images/01-director.zh-tw.png",
+    "kind": "director"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-tw",
+    "file": "images/02-number-input.zh-tw.png",
+    "kind": "numeric"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-tw",
+    "file": "images/03-add-unit.zh-tw.png",
+    "kind": "add_unit"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-tw",
+    "file": "images/04-native-mode.zh-tw.png",
+    "kind": "native"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-tw",
+    "file": "images/05-templates.zh-tw.png",
+    "kind": "templates"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-tw",
+    "file": "images/06-delete-template.zh-tw.png",
+    "kind": "delete_template"
+  }
+]

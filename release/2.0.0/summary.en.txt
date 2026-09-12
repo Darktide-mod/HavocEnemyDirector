@@ -1,0 +1,1 @@
+Fine-tune native enemy templates for SoloPlay and Realms through Havoc Condition Manager: numbers, compositions, weights, trigger rules and map seed, with named JSON presets for saving, loading and sharing settings.

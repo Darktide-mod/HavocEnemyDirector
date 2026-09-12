@@ -1,0 +1,62 @@
+{
+  "01-director.en.png": {
+    "en": "Advanced generators and unit pools. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "高级生成器与单位池。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "高階生成器與單位池。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "02-number-input.en.png": {
+    "en": "Direct numeric input. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "数字直接输入。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "數字直接輸入。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "01-director.zh-cn.png": {
+    "en": "Advanced generators and unit pools. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "高级生成器与单位池。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "高階生成器與單位池。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "02-number-input.zh-cn.png": {
+    "en": "Direct numeric input. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "数字直接输入。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "數字直接輸入。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "01-director.zh-tw.png": {
+    "en": "Advanced generators and unit pools. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "高级生成器与单位池。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "高階生成器與單位池。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "02-number-input.zh-tw.png": {
+    "en": "Direct numeric input. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "数字直接输入。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "數字直接輸入。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "03-add-unit.en.png": {
+    "en": "Add units to an empty custom generator. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "为自定义生成器的空池添加单位。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "為自訂生成器的空池新增單位。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "03-add-unit.zh-cn.png": {
+    "en": "Add units to an empty custom generator. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "为自定义生成器的空池添加单位。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "為自訂生成器的空池新增單位。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "03-add-unit.zh-tw.png": {
+    "en": "Add units to an empty custom generator. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "为自定义生成器的空池添加单位。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "為自訂生成器的空池新增單位。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "04-native-mode.en.png": {
+    "en": "Native mode: saved advanced settings are inactive. UI layout render; not a gameplay capture.",
+    "zh-CN": "原版模式：已保存的高级配置置灰、不生效。控件布局渲染，非游戏实拍。",
+    "zh-TW": "原版模式：已儲存的高階設定灰顯、不生效。控制項佈局算繪，非遊戲實拍。"
+  },
+  "04-native-mode.zh-cn.png": {
+    "en": "Native mode: saved advanced settings are inactive. UI layout render; not a gameplay capture.",
+    "zh-CN": "原版模式：已保存的高级配置置灰、不生效。控件布局渲染，非游戏实拍。",
+    "zh-TW": "原版模式：已儲存的高階設定灰顯、不生效。控制項佈局算繪，非遊戲實拍。"
+  },
+  "04-native-mode.zh-tw.png": {
+    "en": "Native mode: saved advanced settings are inactive. UI layout render; not a gameplay capture.",
+    "zh-CN": "原版模式：已保存的高级配置置灰、不生效。控件布局渲染，非游戏实拍。",
+    "zh-TW": "原版模式：已儲存的高階設定灰顯、不生效。控制項佈局算繪，非遊戲實拍。"
+  }
+}

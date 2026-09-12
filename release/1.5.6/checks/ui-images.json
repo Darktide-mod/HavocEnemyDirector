@@ -1,0 +1,38 @@
+[
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "en",
+    "file": "images/01-director.en.png",
+    "kind": "director"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "en",
+    "file": "images/02-number-input.en.png",
+    "kind": "numeric"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-cn",
+    "file": "images/01-director.zh-cn.png",
+    "kind": "director"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-cn",
+    "file": "images/02-number-input.zh-cn.png",
+    "kind": "numeric"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-tw",
+    "file": "images/01-director.zh-tw.png",
+    "kind": "director"
+  },
+  {
+    "mod": "HavocEnemyDirector",
+    "language": "zh-tw",
+    "file": "images/02-number-input.zh-tw.png",
+    "kind": "numeric"
+  }
+]

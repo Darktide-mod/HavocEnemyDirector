@@ -1,0 +1,98 @@
+Packaging variant: performance diagnostics removed; test status and gameplay fixes are unchanged.
+
+1.6.7-test.3 - 2026-09-09
+- Move Buff event capacity into the Advanced director top row, immediately after Total cap, and remove its duplicate Mod Options widget.
+- Keep the existing saved value, default 300, integer range 300-3000, next-mission activation and fixed overflow rejection. Both spawn modes support direct numeric input and held minus/plus buttons.
+- Retain the performance fixes and removable diagnostics; verify translated layout, input limits, native-mode editing, mission isolation and diagnostic-stripped runtime.
+
+1.6.7-test.2 - 2026-09-09
+- Refine capacity diagnostics after on-demand population refresh: cached idle snapshots no longer accumulate time at capacity. Report mission time separately from observed population time.
+- Retain all first-test performance fixes, fixed manual Buff limits and removable diagnostics; rerun the full project and stripped-runtime checks.
+
+1.6.7-test.1 - 2026-09-09
+- Preserve each source spawn type, including weak bosses from special sources; restore the running game challenge-pressure threshold. Player population caps remain configurable.
+- Drain pending batches fairly: at most 24 requested units and two native spawn calls per frame; chunks are 16 common, 4 elite, 2 special or 1 boss. Reserve capacity and release unused work on failure/cancellation.
+- Refresh population only for capacity work; preserve birth/removal accounting, allocated corpses, event tokens, logical horde limits and mission isolation.
+- Add a default-on Performance diagnostics switch for test builds. Summarize sampled phase costs and counters every 30 seconds and at mission end; no per-unit spam.
+- Publishing with -StripDebug removes the diagnostic module, hooks/callers, setting and translations; it does not change test-build status.
+- Offline behavior and stripped-runtime checks pass. Frame-time and total native navigation cost still require in-game comparison.
+
+1.6.6
+- Remove all Buff capacity linkage to enemy multipliers. The default is 300, with direct integer input from 300 to 3000 in HED's Mod Options.
+- Preserve the chosen Buff capacity when changing multipliers, resetting generators or loading templates. Existing saved capacity remains unchanged on upgrade.
+- Keep one fixed capacity per mission, apply edits next mission, and reject requests beyond the chosen limit without automatic growth.
+- Verify the new 3000 boundary, repeated overflow rejection, default and input bounds, multiplier/reset/template independence, native event dispatch and mission isolation.
+- Requires the companion HCM 2.4.17 for native standalone Buff allocation. Fully restart after updating; live gameplay/FPS retesting remains pending.
+
+1.6.5
+- Add Buff event capacity to HED's Mod Options, independently of enemy population limits and native/advanced spawn mode.
+- Default to native capacity (currently 300). Link to 300 times the higher elite/specialist multiplier; common-enemy and Boss multipliers do not affect the value.
+- Allow direct integer input from 300 to 2400. Preserve manual input until the elite/specialist maximum changes, including through loading a template.
+- Fix the chosen capacity for each mission and establish it before native Buff initialization. Reject excess requests immediately; no overflow-triggered growth.
+- Preserve native event dispatch and nested-event order, lazy table allocation within the fixed limit, client behavior and low-frequency diagnostics.
+- Verify 300/600/750/1500/2400 boundaries, repeated overflow rejection, preallocated/lazy rings, nested dispatch, mission changes, linkage and manual values. Pair with HCM 2.4.17 and fully restart; live gameplay/FPS retesting remains pending.
+
+1.6.4
+- Set the public author name to IRONCROWY.
+- No gameplay, UI, settings or saved-data changes.
+
+1.6.3
+- Cache generator previews and unit lists while browsing the editor. Scrolling, filters and dropdowns no longer repeatedly collect native sources and compile the same generators.
+- Invalidate previews on configuration revisions, ordered condition changes, faction, native difficulty tiers and optional weak-Boss pool settings. Read scaling values live.
+- Keep cached replacement resolution private to the preview so unrelated source queries cannot change displayed pool eligibility.
+- Retain native-mode controls, numeric input, template management, actual mission scheduling and all spawn rules.
+- Offline native-source equivalence, cache invalidation, templates, input, three-language and aspect-ratio checks passed. Live UI latency and FPS gains have not been measured.
+
+1.6.2
+- Evaluate source challenge, event and player gates only when an enabled generator is due, while retaining travel accumulation and native condition gates.
+- Restore only native special slots actually parked in the current update, avoiding a second full slot scan. Preserve injected, queued and living specials and exception cleanup.
+- Sample with the retail Lua clock instead of frame-latched engine time. Report zero-delta samples as below clock resolution rather than claiming zero runtime cost.
+- Preserve generator settings, templates, pools, caps, multipliers and native spawn effects.
+- Offline native-source scheduling, capacity, injection, cleanup and timing regressions passed. Real-game FPS gains have not been measured.
+
+1.6.1
+
+- Fix template saving failing with “Invalid template setting · generator id” when native reinforcement rules produce IDs containing decimal cooldowns such as 27.5 or 42.5.
+- Accept decimal points and numeric exponent signs in generator IDs without renaming them. Saved parameters, deleted generators and existing template data keep their original IDs. Other identifier and file checks remain in place.
+- Add regression coverage using the reported rule-derived IDs through saving, share export, repeated loading and generator compilation. Local checks passed; no new live-game test was performed.
+
+Update to 1.6.1, fully restart the game and save again. Existing generator settings do not need to be rebuilt.
+
+1.6.0
+
+- Add a template library to Advanced: name and save setups, select and load them, copy share data, or import from the clipboard.
+- Save shareable JSON files in a dedicated folder under the game's configuration directory. Refresh to find received files; updates and Vortex deployment leave this folder separate from mod files.
+- Include generators, pools, bans, capacities, spawn switches, conditions, faction, environment and multipliers. Loading preserves manual values without intermediate multiplier recalculation and applies next mission.
+- Add Delete selected with a modal showing the full template name and filename. Confirm deletes only that file; Cancel or Esc preserves it, and the loaded setup remains unchanged.
+- Confirm overwrites, validate imported data and compatibility, and retain the previous file if replacement fails. Use the native text field with Chinese filenames, paste, Enter and Esc.
+- Add English, Simplified Chinese and Traditional Chinese controls and offline UI renders. File access happens on library actions, with no added gameplay polling. Local regression checks passed; live-game testing remains pending.
+
+1.5.10
+
+- Native mode greys out advanced generators, caps, pools and extra-spawn, map-event and twin switches. Mode and page navigation remain available. Saved advanced settings are retained; effective values are marked inactive.
+- Mode changes cancel number input, held buttons and dropdown editing, and reject stale callbacks. The current mission keeps its starting mode; the next mission uses the saved selection.
+- Verify native pass-through for hordes, specialists, bosses, rituals, map events, replacements, pools and capacity. Stop copying advanced pacing metadata in native mode. HCM conditions and multipliers remain available.
+- Extend the source audit across the condition catalogue and environments. Conflicting native fields retain native precedence; engine-owned implementations are identified separately. Full additive compatibility is not claimed.
+- Full local regression passed. Includes native-mode UI renders in three languages. Live-game and frame-rate testing remain pending.
+
+Version 1.5.9
+
+- Paused ordinary native specialist slots before their update while the advanced director owns spawning. This avoids repeated disabler selection, foreshadow work and failed-spawn telemetry for suppressed slots.
+- Preserved native condition injections, already queued specialists, living-unit cleanup and extra-spawn switches. Temporary slot state is restored after the update, including on errors.
+- Added elapsed-time samples for director ticks and owned-specialist cleanup, each at most once per second, with summaries every thirty seconds and at mission end. These are sampled calls, not whole-game frame timings.
+- Preserved generator configurations, pools, multipliers, capacities and native Buff IDs. Recommended companion: Havoc Condition Manager 2.4.10. Fully exit and restart after updating; live-game FPS improvement remains unmeasured.
+
+Version 1.5.8
+
+- Reused population snapshots and cached breed metadata. Spawns and removals update counts immediately; deleted or paused ambient generators skip population checks.
+- Prepared weighted unit choices once per mission instead of sorting for every draw. Per-unit caps and patrol eligibility remain enforced.
+- Director-created specialists now use the original game's stuck and distance cleanup checks, staggered at up to two checks per frame. Native injections, mission actors, bosses and ritual actors are excluded.
+- Preserved condition effects, saved generators, multipliers, spawn parameters and capacity limits. Added regressions for shared caps, pool selection and native cleanup decisions.
+- Recommended companion: Havoc Condition Manager 2.4.9. Fully exit and restart after updating. No live-game FPS improvement has been measured.
+
+Version 1.5.7
+
+- Deleted custom generator numbers are now reused, starting with the lowest free number. Surviving generators keep their IDs; old saved counters are recalculated automatically.
+- Added an Add unit selection menu and per-row add/remove buttons. Added units start at weight 1. Removing a unit affects only the current pool; global bans remain separate.
+- Unit selection respects category, forced faction and condition replacement rules. Removed units cannot return through a source unit that conditions replace with them.
+- Reused IDs start without deleted overrides. Updated English, Simplified Chinese and Traditional Chinese controls and offline UI previews. Changes apply next mission.

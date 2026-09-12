@@ -1,0 +1,92 @@
+{
+  "01-director.en.png": {
+    "en": "Advanced generators and unit pools. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "高级生成器与单位池。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "高階生成器與單位池。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "02-number-input.en.png": {
+    "en": "Direct numeric input. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "数字直接输入。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "數字直接輸入。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "01-director.zh-cn.png": {
+    "en": "Advanced generators and unit pools. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "高级生成器与单位池。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "高階生成器與單位池。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "02-number-input.zh-cn.png": {
+    "en": "Direct numeric input. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "数字直接输入。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "數字直接輸入。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "01-director.zh-tw.png": {
+    "en": "Advanced generators and unit pools. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "高级生成器与单位池。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "高階生成器與單位池。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "02-number-input.zh-tw.png": {
+    "en": "Direct numeric input. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "数字直接输入。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "數字直接輸入。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "03-add-unit.en.png": {
+    "en": "Add units to an empty custom generator. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "为自定义生成器的空池添加单位。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "為自訂生成器的空池新增單位。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "03-add-unit.zh-cn.png": {
+    "en": "Add units to an empty custom generator. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "为自定义生成器的空池添加单位。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "為自訂生成器的空池新增單位。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "03-add-unit.zh-tw.png": {
+    "en": "Add units to an empty custom generator. UI layout render with sample values; not an in-game screenshot.",
+    "zh-CN": "为自定义生成器的空池添加单位。根据控件布局渲染，采用示例配置，非游戏实拍。",
+    "zh-TW": "為自訂生成器的空池新增單位。根據控制元件佈局渲染，採用示例配置，非遊戲實拍。"
+  },
+  "04-native-mode.en.png": {
+    "en": "Native mode: saved advanced settings are inactive. UI layout render; not a gameplay capture.",
+    "zh-CN": "原版模式：已保存的高级配置置灰、不生效。控件布局渲染，非游戏实拍。",
+    "zh-TW": "原版模式：已儲存的高階設定灰顯、不生效。控制項佈局算繪，非遊戲實拍。"
+  },
+  "04-native-mode.zh-cn.png": {
+    "en": "Native mode: saved advanced settings are inactive. UI layout render; not a gameplay capture.",
+    "zh-CN": "原版模式：已保存的高级配置置灰、不生效。控件布局渲染，非游戏实拍。",
+    "zh-TW": "原版模式：已儲存的高階設定灰顯、不生效。控制項佈局算繪，非遊戲實拍。"
+  },
+  "04-native-mode.zh-tw.png": {
+    "en": "Native mode: saved advanced settings are inactive. UI layout render; not a gameplay capture.",
+    "zh-CN": "原版模式：已保存的高级配置置灰、不生效。控件布局渲染，非游戏实拍。",
+    "zh-TW": "原版模式：已儲存的高階設定灰顯、不生效。控制項佈局算繪，非遊戲實拍。"
+  },
+  "05-templates.en.png": {
+    "en": "Player template library: name, save, load and share setups. Offline UI render with sample configurations.",
+    "zh-CN": "玩家模板库：命名、保存、加载与分享配置。使用示例配置的离线UI渲染。",
+    "zh-TW": "玩家範本庫：命名、儲存、載入與分享設定。使用範例設定的離線UI算繪。"
+  },
+  "05-templates.zh-cn.png": {
+    "en": "Player template library: name, save, load and share setups. Offline UI render with sample configurations.",
+    "zh-CN": "玩家模板库：命名、保存、加载与分享配置。使用示例配置的离线UI渲染。",
+    "zh-TW": "玩家範本庫：命名、儲存、載入與分享設定。使用範例設定的離線UI算繪。"
+  },
+  "05-templates.zh-tw.png": {
+    "en": "Player template library: name, save, load and share setups. Offline UI render with sample configurations.",
+    "zh-CN": "玩家模板库：命名、保存、加载与分享配置。使用示例配置的离线UI渲染。",
+    "zh-TW": "玩家範本庫：命名、儲存、載入與分享設定。使用範例設定的離線UI算繪。"
+  },
+  "06-delete-template.en.png": {
+    "en": "Delete confirmation displays the full template name and filename. Offline UI render with a sample configuration.",
+    "zh-CN": "删除确认弹窗显示完整模板名和文件名。使用示例配置的离线UI渲染。",
+    "zh-TW": "刪除確認彈窗顯示完整範本名稱及檔名。使用範例設定的離線UI算繪。"
+  },
+  "06-delete-template.zh-cn.png": {
+    "en": "Delete confirmation displays the full template name and filename. Offline UI render with a sample configuration.",
+    "zh-CN": "删除确认弹窗显示完整模板名和文件名。使用示例配置的离线UI渲染。",
+    "zh-TW": "刪除確認彈窗顯示完整範本名稱及檔名。使用範例設定的離線UI算繪。"
+  },
+  "06-delete-template.zh-tw.png": {
+    "en": "Delete confirmation displays the full template name and filename. Offline UI render with a sample configuration.",
+    "zh-CN": "删除确认弹窗显示完整模板名和文件名。使用示例配置的离线UI渲染。",
+    "zh-TW": "刪除確認彈窗顯示完整範本名稱及檔名。使用範例設定的離線UI算繪。"
+  }
+}

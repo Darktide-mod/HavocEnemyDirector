@@ -1,0 +1,1 @@
+Build enemy formations and independent deployment rules, adjust native templates and adaptive pressure, and link DIY conditions or talents to bounded reinforcements and signals. For SoloPlay and Realms; requires Havoc Condition Manager.

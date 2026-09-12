@@ -1,0 +1,577 @@
+{
+  "source_commit": "0f0cb45991e9305ef4a7b925370792d7d6035f95",
+  "events": {
+    "on_action_start": {
+      "action_name": "string",
+      "action_settings": "table"
+    },
+    "on_action_finish": {
+      "action_name": "string",
+      "action_settings": "table",
+      "charge_level": "number"
+    },
+    "on_ammo_consumed": {
+      "ammo_usage": "number",
+      "charged_ammo": "bool",
+      "is_critical_strike": "bool",
+      "is_leadbelcher_shot": "bool",
+      "num_shots_fired": "number",
+      "saved_ammo": "number",
+      "t": "number"
+    },
+    "on_ammo_pickup": {
+      "new_ammo_amount": "number",
+      "pickup_amount": "number",
+      "pickup_name": "string"
+    },
+    "on_deployable_placed": {
+      "deployable_name": "string",
+      "life_time": "number",
+      "position": "Vector3"
+    },
+    "on_warp_fire_applied": {
+      "buff_name": "string",
+      "buffed_unit": "unit",
+      "buffer_unit": "unit"
+    },
+    "on_coherency_enter": {
+      "enter_unit": "unit",
+      "number_of_unit_in_coherency": "unit"
+    },
+    "on_coherency_exit": {
+      "exit_unit": "unit",
+      "number_of_unit_in_coherency": "unit"
+    },
+    "on_combat_ability": {
+      "unit": "unit",
+      "warp_charge_percent": "number"
+    },
+    "on_combat_ability_charge_replenished": {
+      "num_charges_gained": "number",
+      "unit": "unit"
+    },
+    "on_combat_ability_charge_consumed": {
+      "num_charges_consumed": "number",
+      "unit": "unit"
+    },
+    "on_player_assist_done": {
+      "assist_type": "string",
+      "assisted_unit": "unit",
+      "interactor_unit": "unit"
+    },
+    "on_player_companion_spawn": {
+      "companion_breed_name": "string",
+      "companion_unit": "unit",
+      "owner_unit": "unit"
+    },
+    "on_player_companion_pounce": {
+      "companion_breed": "string",
+      "companion_unit": "unit",
+      "owner_unit": "unit",
+      "pounced_unit": "unit",
+      "target_unit_breed_name": "string"
+    },
+    "on_player_companion_pounce_finish": {
+      "companion_breed": "string",
+      "companion_unit": "unit",
+      "owner_unit": "unit",
+      "pounced_unit": "unit",
+      "reason": "string",
+      "target_unit_breed_name": "string"
+    },
+    "on_player_companion_knock_away": {
+      "companion_breed": "string",
+      "companion_unit": "unit",
+      "owner_unit": "unit",
+      "target_unit_breed_name": "string"
+    },
+    "on_grenade_thrown": {
+      "unit": "unit"
+    },
+    "on_grenade_ability_charge_replenished": {
+      "num_charges_gained": "number",
+      "unit": "unit"
+    },
+    "on_grenade_ability_charge_consumed": {
+      "num_charges_consumed": "number",
+      "unit": "unit"
+    },
+    "on_player_projectile_finished": {
+      "impact_hit": "bool",
+      "num_impact_hit_elite": "number",
+      "num_impact_hit_kill": "number",
+      "num_impact_hit_minion": "number",
+      "num_impact_hit_special": "number",
+      "num_impact_hit_weakspot": "number",
+      "projectile_name": "string"
+    },
+    "on_player_grenade_exploded": {
+      "item_name": "string",
+      "owner_unit": "unit",
+      "position": "Vector3",
+      "projectile_template": "table",
+      "triggered_on_impact": "bool"
+    },
+    "on_projectile_stick": {
+      "owner_unit": "unit",
+      "projectile_template_name": "string",
+      "projectile_unit": "unit",
+      "target_unit": "unit"
+    },
+    "on_critical_strike": {
+      "attack_type": "string",
+      "attacking_unit": "unit"
+    },
+    "on_damage_taken": {
+      "attack_type": "string",
+      "attacked_unit": "unit",
+      "attacking_unit": "unit",
+      "attacking_unit_owner_unit": "unit",
+      "damage_amount": "number",
+      "damage_profile_name": "string",
+      "permanent_damage": "number",
+      "toughness_damage_amount": "number",
+      "will_die": "bool"
+    },
+    "on_minion_damage_taken": {
+      "attack_type": "string",
+      "attacked_unit": "unit",
+      "attacking_unit": "unit",
+      "attacking_unit_owner_unit": "unit",
+      "damage_amount": "number",
+      "damage_profile_name": "string",
+      "keywords_on_death_or_nil": "table",
+      "permanent_damage": "number"
+    },
+    "on_dodge_start": {},
+    "on_dodge_end": {},
+    "on_explosion_hit": {
+      "attack_instigator_unit": "unit",
+      "attacking_unit": "unit",
+      "charge_level": "number",
+      "explosion_template_name": "string",
+      "item_slot_origin": "string",
+      "number_of_hit_units": "number",
+      "weapon_special": "bool"
+    },
+    "on_lunge_aim_start": {},
+    "on_lunge_aim_end": {},
+    "on_lunge_start": {
+      "lunge_direction": "Vector3",
+      "lunge_template_name": "string",
+      "lunging_unit": "unit"
+    },
+    "on_lunge_end": {
+      "last_hit_unit": "unit",
+      "lunge_direction": "Vector3",
+      "lunge_template_name": "string",
+      "lunging_unit": "unit"
+    },
+    "on_slide_start": {},
+    "on_slide_end": {},
+    "on_healing_taken": {
+      "heal_amount": "number",
+      "heal_type": "string"
+    },
+    "on_pellet_hits": {
+      "attacked_unit": "unit",
+      "damage": "number",
+      "is_critical_strike": "bool",
+      "max_number_of_pellets": "number",
+      "number_of_pellets_hit": "number"
+    },
+    "on_psyker_shout_finish": {
+      "num_hits": "number"
+    },
+    "on_psyker_shout_hit_ally": {
+      "ally_unit": "unit"
+    },
+    "on_ogryn_shout": {
+      "num_hits": "number"
+    },
+    "on_hit": {
+      "actual_damage_dealt": "number",
+      "alternative_fire": "bool",
+      "attack_direction": "Vector3",
+      "attack_instigator_unit": "unit",
+      "attack_instigator_unit_breed_name": "string",
+      "attack_result": "string",
+      "attack_type": "string",
+      "attacked_unit": "unit",
+      "attacking_unit": "unit",
+      "attacking_unit_breed_name": "string",
+      "breed_name": "string",
+      "charge_level": "number",
+      "close_explosion_hit": "bool",
+      "damage": "number",
+      "damage_efficiency": "string",
+      "damage_profile": "table",
+      "damage_type": "string",
+      "hit_weakspot": "bool",
+      "hit_world_position": "Vector3",
+      "hit_zone_name": "string",
+      "is_backstab": "bool",
+      "is_critical_strike": "bool",
+      "is_instakill": "bool",
+      "melee_attack_strength": "string",
+      "one_hit_kill": "bool",
+      "overkill_damage": "number",
+      "stagger_result": "string",
+      "sticky_attack": "bool",
+      "tags": "table",
+      "target_index": "number",
+      "weapon_special": "bool"
+    },
+    "on_bleed_on_activated_hit_trait_hit": {
+      "actual_damage_dealt": "number",
+      "alternative_fire": "bool",
+      "attack_direction": "Vector3",
+      "attack_instigator_unit": "unit",
+      "attack_instigator_unit_breed_name": "string",
+      "attack_result": "string",
+      "attack_type": "string",
+      "attacked_unit": "unit",
+      "attacking_unit": "unit",
+      "attacking_unit_breed_name": "string",
+      "breed_name": "string",
+      "charge_level": "number",
+      "close_explosion_hit": "bool",
+      "damage": "number",
+      "damage_efficiency": "string",
+      "damage_profile": "table",
+      "damage_type": "string",
+      "hit_weakspot": "bool",
+      "hit_world_position": "Vector3",
+      "hit_zone_name": "string",
+      "is_backstab": "bool",
+      "is_critical_strike": "bool",
+      "is_instakill": "bool",
+      "melee_attack_strength": "string",
+      "one_hit_kill": "bool",
+      "overkill_damage": "number",
+      "stagger_result": "string",
+      "sticky_attack": "bool",
+      "tags": "table",
+      "target_index": "number",
+      "weapon_special": "bool"
+    },
+    "on_direct_flamer_hit": {},
+    "on_kill": {
+      "alternative_fire": "bool",
+      "attack_direction": "Vector3",
+      "attack_instigator_unit": "unit",
+      "attack_instigator_unit_breed_name": "string",
+      "attack_result": "string",
+      "attack_type": "string",
+      "attacked_unit": "unit",
+      "attacked_unit_position": "Vector3",
+      "attacking_unit": "unit",
+      "attacking_unit_breed_name": "string",
+      "breed_name": "string",
+      "charge_level": "number",
+      "close_explosion_hit": "bool",
+      "damage": "number",
+      "damage_efficiency": "string",
+      "damage_type": "string",
+      "hit_weakspot": "bool",
+      "hit_world_position": "Vector3",
+      "is_backstab": "bool",
+      "is_critical_strike": "bool",
+      "is_instakill": "bool",
+      "melee_attack_strength": "string",
+      "one_hit_kill": "bool",
+      "overkill_damage": "number",
+      "stagger_result": "string",
+      "sticky_attack": "bool",
+      "tags": "table",
+      "target_index": "number",
+      "weapon_special": "bool"
+    },
+    "on_damage_dealt": {
+      "actual_damage_dealt": "number",
+      "alternative_fire": "bool",
+      "attack_direction": "Vector3",
+      "attack_instigator_unit": "unit",
+      "attack_result": "string",
+      "attack_type": "string",
+      "attacked_unit": "unit",
+      "attacking_unit": "unit",
+      "breed_name": "string",
+      "charge_level": "number",
+      "close_explosion_hit": "bool",
+      "damage": "number",
+      "damage_efficiency": "string",
+      "damage_profile_name": "string",
+      "damage_type": "string",
+      "hit_weakspot": "bool",
+      "hit_world_position": "Vector3",
+      "is_backstab": "bool",
+      "is_critical_strike": "bool",
+      "melee_attack_strength": "string",
+      "one_hit_kill": "bool",
+      "stagger_result": "string",
+      "sticky_attack": "bool",
+      "tags": "table",
+      "target_index": "number",
+      "weapon_special": "bool"
+    },
+    "on_player_hit_received": {
+      "alternative_fire": "bool",
+      "attack_direction": "Vector3",
+      "attack_instigator_unit": "unit",
+      "attack_type": "string",
+      "attacked_unit": "unit",
+      "attacking_unit": "unit",
+      "close_explosion_hit": "bool",
+      "damage": "number",
+      "damage_absorbed": "number",
+      "damage_efficiency": "string",
+      "damage_type": "string",
+      "hit_weakspot": "bool",
+      "is_backstab": "bool",
+      "is_critical_strike": "bool",
+      "melee_attack_strength": "string",
+      "permanent_damage": "number",
+      "result": "string",
+      "sticky_attack": "bool"
+    },
+    "on_death": {
+      "attack_type": "string",
+      "attacking_unit": "unit",
+      "breed_name": "string",
+      "damage_profile_name": "string",
+      "damage_type": "string",
+      "dying_unit": "unit",
+      "position": "Vector3",
+      "side_name": "string",
+      "tags": "table"
+    },
+    "on_minion_death": {
+      "attack_type": "string",
+      "attacking_unit": "unit",
+      "breed_name": "string",
+      "damage_profile_name": "string",
+      "damage_type": "string",
+      "dying_unit": "unit",
+      "position": "Vector3",
+      "side_name": "string",
+      "tags": "table"
+    },
+    "on_bleeding_minion_death": {
+      "attack_type": "string",
+      "attacking_unit": "unit",
+      "bleed_stacks": "number",
+      "breed_name": "string",
+      "damage_profile_name": "string",
+      "damage_type": "string",
+      "dying_unit": "unit",
+      "position": "Vector3",
+      "side_name": "string",
+      "tags": "table"
+    },
+    "on_push_hit": {
+      "pushed_unit": "unit",
+      "pushing_unit": "unit",
+      "stagger_result": "string"
+    },
+    "on_push_finish": {
+      "num_hit_units": "number"
+    },
+    "on_block": {
+      "attack_type": "string",
+      "attacking_unit": "unit",
+      "block_broken": "bool",
+      "block_cost": "number"
+    },
+    "on_perfect_block": {
+      "action_name": "string",
+      "attacking_unit": "unit",
+      "block_broken": "bool",
+      "block_cost": "number"
+    },
+    "on_coherency_player_block_broken_server": {
+      "attack_type": "string",
+      "attacking_unit": "unit",
+      "player_unit": "unit"
+    },
+    "on_reload": {
+      "shotgun": "bool",
+      "weapon_template": "table"
+    },
+    "on_reload_start": {
+      "shotgun": "bool",
+      "weapon_template": "table"
+    },
+    "on_reload_finished": {
+      "shotgun": "bool",
+      "weapon_template": "table"
+    },
+    "on_shoot_start": {},
+    "on_shoot": {
+      "attacked_unit": "unit",
+      "attacking_unit": "unit",
+      "combo_count": "number",
+      "hit_all_pellets": "bool",
+      "hit_all_pellets_on_same": "bool",
+      "hit_weakspot": "bool",
+      "is_critical_strike": "bool",
+      "num_hit_units": "number",
+      "num_shots_fired": "number"
+    },
+    "on_shoot_projectile": {
+      "attacking_unit": "unit",
+      "combo_count": "number",
+      "num_shots_fired": "number",
+      "projectile_template_name": "string"
+    },
+    "on_shoot_finish": {},
+    "on_action_damage_target": {
+      "attacked_unit": "unit",
+      "attacking_unit": "unit",
+      "damage_type": "string"
+    },
+    "on_ranged_dodge": {},
+    "on_sprint_dodge": {},
+    "on_sprint_ended": {},
+    "on_sprint_started": {},
+    "on_stamina_depleted": {
+      "unit": "unit"
+    },
+    "on_successful_dodge": {
+      "attack_type": "string",
+      "attacking_unit": "unit",
+      "dodge_type": "string",
+      "dodging_unit": "unit"
+    },
+    "on_weapon_special_activate": {
+      "num_special_charges": "number",
+      "t": "number"
+    },
+    "on_weapon_special_deactivate": {
+      "t": "number"
+    },
+    "on_wield": {
+      "weapon_template": "table"
+    },
+    "on_wield_ranged": {
+      "previously_wielded_slot": "string",
+      "weapon_template": "table"
+    },
+    "on_wield_melee": {
+      "previously_wielded_slot": "string",
+      "weapon_template": "table"
+    },
+    "on_sweep_start": {
+      "combo_count": "number",
+      "is_auto_completed": "bool",
+      "is_chain_action": "bool",
+      "is_heavy": "bool",
+      "is_weapon_special_active": "bool"
+    },
+    "on_sweep_finish": {
+      "combo_count": "number",
+      "hit_weakspot": "bool",
+      "is_heavy": "bool",
+      "num_hit_units": "number"
+    },
+    "on_windup_start": {
+      "combo_count": "number"
+    },
+    "on_windup_trigger": {},
+    "on_side_mission_objective_complete": {
+      "unit": "unit"
+    },
+    "on_all_grimoires_picked_up": {
+      "unit": "unit"
+    },
+    "on_tag_unit": {
+      "tag_name": "string",
+      "tagger_unit": "unit",
+      "unit": "unit"
+    },
+    "on_untag_unit": {
+      "tagger_unit": "unit",
+      "unit": "unit"
+    },
+    "on_revive": {
+      "target_unit": "unit",
+      "unit": "unit"
+    },
+    "on_rescue": {
+      "target_unit": "unit",
+      "unit": "unit"
+    },
+    "on_pull_up": {
+      "target_unit": "unit",
+      "unit": "unit"
+    },
+    "on_remove_net": {
+      "target_unit": "unit",
+      "unit": "unit"
+    },
+    "on_ally_knocked_down": {
+      "downed_unit": "unit"
+    },
+    "on_player_toughness_broken": {
+      "unit": "unit"
+    },
+    "on_alternative_fire_start": {
+      "unit": "unit"
+    },
+    "on_chain_lightning_start": {
+      "unit": "unit"
+    },
+    "on_chain_lightning_finish": {
+      "unit": "unit"
+    },
+    "on_chain_lightning_jump": {
+      "unit": "unit"
+    },
+    "on_weapon_chain_lightning_triggered": {},
+    "on_psyker_force_field_equip": {},
+    "on_psyker_force_field_unequip": {},
+    "on_unit_touch_force_field": {
+      "force_field_owner_unit": "unit",
+      "force_field_unit": "unit",
+      "is_player_unit": "bool",
+      "passing_unit": "unit"
+    },
+    "on_unit_leave_force_field": {
+      "force_field_owner_unit": "unit",
+      "force_field_unit": "unit",
+      "is_player_unit": "bool",
+      "passing_unit": "unit"
+    },
+    "on_unit_enter_fog": {
+      "fog_owner_unit": "unit",
+      "target_unit": "unit"
+    },
+    "on_unit_exit_fog": {
+      "fog_owner_unit": "unit",
+      "target_unit": "unit"
+    },
+    "on_warp_charge_changed": {
+      "percentage_change": "number"
+    },
+    "on_syringe_used": {},
+    "on_toughness_replenished": {
+      "amount": "number",
+      "reason": "string",
+      "recovered_amount": "number"
+    },
+    "on_overheat_lockout": {},
+    "on_overheat_soft_lockout": {},
+    "on_buff_added": {
+      "template_name": "string",
+      "unit": "unit"
+    },
+    "on_buff_stack_added": {
+      "template_name": "string",
+      "unit": "unit"
+    },
+    "on_max_stack_refresh_buff": {
+      "template_name": "string",
+      "unit": "unit"
+    }
+  }
+}

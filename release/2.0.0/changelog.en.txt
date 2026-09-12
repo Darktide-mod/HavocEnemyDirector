@@ -1,0 +1,12 @@
+2.0.0 — Native template redesign
+
+- Replace custom generators with a native-template editor for parameters, compositions, weights and trigger rules.
+- Add eight data-only clauses per rule, native baselines, exact overrides and an optional map seed.
+- Store HCM multipliers and HED edits in validated JSON presets; preserve old files as unsupported legacy formats.
+- Remove custom spawn queues, derived population caps and the previous Buff event-capacity system.
+- Add a two-click reset of all HED edits while retaining HCM settings and preset files.
+- Save edits for the next mission and retain the running mission's initial configuration.
+- Provide English, Simplified Chinese and Traditional Chinese controls and installation documents.
+- Completely remove diagnostics, sampling hooks, switches, translations and diagnostic modules.
+- Validate Lua syntax/imports, native-manager behavior, input controls and package installation layout offline. No live in-game playtest or measured FPS claim is included.
+- Install current companion versions and fully restart the game. For manual upgrades, remove the old mod installation folder first.

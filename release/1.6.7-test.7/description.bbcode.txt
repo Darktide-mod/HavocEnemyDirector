@@ -1,0 +1,199 @@
+[size=5][b]English[/b][/size]
+
+[size=5][b]Havoc Enemy Director[/b][/size]
+
+Build custom enemy encounters for SoloPlay and Realms. Havoc Enemy Director adds an Advanced page to Havoc Condition Manager and groups the selected conditions' native spawn sources into editable generators. In Realms, the host controls the configuration.
+
+[size=4][b]Buff event capacity[/b][/size]
+
+[color=#ff6666]Open Advanced director and use Buff event capacity in the top row, immediately to the right of Total cap. Click the value to enter a number or use the minus/plus buttons. This control remains available in Native mode; there is no separate Buff widget in Mod Options.[/color] This is a per-unit event limit for the local host, separate from enemy population limits. It defaults to 300 and accepts integers from 300 to 3000.
+
+The value is controlled only by this setting. Changing enemy multipliers, resetting generators or loading templates does not change it. The setting is saved separately from generator templates, and an existing saved capacity is retained when updating.
+
+Every unit uses the mission's fixed limit; edits apply next mission. Requests beyond that limit are rejected immediately, with no automatic capacity growth during play. This setting works in native and advanced spawn modes.
+
+Update both companion mods and fully restart the game. HCM alone retains the native 300 limit.
+
+[size=4][b]Generators and unit pools[/b][/size]
+
+[list]
+[*]Edit timed and travel-based generators, ambient enemies and supported event sources. Different behaviors retain separate groups.
+[*]Adjust batch count, interval, travel distance and generator limits independently.
+[*]Add, pause, delete or reset custom generators. Deleted custom numbers can be reused; surviving generators retain their IDs.
+[*]Restore the default generator set derived from the selected conditions.
+[*]Add or remove eligible units, set weights, and apply global bans. Condition-forced factions and replacements constrain the available pool.
+[/list]
+
+Changing conditions rebuilds the default generators to reflect their combined effects. Set conditions and multipliers before making manual generator edits. Changes made during a mission apply to the next mission.
+
+[size=4][b]Multipliers, capacities and number entry[/b][/size]
+
+The highest enemy multiplier supplies the default total capacity: 1× = 240, 2× = 330, 3× = 420, 4× = 510 and 5× = 600. Category capacities scale with their corresponding multipliers and remain editable. Limits control capacity, not guaranteed enemy counts.
+
+Click numbers to type or paste. Enter or clicking elsewhere confirms; Esc cancels. Hold + or − for about 400 ms to begin repeating. Unit selection uses a menu that can open upwards when space is limited.
+
+[size=4][b]Native mode and spawn switches[/b][/size]
+
+Native mode uses the original enemy generators, unit pools and population limits. Advanced generator controls are greyed out; Havoc Condition Manager's conditions and multipliers remain available.
+
+[list]
+[*]Extra spawns controls anti-rush, split-team/loner penalties, heat-based specialist injections and ordinary elite patrols. Condition-required sources retain their own rules.
+[*]Scripted events controls map-event waves and reinforcements while preserving condition effects such as Rotten Armour and rituals, named mission actors and objective logic.
+[*]Twin ambush is a separate switch, enabled by default, for the ambush supplied by Havoc difficulty. It does not control the dedicated Twins mission or twins manually added to a pool.
+[/list]
+
+These switches apply next mission and remain saved through condition edits and generator resets. The DMF switch applies immediately in the hub and next mission during play. With the Director disabled, Havoc Condition Manager can still run independently.
+
+[size=4][b]Player templates[/b][/size]
+
+Open Advanced → Templates to name, save, load and share configurations. Templates include generators, pools, bans, enemy capacities, spawn switches, conditions, faction, environment and multipliers.
+
+Template folder: %APPDATA%/Fatshark/Darktide/HavocEnemyDirector/templates
+
+[list]
+[*]Save the current setup under a name of up to 64 characters. Overwriting requires confirmation.
+[*]Select and load a template after reviewing its summary. Loading applies to the next mission.
+[*]Share a JSON file or copy share data. Import from the clipboard, or place a received file in the folder and refresh the library.
+[*]Delete a selected template only after a confirmation dialog displays its name and filename. Cancel or Esc keeps the file. Deleting a file does not change the loaded setup.
+[/list]
+
+The template folder is separate from the installation, so Vortex deployment does not replace saved templates. Importing a template does not automatically load it.
+
+[size=4][b]Requirements and compatibility[/b][/size]
+
+Requires Darktide Mod Loader, Darktide Mod Framework, SoloPlay and Havoc Condition Manager. Realms is optional for co-op. English, Simplified Chinese and Traditional Chinese follow the game language.
+
+Higher populations increase game workload. Director-created specialists use native stuck/distance cleanup; this is not general enemy redeployment. Recheck generated sources after changing difficulty. Other mods replacing the same spawning systems may conflict.
+
+[size=4][b]Vortex installation[/b][/size]
+
+[list]
+[*]Close the game and install the requirements. Import this mod's ZIP with Install From File, enable it and select Deploy Mods.
+[*]Use Load Order: SoloPlay → HavocConditionManager → HavocEnemyDirector.
+[*]Open Havoc Condition Manager in Mod Options and use the side arrows to reach Advanced.
+[/list]
+
+[size=4][b]Manual installation[/b][/size]
+
+[list]
+[*]Close the game. Extract the ZIP into Darktide/mods, producing mods/HavocEnemyDirector.
+[*]Add HavocEnemyDirector after HavocConditionManager in mods/mod_load_order.txt, with SoloPlay before both.
+[*]Start the game and open Advanced in Havoc Condition Manager.
+[/list]
+
+[size=4][b]Credits[/b][/size]
+
+SoloPlay: deluxghost. Native game systems and referenced assets: Fatshark. Game-source reference: Aussiemon/Darktide-Source-Code.
+
+[size=4][b]Spawning workload[/b][/size]
+
+Advanced generators retain their source-specific pause, freeze, heat and challenge-pressure checks. The pressure threshold is read from the running game, including its active modifiers; population settings remain your chosen ceilings. Large batches are spread across frames with at most 24 requested units and two native calls per frame (16 common, 4 elite, 2 special or 1 boss per call). A 2 ms soft budget can stop further calls; it cannot interrupt an ongoing native call. Pending units reserve capacity, generators take turns, and failed or cancelled work releases its unused reservation. Splitting batches changes the moment-to-moment arrival pattern and can increase the number of native position queries.
+
+
+[size=4][b]Performance diagnostics[/b][/size]
+
+[color=#ff6666]Performance diagnostics is on by default in this comparison test package. The shared ComparePerf observer reports every 30 seconds and at mission end: update intervals and population bands, live/dead/queued units, confirmed spawns, batch sizes, occluded-position query cost and failures, sampled work belonging to each mod, and player/minion Buff processing and rejected events. It uses the Windows high-resolution QPC clock when available and labels any clock fallback. Initialization is reported separately. Multiple diagnostic components share one observer. Spawn settings, random choices and fixed Buff limits are unchanged.[/color]
+
+[color=#ff6666]Mod Options contains Performance diagnostics and Summarize repeated Buff warnings (comparison). The latter defaults off and preserves native warning output. Enable it only for a controlled logging-cost experiment: it keeps one capacity warning per second while counting every rejected event; it does not accept rejected events. Turn Performance diagnostics off in every installed diagnostic component for an observer-overhead control run.[/color]
+
+[color=#ff6666]Frame intervals are measured between mod update callbacks; they are not GPU timings or a complete engine CPU profile. Scope timings include measurement overhead; next scopes include native code and any other hooks. Compare matched missions and observed population bands. Custom generator pools should be exported with the saved template.[/color]
+
+[size=5][b]简体中文[/b][/size]
+
+[size=5][b]浩劫高级敌人生成器[/b][/size]
+
+为 SoloPlay 和 Realms 自定义敌人配置。高级生成器在浩劫词条管理器中增加“高级”页，将所选词条的原版刷怪来源归类为可编辑的多个生成器。Realms 以房主配置为准。
+
+[size=4][b]Buff 事件容量[/b][/size]
+
+[color=#ff6666]进入“高级生成器”页，在顶部“总上限”右侧调整“Buff 事件容量”。点击数值可直接输入，也可使用加减按钮；原版模式下仍可调整。DMF 的 Mod Options 中不再单独放置此控件。[/color]这是本地主机端每个单位的事件上限，独立于敌人数容量。默认 300，可手动输入 300–3000 的整数。
+
+容量仅由此控件决定。修改敌人倍率、重置生成器或加载模板均不会改变该值。此设置独立于生成器模板保存，更新时保留已有容量设置。
+
+每局所有单位使用该局确定的固定上限，修改下一局生效。游戏请求超限立即拒绝，不会自动增加容量。原版与高级两种生成模式均适用。
+
+请同时更新两个配套模组并完全重启游戏。HCM 单独运行保持原版 300 上限。
+
+[size=4][b]生成器与单位池[/b][/size]
+
+[list]
+[*]编辑周期、推进、场景敌人及支持的事件来源；行为不同的来源保留各自分组。
+[*]独立调整批次数量、周期、推进距离及生成器限制。
+[*]添加、暂停、删除或重置自定义生成器。已删除的自定义编号可以复用，其余生成器保留编号。
+[*]全局恢复由所选词条形成的默认生成器。
+[*]添加或移除允许的单位，调整权重、全局禁用单位。可用池子遵循词条强制阵营及替换规则。
+[/list]
+
+修改词条会重建默认生成器，使其对应词条的联合效果。建议先确定词条和倍率，再进行手动编辑。任务中的修改用于下一局。
+
+[size=4][b]倍率、容量与数字输入[/b][/size]
+
+最高敌人倍率对应的默认总容量为：1 倍 240、2 倍 330、3 倍 420、4 倍 510、5 倍 600。各类别容量随对应倍率调整，并可继续编辑。容量表示允许的上限，不保证实际生成数量。
+
+点击数字可以输入或粘贴；回车或点击其他位置确认，Esc 取消。长按 +／− 约 400 毫秒后连续增减。单位选择使用菜单，空间不足时可向上展开。
+
+[size=4][b]原版模式与投放开关[/b][/size]
+
+原版模式使用原有敌人生成器、单位池和敌人数上限，高级生成器控件置灰；浩劫词条管理器的词条及倍率仍可使用。
+
+[list]
+[*]“额外投放”控制防速通、离队惩罚、热度特感和普通精英巡逻。词条要求的来源仍遵循各自规则。
+[*]“场景触发”控制地图事件刷潮及增援，保留腐化装甲、仪式等词条效果，以及任务角色和目标逻辑。
+[*]“双子伏击”是独立开关，默认开启，控制浩劫难度状况提供的伏击；不控制双子专属任务或手动加入池子的双子。
+[/list]
+
+这些开关用于下一局，修改词条或恢复生成器默认值时仍保留设置。DMF 开关在大厅立即应用、任务中下一局应用。关闭高级生成器后，浩劫词条管理器仍可独立使用。
+
+[size=4][b]玩家模板[/b][/size]
+
+在“高级 → 模板”中命名、保存、加载和分享配置。模板包含生成器、池子、禁用单位、敌人数容量、投放开关、词条、阵营、环境及倍率。
+
+模板目录：%APPDATA%/Fatshark/Darktide/HavocEnemyDirector/templates
+
+[list]
+[*]使用最长 64 字符的名称保存当前配置；覆盖文件需要确认。
+[*]选中模板、查看摘要并确认加载，下一局生效。
+[*]分享 JSON 文件或复制分享内容；可从剪贴板导入，也可将收到的文件放入目录后刷新列表。
+[*]删除时弹窗显示模板名及文件名，再次确认后才删除。取消或 Esc 保留文件，删除文件不改变当前加载的配置。
+[/list]
+
+模板目录独立于安装目录，Vortex 部署不会替换已保存模板。导入模板不会自动加载。
+
+[size=4][b]使用前提与兼容[/b][/size]
+
+需要 Darktide Mod Loader、Darktide Mod Framework、SoloPlay 和浩劫词条管理器。联机可使用 Realms。英文、简体中文和繁体中文跟随游戏语言。
+
+更高敌人数会增加游戏负载。高级生成器创建的特感使用原版滞留／距离清理逻辑，不提供所有敌人的通用重部署。修改难度后请核对生成来源。替换相同刷怪系统的其他 mod 可能冲突。
+
+[size=4][b]Vortex 安装[/b][/size]
+
+[list]
+[*]退出游戏并安装依赖。使用 Install From File 导入本 mod 的 ZIP，启用后选择 Deploy Mods。
+[*]加载顺序为 SoloPlay → HavocConditionManager → HavocEnemyDirector。
+[*]从 Mod Options 打开浩劫词条管理器，用侧边箭头进入“高级”页。
+[/list]
+
+[size=4][b]手动安装[/b][/size]
+
+[list]
+[*]退出游戏，将 ZIP 解压到 Darktide/mods，得到 mods/HavocEnemyDirector。
+[*]在 mods/mod_load_order.txt 中将 HavocEnemyDirector 放在 HavocConditionManager 后面，SoloPlay 放在两者之前。
+[*]启动游戏，在浩劫词条管理器中进入“高级”页。
+[/list]
+
+[size=4][b]致谢[/b][/size]
+
+SoloPlay：deluxghost。原版游戏系统与引用素材：Fatshark。游戏源码参考：Aussiemon/Darktide-Source-Code。
+
+[size=4][b]生成负载[/b][/size]
+
+高级生成器保留来源各自的暂停、冻结、热度与战斗压力检查。压力阈值读取当前游戏及其已生效的修改；敌人数上限仍由你的设置决定。大批次分帧生成：每帧最多请求 24 个单位、调用原版生成两次，单次上限为普通 16、精英 4、特感 2、Boss 1。另有 2 毫秒软预算，可停止后续调用，但无法中断正在执行的原版调用。待生成数量预留容量，生成器轮流处理；失败或取消释放未用额度。分批会改变敌人出现的瞬间节奏，也可能增加原版选点次数。
+
+
+[size=4][b]性能诊断[/b][/size]
+
+[color=#ff6666]此对比测试包默认开启性能诊断。共享 ComparePerf 监控每 30 秒及任务结束时汇总：更新间隔与敌人数分档、存活/死亡待清理/排队单位、实际生成数、批次大小、遮挡选点耗时与失败次数、各模组的采样耗时，以及玩家/敌人 Buff 处理量与拒绝事件数。优先使用 Windows 高精度 QPC 时钟，回退时明确标注。初始化单独汇总；多个诊断组件只建立一套公共监控。刷怪设置、随机选择与固定 Buff 上限保持原有行为。[/color]
+
+[color=#ff6666]Mod Options 中提供“性能诊断”及“重复 Buff 警告仅汇总（对照）”。后者默认关闭，保留原版日志；只在对照日志开销时开启，每秒保留一条容量警告、完整累计拒绝次数，不接受已被拒绝的事件。测量诊断自身开销时，需要关闭所有已安装诊断组件的“性能诊断”。[/color]
+
+[color=#ff6666]帧间隔取自模组更新回调，不是 GPU 耗时或完整引擎 CPU 分析。采样耗时包含测量开销；next 项包含原版代码及其他钩子。应在同任务、同配置、实际敌人数相近的区间比较。自定义生成池应同时导出模板保存。[/color]

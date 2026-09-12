@@ -1,0 +1,1418 @@
+{
+  "description": {
+    "en": "Examples are selected individually. Enable only the effects you want.",
+    "zh-cn": "逐项选择所需示例，再启用配置库。",
+    "zh-tw": "逐項選擇所需示例，再啓用配置庫。"
+  },
+  "entries": [
+    {
+      "conditions": [],
+      "description": {
+        "en": "Multiplies initial health of the three freely spawnable monsters.",
+        "zh-cn": "乘算三种可自由生成怪物的初始生命；对原生与 HED 生成均有效。",
+        "zh-tw": "乘算三種可自由生成怪物的初始生命；對原生與 HED 生成均有效。"
+      },
+      "enabled": true,
+      "exclusive_group": "monster_health",
+      "id": "monster_health_150",
+      "match": "all",
+      "name": {
+        "en": "Monster health ×1.5",
+        "zh-cn": "怪物生命 ×1.5",
+        "zh-tw": "怪物生命 ×1.5"
+      },
+      "rules": [],
+      "source_row": 4,
+      "spawn": {
+        "health_multiplier": 1.5
+      },
+      "targets": {
+        "breeds": [
+          "chaos_spawn",
+          "chaos_beast_of_nurgle",
+          "chaos_plague_ogryn"
+        ],
+        "kind": "minions"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Multiplies initial health of the three freely spawnable monsters.",
+        "zh-cn": "乘算三种可自由生成怪物的初始生命；对原生与 HED 生成均有效。",
+        "zh-tw": "乘算三種可自由生成怪物的初始生命；對原生與 HED 生成均有效。"
+      },
+      "enabled": true,
+      "exclusive_group": "monster_health",
+      "id": "monster_health_200",
+      "match": "all",
+      "name": {
+        "en": "Monster health ×2",
+        "zh-cn": "怪物生命 ×2",
+        "zh-tw": "怪物生命 ×2"
+      },
+      "rules": [],
+      "source_row": 5,
+      "spawn": {
+        "health_multiplier": 2
+      },
+      "targets": {
+        "breeds": [
+          "chaos_spawn",
+          "chaos_beast_of_nurgle",
+          "chaos_plague_ogryn"
+        ],
+        "kind": "minions"
+      },
+      "tier": 3,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Ammo pickups yield 75% of their native result, after native modifiers.",
+        "zh-cn": "弹药拾取量为原版结算结果的 75%，与浩劫等原生修正乘算。",
+        "zh-tw": "彈藥拾取量爲原版結算結果的 75%，與浩劫等原生修正乘算。"
+      },
+      "enabled": true,
+      "id": "ammo_scarcity",
+      "match": "all",
+      "name": {
+        "en": "Ammo scarcity",
+        "zh-cn": "弹药匮乏",
+        "zh-tw": "彈藥匱乏"
+      },
+      "passive": {
+        "modifiers": {
+          "ammo_pickup_multiplier": 0.75
+        }
+      },
+      "rules": [],
+      "source_row": 6,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Each ammo collection has a 50% chance of restoring zero ammunition. This does not invalidate medical or deployable crates.",
+        "zh-cn": "每次收取弹药有 50% 概率不补充弹药；不包含医疗包或部署型箱子的失效。",
+        "zh-tw": "每次收取彈藥有 50% 概率不補充彈藥；不包含醫療包或部署型箱子的失效。"
+      },
+      "enabled": true,
+      "id": "empty_ammo",
+      "match": "all",
+      "name": {
+        "en": "Empty ammo",
+        "zh-cn": "空弹药盒",
+        "zh-tw": "空彈藥盒"
+      },
+      "passive": {
+        "modifiers": {
+          "ammo_pickup_failure_chance": 0.5
+        }
+      },
+      "rules": [],
+      "source_row": 7,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "While in coherency with at least two units, heal 0.3 health and remove 0.3 corruption each second.",
+        "zh-cn": "连携单位至少 2 个时，每秒恢复 0.3 生命并清除 0.3 腐化；遵守原生治疗限制。",
+        "zh-tw": "連攜單位至少 2 個時，每秒恢復 0.3 生命並清除 0.3 腐化；遵守原生治療限制。"
+      },
+      "enabled": true,
+      "id": "coherent_medic",
+      "match": "all",
+      "name": {
+        "en": "Coherent medic",
+        "zh-cn": "连携医师",
+        "zh-tw": "連攜醫師"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": 0.3,
+              "type": "heal"
+            },
+            {
+              "amount": 0.3,
+              "type": "corruption"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "coherency",
+              "op": "ge",
+              "value": 2
+            }
+          ],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "mend",
+          "interval": 1,
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "source_row": 8,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [
+        {
+          "field": "coherency",
+          "op": "ge",
+          "value": 2
+        }
+      ],
+      "description": {
+        "en": "In coherency with at least two units, take 35% less toughness damage.",
+        "zh-cn": "连携单位至少 2 个时，受到的韧性伤害降低 35%。",
+        "zh-tw": "連攜單位至少 2 個時，受到的韌性傷害降低 35%。"
+      },
+      "enabled": true,
+      "id": "coherent_defence",
+      "match": "all",
+      "name": {
+        "en": "Coherent defence",
+        "zh-cn": "连携防御",
+        "zh-tw": "連攜防禦"
+      },
+      "passive": {
+        "stats": {
+          "toughness_damage_taken_multiplier": 0.65
+        }
+      },
+      "rules": [],
+      "source_row": 9,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Players take 10% more damage.",
+        "zh-cn": "玩家受到的伤害增加 10%。",
+        "zh-tw": "玩家受到的傷害增加 10%。"
+      },
+      "enabled": true,
+      "id": "deeper_wounds",
+      "match": "all",
+      "name": {
+        "en": "Deeper wounds",
+        "zh-cn": "受伤加深",
+        "zh-tw": "受傷加深"
+      },
+      "passive": {
+        "stats": {
+          "damage_taken_multiplier": 1.1
+        }
+      },
+      "rules": [],
+      "source_row": 11,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Players take 30% more corruption from sources that use the native modifier.",
+        "zh-cn": "对使用原生腐化倍率的来源，玩家受到的腐化增加 30%。",
+        "zh-tw": "對使用原生腐化倍率的來源，玩家受到的腐化增加 30%。"
+      },
+      "enabled": true,
+      "id": "corrupting_touch",
+      "match": "all",
+      "name": {
+        "en": "Corrupting touch",
+        "zh-cn": "堕落之触",
+        "zh-tw": "墮落之觸"
+      },
+      "passive": {
+        "stats": {
+          "corruption_taken_multiplier": 1.3
+        }
+      },
+      "rules": [],
+      "source_row": 12,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Dodge distance and speed are reduced by 10%.",
+        "zh-cn": "闪避距离与速度降低 10%；未覆盖所有闪避恢复计时。",
+        "zh-tw": "閃避距離與速度降低 10%；未覆蓋所有閃避恢復計時。"
+      },
+      "enabled": true,
+      "id": "slow_feet",
+      "match": "all",
+      "name": {
+        "en": "Slow feet",
+        "zh-cn": "脚扭了",
+        "zh-tw": "腳扭了"
+      },
+      "passive": {
+        "stats": {
+          "dodge_distance_modifier": -0.1,
+          "dodge_speed_multiplier": 0.9
+        }
+      },
+      "rules": [],
+      "source_row": 17,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Elite enemies spawn with 40% more health.",
+        "zh-cn": "精英敌人生成时生命增加 40%。",
+        "zh-tw": "精英敵人生成時生命增加 40%。"
+      },
+      "enabled": true,
+      "id": "elite_endurance",
+      "match": "all",
+      "name": {
+        "en": "Elite endurance",
+        "zh-cn": "精英坚韧",
+        "zh-tw": "精英堅韌"
+      },
+      "rules": [],
+      "source_row": 18,
+      "spawn": {
+        "health_multiplier": 1.4
+      },
+      "targets": {
+        "kind": "minions",
+        "tags": [
+          "elite"
+        ]
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Each enemy death grants matching enemies 0.1% power for 30 seconds, up to 500 stacks; each death refreshes the shared timer.",
+        "zh-cn": "每次敌人死亡，敌方获得 0.1% 能量，最多 500 层；30 秒共用计时在击杀后刷新。未添加减伤层。",
+        "zh-tw": "每次敵人死亡，敵方獲得 0.1% 能量，最多 500 層；30 秒共用計時在擊殺後刷新。未添加減傷層。"
+      },
+      "enabled": true,
+      "id": "battle_fervour",
+      "match": "all",
+      "name": {
+        "en": "Battle fervour",
+        "zh-cn": "战斗狂热",
+        "zh-tw": "戰鬥狂熱"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "duration": 30,
+              "effects": {
+                "stats": {
+                  "power_level_modifier": 0.001
+                }
+              },
+              "max_stacks": 500,
+              "target": "matching",
+              "type": "effect"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0.05,
+          "delay": 0,
+          "event": "enemy_died",
+          "id": "fervour",
+          "match": "all",
+          "max_triggers": 0,
+          "scope": "global"
+        }
+      ],
+      "source_row": 21,
+      "targets": {
+        "kind": "minions"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Each elite death requests two poxwalkers from HED. They arrive at valid native spawn locations, not at the corpse.",
+        "zh-cn": "精英死亡后向 HED 请求 2 个瘟疫行尸；在合规原生落点增援，不在尸体原地分裂。每局请求有总预算。",
+        "zh-tw": "精英死亡後向 HED 請求 2 個瘟疫行屍；在合規原生落點增援，不在屍體原地分裂。每局請求有總預算。"
+      },
+      "enabled": true,
+      "id": "split_reinforcements",
+      "match": "all",
+      "name": {
+        "en": "Split reinforcements",
+        "zh-cn": "双生增援",
+        "zh-tw": "雙生增援"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "breed": "chaos_poxwalker",
+              "count": 2,
+              "type": "spawn_enemy"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 3,
+          "delay": 0,
+          "event": "enemy_died",
+          "id": "split",
+          "match": "all",
+          "max_triggers": 20,
+          "scope": "global"
+        }
+      ],
+      "source_row": 23,
+      "targets": {
+        "kind": "minions",
+        "tags": [
+          "elite"
+        ]
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Monster ranged-damage multiplier is zero. Damage paths that bypass this native stat are unaffected.",
+        "zh-cn": "怪物远程承伤倍率为零；绕过该原生属性的特殊伤害路径不受影响。",
+        "zh-tw": "怪物遠程承傷倍率爲零；繞過該原生屬性的特殊傷害路徑不受影響。"
+      },
+      "enabled": true,
+      "id": "ranged_monster_shield",
+      "match": "all",
+      "name": {
+        "en": "Ranged monster shield",
+        "zh-cn": "怪物远程壁垒",
+        "zh-tw": "怪物遠程壁壘"
+      },
+      "passive": {
+        "stats": {
+          "ranged_damage_taken_multiplier": 0
+        }
+      },
+      "rules": [],
+      "source_row": 29,
+      "targets": {
+        "kind": "minions",
+        "tags": [
+          "monster"
+        ]
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Apply the native keyword that prevents healing.",
+        "zh-cn": "应用原生禁止治疗关键词；不替换敌人或增加任务事件。",
+        "zh-tw": "應用原生禁止治療關鍵詞；不替換敵人或增加任務事件。"
+      },
+      "enabled": true,
+      "id": "no_healing",
+      "match": "all",
+      "name": {
+        "en": "No healing",
+        "zh-cn": "禁止治疗",
+        "zh-tw": "禁止治療"
+      },
+      "passive": {
+        "keywords": [
+          "prevent_all_healing"
+        ]
+      },
+      "rules": [],
+      "source_row": 46,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 4,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Melee attacks spend five toughness; melee speed +10%, power +20%, toughness regeneration rate +150%.",
+        "zh-cn": "近战攻击消耗 5 点韧性；近战攻速 +10%、能量 +20%、韧性恢复速度 +150%。",
+        "zh-tw": "近戰攻擊消耗 5 點韌性；近戰攻速 +10%、能量 +20%、韌性恢復速度 +150%。"
+      },
+      "enabled": true,
+      "id": "blood_price",
+      "match": "all",
+      "name": {
+        "en": "Blood price",
+        "zh-cn": "血手之怒",
+        "zh-tw": "血手之怒"
+      },
+      "passive": {
+        "stats": {
+          "melee_attack_speed": 0.1,
+          "melee_power_level_modifier": 0.2,
+          "toughness_regen_rate_modifier": 1.5
+        }
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": -5,
+              "type": "toughness"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0.1,
+          "delay": 0,
+          "event": "on_sweep_start",
+          "id": "price",
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "source_row": 47,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 4,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Melee kills restore five health. Coherency grants 10% power.",
+        "zh-cn": "近战击杀回复 5 点生命；处于连携时能量提高 10%。",
+        "zh-tw": "近戰擊殺回覆 5 點生命；處於連攜時能量提高 10%。"
+      },
+      "enabled": true,
+      "id": "martyr_blessing",
+      "match": "all",
+      "name": {
+        "en": "Martyr blessing",
+        "zh-cn": "圣梅基丽娜的赐福",
+        "zh-tw": "聖梅基麗娜的賜福"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": 5,
+              "type": "heal"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "attack_type",
+              "op": "eq",
+              "value": "melee"
+            }
+          ],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "on_kill",
+          "id": "heal",
+          "match": "all",
+          "max_triggers": 0
+        },
+        {
+          "actions": [
+            {
+              "duration": 1.2,
+              "effects": {
+                "stats": {
+                  "power_level_modifier": 0.1
+                }
+              },
+              "type": "effect"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "coherency",
+              "op": "ge",
+              "value": 2
+            }
+          ],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "aura",
+          "interval": 1,
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "source_row": 48,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 4,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Pause native and HED spawning for 30 seconds on the first player spawn. Existing enemies remain.",
+        "zh-cn": "首名玩家生成后，暂停原生与 HED 刷新 30 秒；已生成敌人保留。",
+        "zh-tw": "首名玩家生成後，暫停原生與 HED 刷新 30 秒；已生成敵人保留。"
+      },
+      "enabled": true,
+      "id": "wait_a_moment",
+      "match": "all",
+      "name": {
+        "en": "Wait a moment",
+        "zh-cn": "等等",
+        "zh-tw": "等等"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "duration": 30,
+              "name": "all",
+              "type": "pause_spawns"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "mission_start",
+          "id": "pause",
+          "match": "all",
+          "max_triggers": 1,
+          "scope": "global"
+        }
+      ],
+      "source_row": 59,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Lose 1% toughness per second; at zero toughness, lose 0.3 health per second.",
+        "zh-cn": "每秒损失最大韧性的 1%；韧性耗尽时每秒损失 0.3 生命。",
+        "zh-tw": "每秒損失最大韌性的 1%；韌性耗盡時每秒損失 0.3 生命。"
+      },
+      "enabled": true,
+      "id": "corrosive_air",
+      "match": "all",
+      "name": {
+        "en": "Corrosive air",
+        "zh-cn": "腐蚀环境",
+        "zh-tw": "腐蝕環境"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": -0.01,
+              "amount_kind": "fraction",
+              "type": "toughness"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "drain",
+          "interval": 1,
+          "match": "all",
+          "max_triggers": 0
+        },
+        {
+          "actions": [
+            {
+              "amount": 0.3,
+              "type": "damage"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "toughness",
+              "op": "le",
+              "value": 0
+            }
+          ],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "damage",
+          "interval": 1,
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "source_row": 63,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "First spawn removes half the ammunition currently held by each weapon and all grenades.",
+        "zh-cn": "首次生成时移除各武器当前持有弹药的 50% 和全部手雷；弹药先扣备用弹再扣弹匣。",
+        "zh-tw": "首次生成時移除各武器當前持有彈藥的 50% 和全部手雷；彈藥先扣備用彈再扣彈匣。"
+      },
+      "enabled": true,
+      "id": "supply_tax",
+      "match": "all",
+      "name": {
+        "en": "Supply tax",
+        "zh-cn": "克扣物资",
+        "zh-tw": "剋扣物資"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": -0.5,
+              "amount_kind": "current_fraction",
+              "type": "ammo"
+            },
+            {
+              "amount": -1,
+              "amount_kind": "fraction",
+              "type": "grenades"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "mission_start",
+          "id": "tax",
+          "match": "all",
+          "max_triggers": 1
+        }
+      ],
+      "source_row": 65,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "On first spawn remove up to full-health corruption and heal up to full health, subject to native restrictions.",
+        "zh-cn": "首次生成时按最大生命量清除腐化并治疗，仍受原生治疗限制。",
+        "zh-tw": "首次生成時按最大生命量清除腐化並治療，仍受原生治療限制。"
+      },
+      "enabled": true,
+      "id": "field_restoration",
+      "match": "all",
+      "name": {
+        "en": "Field restoration",
+        "zh-cn": "治疗伤势",
+        "zh-tw": "治療傷勢"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": 1,
+              "amount_kind": "fraction",
+              "type": "corruption"
+            },
+            {
+              "amount": 1,
+              "amount_kind": "fraction",
+              "type": "heal"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "mission_start",
+          "id": "restore",
+          "match": "all",
+          "max_triggers": 1
+        }
+      ],
+      "source_row": 70,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [
+        {
+          "field": "sprinting",
+          "op": "eq",
+          "value": false
+        }
+      ],
+      "description": {
+        "en": "While not sprinting, take half toughness damage and gain 20% power.",
+        "zh-cn": "不在疾跑时，韧性承伤减半，能量提高 20%。",
+        "zh-tw": "不在疾跑時，韌性承傷減半，能量提高 20%。"
+      },
+      "enabled": true,
+      "id": "stillness_blessing",
+      "match": "all",
+      "name": {
+        "en": "Stillness blessing",
+        "zh-cn": "圣亚瑞克的赐福",
+        "zh-tw": "聖亞瑞克的賜福"
+      },
+      "passive": {
+        "stats": {
+          "power_level_modifier": 0.2,
+          "toughness_damage_taken_multiplier": 0.5
+        }
+      },
+      "rules": [],
+      "source_row": 72,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Movement +10%, block cost −20%, stamina regeneration +100%, spread −50%.",
+        "zh-cn": "移动速度 +10%、格挡体力消耗 −20%、体力恢复 +100%、散布 −50%。",
+        "zh-tw": "移動速度 +10%、格擋體力消耗 −20%、體力恢復 +100%、散佈 −50%。"
+      },
+      "enabled": true,
+      "id": "agility_blessing",
+      "match": "all",
+      "name": {
+        "en": "Agility blessing",
+        "zh-cn": "圣凯恩的赐福",
+        "zh-tw": "聖凱恩的賜福"
+      },
+      "passive": {
+        "stats": {
+          "block_cost_multiplier": 0.8,
+          "movement_speed": 0.1,
+          "spread_modifier": -0.5,
+          "stamina_regeneration_modifier": 1
+        }
+      },
+      "rules": [],
+      "source_row": 73,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "A melee kill grants three seconds of invisibility, with a five-second cooldown.",
+        "zh-cn": "近战击杀后隐身 3 秒，冷却 5 秒；隐身关键词遵守原版感知规则。",
+        "zh-tw": "近戰擊殺後隱身 3 秒，冷卻 5 秒；隱身關鍵詞遵守原版感知規則。"
+      },
+      "enabled": true,
+      "id": "melee_shelter",
+      "match": "all",
+      "name": {
+        "en": "Melee shelter",
+        "zh-cn": "近战庇护",
+        "zh-tw": "近戰庇護"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "duration": 3,
+              "effects": {
+                "keywords": [
+                  "invisible"
+                ]
+              },
+              "type": "effect"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "attack_type",
+              "op": "eq",
+              "value": "melee"
+            }
+          ],
+          "cooldown": 5,
+          "delay": 0,
+          "event": "on_kill",
+          "id": "hide",
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "source_row": 74,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 3,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Recover toughness equal to damage dealt, with a 0.1-second cooldown.",
+        "zh-cn": "按造成的伤害等量恢复韧性，冷却 0.1 秒。",
+        "zh-tw": "按造成的傷害等量恢復韌性，冷卻 0.1 秒。"
+      },
+      "enabled": true,
+      "id": "iron_river",
+      "match": "all",
+      "name": {
+        "en": "Iron river",
+        "zh-cn": "铁斩波",
+        "zh-tw": "鐵斬波"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": 1,
+              "amount_kind": "event_damage",
+              "type": "toughness"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0.1,
+          "delay": 0,
+          "event": "on_damage_dealt",
+          "id": "leech",
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "source_row": 87,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "After 60 seconds, once per player, drop an ammo crate and a medical crate nearby.",
+        "zh-cn": "60 秒后，每名玩家身旁各落下一个弹药箱与医疗箱，每人仅一次。",
+        "zh-tw": "60 秒後，每名玩家身旁各落下一個彈藥箱與醫療箱，每人僅一次。"
+      },
+      "enabled": true,
+      "id": "call_supplies",
+      "match": "all",
+      "name": {
+        "en": "Call supplies",
+        "zh-cn": "呼叫补给",
+        "zh-tw": "呼叫補給"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "name": "ammo_cache_pocketable",
+              "type": "pickup"
+            },
+            {
+              "name": "medical_crate_pocketable",
+              "type": "pickup"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "call",
+          "interval": 60,
+          "match": "all",
+          "max_triggers": 1
+        }
+      ],
+      "source_row": 90,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "No ammunition consumption, no heat gain and 80% shorter combat ability cooldown.",
+        "zh-cn": "不消耗弹药、不增加热量，战斗技能冷却缩短 80%；用于测试和自定义玩法。",
+        "zh-tw": "不消耗彈藥、不增加熱量，戰鬥技能冷卻縮短 80%；用於測試和自定義玩法。"
+      },
+      "enabled": true,
+      "id": "infinite_test",
+      "match": "all",
+      "name": {
+        "en": "Infinite-fire test",
+        "zh-cn": "无限火力测试",
+        "zh-tw": "無限火力測試"
+      },
+      "passive": {
+        "keywords": [
+          "no_ammo_consumption"
+        ],
+        "stats": {
+          "ability_cooldown_modifier": -0.8,
+          "overheat_amount": 0
+        }
+      },
+      "rules": [],
+      "source_row": 95,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 4,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Using a stim applies the native power, speed and ability stims for up to 15 seconds.",
+        "zh-cn": "使用药剂后，附加原生能量、速度和技能药剂效果，最长 15 秒。",
+        "zh-tw": "使用藥劑後，附加原生能量、速度和技能藥劑效果，最長 15 秒。"
+      },
+      "enabled": true,
+      "id": "mixed_stimms",
+      "match": "all",
+      "name": {
+        "en": "Mixed stimms",
+        "zh-cn": "混合物",
+        "zh-tw": "混合物"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "duration": 15,
+              "name": "syringe_power_boost_buff",
+              "type": "native_buff"
+            },
+            {
+              "duration": 15,
+              "name": "syringe_speed_boost_buff",
+              "type": "native_buff"
+            },
+            {
+              "duration": 15,
+              "name": "syringe_ability_boost_buff",
+              "type": "native_buff"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 2,
+          "delay": 0,
+          "event": "on_syringe_used",
+          "id": "mix",
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "source_row": 106,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 3,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Remove the native recoil modifier; other sources of weapon movement may remain.",
+        "zh-cn": "将原生后坐力倍率降为零；不移除其他来源的武器晃动。",
+        "zh-tw": "將原生後坐力倍率降爲零；不移除其他來源的武器晃動。"
+      },
+      "enabled": true,
+      "id": "deadeye_recoil",
+      "match": "all",
+      "name": {
+        "en": "Recoil control",
+        "zh-cn": "无后座",
+        "zh-tw": "無後座"
+      },
+      "passive": {
+        "stats": {
+          "recoil_modifier": -1
+        }
+      },
+      "rules": [],
+      "source_row": 110,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 3,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Deal 50% more damage to poxwalkers and newly infected enemies.",
+        "zh-cn": "对瘟疫行尸和新感染者伤害提高 50%。",
+        "zh-tw": "對瘟疫行屍和新感染者傷害提高 50%。"
+      },
+      "enabled": true,
+      "id": "undead_hunter",
+      "match": "all",
+      "name": {
+        "en": "Undead hunter",
+        "zh-cn": "亡灵杀手",
+        "zh-tw": "亡靈殺手"
+      },
+      "passive": {
+        "stats": {
+          "damage_vs_chaos_newly_infected": 0.5,
+          "damage_vs_chaos_poxwalker": 0.5
+        }
+      },
+      "rules": [],
+      "source_row": 119,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Melee hits spend two stamina. Empty stamina reduces melee speed by 20% and melee damage by 10%.",
+        "zh-cn": "近战命中消耗 2 点体力；体力耗尽时近战攻速降低 20%、近战伤害降低 10%。",
+        "zh-tw": "近戰命中消耗 2 點體力；體力耗盡時近戰攻速降低 20%、近戰傷害降低 10%。"
+      },
+      "enabled": true,
+      "id": "labour_melee",
+      "match": "all",
+      "name": {
+        "en": "Labouring melee",
+        "zh-cn": "近战疲劳",
+        "zh-tw": "近戰疲勞"
+      },
+      "passive": {
+        "stats": {}
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": -2,
+              "type": "stamina"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "attack_type",
+              "op": "eq",
+              "value": "melee"
+            }
+          ],
+          "cooldown": 0.05,
+          "delay": 0,
+          "event": "on_hit",
+          "id": "spend",
+          "match": "all",
+          "max_triggers": 0
+        },
+        {
+          "actions": [
+            {
+              "duration": 0.3,
+              "effects": {
+                "stats": {
+                  "melee_attack_speed": -0.2,
+                  "melee_damage": -0.1
+                }
+              },
+              "type": "effect"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "stamina",
+              "op": "le",
+              "value": 0
+            }
+          ],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "tired",
+          "interval": 0.2,
+          "match": "all",
+          "max_triggers": 0
+        }
+      ],
+      "source_row": 121,
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 3,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "At 100 metres of progress, publish diy_pressure for 30 seconds. HED rules can require this signal.",
+        "zh-cn": "主路径推进达到 100 米时，发布持续 30 秒的 diy_pressure 信号；HED 规则可引用此信号。",
+        "zh-tw": "主路徑推進達到 100 米時，發佈持續 30 秒的 diy_pressure 信號；HED 規則可引用此信號。"
+      },
+      "enabled": true,
+      "id": "director_signal",
+      "match": "all",
+      "name": {
+        "en": "Director signal example",
+        "zh-cn": "导演信号示例",
+        "zh-tw": "導演信號示例"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "duration": 30,
+              "name": "diy_pressure",
+              "type": "signal"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "progress",
+              "op": "ge",
+              "value": 100
+            }
+          ],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "signal",
+          "interval": 1,
+          "match": "all",
+          "max_triggers": 1,
+          "scope": "global"
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "While diy_pressure is active, request the HED formation f1 once. Create or import that formation first.",
+        "zh-cn": "diy_pressure 生效时，请求 HED 编队 f1，仅一次。需事先创建或导入该编队。",
+        "zh-tw": "diy_pressure 生效時，請求 HED 編隊 f1，僅一次。需事先創建或導入該編隊。"
+      },
+      "enabled": true,
+      "id": "director_formation",
+      "match": "all",
+      "name": {
+        "en": "Formation request example",
+        "zh-cn": "编队请求示例",
+        "zh-tw": "編隊請求示例"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "name": "f1",
+              "type": "spawn_formation"
+            }
+          ],
+          "chance": 1,
+          "conditions": [
+            {
+              "field": "signal",
+              "op": "contains",
+              "value": "diy_pressure"
+            }
+          ],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "interval",
+          "id": "request",
+          "interval": 1,
+          "match": "all",
+          "max_triggers": 1,
+          "scope": "global"
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "Elite death queues 10 direct health damage to nearby minions after two seconds. Radius is centred on the corpse if it still exists.",
+        "zh-cn": "精英死亡后 2 秒，对尸体附近敌人造成 10 点直接生命伤害；尸体位置不可用时跳过。",
+        "zh-tw": "精英死亡後 2 秒，對屍體附近敵人造成 10 點直接生命傷害；屍體位置不可用時跳過。"
+      },
+      "enabled": true,
+      "id": "delayed_retribution",
+      "match": "all",
+      "name": {
+        "en": "Delayed retribution example",
+        "zh-cn": "延迟惩戒示例",
+        "zh-tw": "延遲懲戒示例"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "amount": 10,
+              "radius": 8,
+              "target": "nearby_minions",
+              "type": "damage"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 3,
+          "delay": 2,
+          "event": "enemy_died",
+          "id": "blast",
+          "match": "all",
+          "max_triggers": 10,
+          "scope": "global"
+        }
+      ],
+      "targets": {
+        "kind": "minions",
+        "tags": [
+          "elite"
+        ]
+      },
+      "tier": 2,
+      "weight": 1
+    },
+    {
+      "conditions": [],
+      "description": {
+        "en": "On first spawn, display a local notification and play an existing UI sound.",
+        "zh-cn": "首名玩家生成时，在房主本地显示通知并播放现有界面音效；不包含自定义音频。",
+        "zh-tw": "首名玩家生成時，在房主本地顯示通知並播放現有界面音效；不包含自定義音頻。"
+      },
+      "enabled": true,
+      "id": "notification_example",
+      "match": "all",
+      "name": {
+        "en": "Notification example",
+        "zh-cn": "提示示例",
+        "zh-tw": "提示示例"
+      },
+      "rules": [
+        {
+          "actions": [
+            {
+              "text": {
+                "en": "DIY effects are active.",
+                "zh-cn": "DIY 效果已启用。",
+                "zh-tw": "DIY 效果已啓用。"
+              },
+              "type": "notification"
+            },
+            {
+              "name": "default_click",
+              "type": "sound"
+            }
+          ],
+          "chance": 1,
+          "conditions": [],
+          "cooldown": 0,
+          "delay": 0,
+          "event": "mission_start",
+          "id": "notify",
+          "match": "all",
+          "max_triggers": 1,
+          "scope": "global"
+        }
+      ],
+      "targets": {
+        "kind": "players"
+      },
+      "tier": 1,
+      "weight": 1
+    }
+  ],
+  "format": "Darktide.DIY",
+  "id": "starter_conditions",
+  "kind": "conditions",
+  "name": {
+    "en": "DIY starter library",
+    "zh-cn": "DIY 入门配置库",
+    "zh-tw": "DIY 入門配置庫"
+  },
+  "version": 1
+}

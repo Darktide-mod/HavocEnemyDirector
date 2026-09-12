@@ -1,0 +1,58 @@
+{
+  "game": "Warhammer 40,000: Darktide",
+  "titles": {
+    "en": "Havoc Enemy Director - Advanced Spawning",
+    "zh-CN": "浩劫高级敌人生成器",
+    "zh-TW": "浩劫高階敵人生成器"
+  },
+  "version": "1.5.10",
+  "suggested_category": "Gameplay",
+  "required": [
+    "Darktide Mod Loader",
+    "Darktide Mod Framework",
+    "Solo Play",
+    "Havoc Condition Manager"
+  ],
+  "optional": [
+    "Realms — for player-hosted sessions"
+  ],
+  "languages": [
+    "English",
+    "Chinese (Simplified)",
+    "Chinese (Traditional)"
+  ],
+  "suggested_tags": [
+    "Gameplay",
+    "English",
+    "Chinese",
+    "Solo Play",
+    "Realms"
+  ],
+  "image_type": "UI layout renders with sample configurations; not gameplay screenshots",
+  "images": [
+    "images/01-director.en.png",
+    "images/02-number-input.en.png",
+    "images/03-add-unit.en.png",
+    "images/04-native-mode.en.png"
+  ],
+  "alternate_images": [
+    "images/01-director.zh-cn.png",
+    "images/01-director.zh-tw.png",
+    "images/02-number-input.zh-cn.png",
+    "images/02-number-input.zh-tw.png",
+    "images/03-add-unit.zh-cn.png",
+    "images/03-add-unit.zh-tw.png",
+    "images/04-native-mode.zh-cn.png",
+    "images/04-native-mode.zh-tw.png"
+  ],
+  "summaries": {
+    "en": "Requires SoloPlay and Havoc Condition Manager; supports Realms. Edit grouped generators, pools and caps. Native mode now greys out inactive advanced settings and preserves the game's spawning. Includes three-language UI renders.",
+    "zh-CN": "以 SoloPlay 和浩劫词条管理器为前提，支持 Realms。编辑分类生成器、池子与容量。原版模式将不生效的高级配置置灰，并保留游戏原版生成流程；附三语界面图。",
+    "zh-TW": "以 SoloPlay 和浩劫詞條管理器為前提，支援 Realms。編輯分類生成器、池子與容量。原版模式將不生效的高階配置置灰，並保留遊戲原版生成流程；附三語介面圖。"
+  },
+  "main_file": "../files/HavocEnemyDirector-1.5.10.zip",
+  "main_file_description": "Requires SoloPlay and Havoc Condition Manager; supports Realms. Edit grouped generators, pools and caps. Native mode now greys out inactive advanced settings and preserves the game's spawning. Includes three-language UI renders.",
+  "file_category": "Main Files",
+  "archive_root": "HavocEnemyDirector/",
+  "manual_extract_to": "Darktide/mods/"
+}

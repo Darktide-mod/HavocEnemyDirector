@@ -1,0 +1,55 @@
+{
+  "game": "Warhammer 40,000: Darktide",
+  "titles": {
+    "en": "Havoc Enemy Director - Advanced Spawning",
+    "zh-CN": "浩劫高级敌人生成器",
+    "zh-TW": "浩劫高階敵人生成器"
+  },
+  "version": "1.5.8",
+  "suggested_category": "Gameplay",
+  "required": [
+    "Darktide Mod Loader",
+    "Darktide Mod Framework",
+    "Solo Play",
+    "Havoc Condition Manager"
+  ],
+  "optional": [
+    "Realms — for player-hosted sessions"
+  ],
+  "languages": [
+    "English",
+    "Chinese (Simplified)",
+    "Chinese (Traditional)"
+  ],
+  "suggested_tags": [
+    "Gameplay",
+    "English",
+    "Chinese",
+    "Solo Play",
+    "Realms"
+  ],
+  "image_type": "UI layout renders with sample configurations; not gameplay screenshots",
+  "images": [
+    "images/01-director.en.png",
+    "images/02-number-input.en.png",
+    "images/03-add-unit.en.png"
+  ],
+  "alternate_images": [
+    "images/01-director.zh-cn.png",
+    "images/01-director.zh-tw.png",
+    "images/02-number-input.zh-cn.png",
+    "images/02-number-input.zh-tw.png",
+    "images/03-add-unit.zh-cn.png",
+    "images/03-add-unit.zh-tw.png"
+  ],
+  "summaries": {
+    "en": "Requires SoloPlay and Havoc Condition Manager; also supports Realms sessions. Build grouped generators from selected conditions, edit unit pools, weights and caps, and toggle extra spawns while preserving condition-required spawning.",
+    "zh-CN": "以 SoloPlay 和浩劫词条管理器为前提，同时支持 Realms 联机会话。根据所选词条重建分类生成器，编辑单位池、权重、容量与刷新参数，并可开关额外投放，保留词条要求的生成行为。",
+    "zh-TW": "以 SoloPlay 和浩劫詞條管理器為前提，同時支援 Realms 聯機會話。根據所選詞條重建分類生成器，編輯單位池、權重、容量與刷新引數，並可開關額外投放，保留詞條要求的生成行為。"
+  },
+  "main_file": "../files/HavocEnemyDirector-1.5.8.zip",
+  "main_file_description": "Requires SoloPlay and Havoc Condition Manager; also supports Realms sessions. Build grouped generators from selected conditions, edit unit pools, weights and caps, and toggle extra spawns while preserving condition-required spawning.",
+  "file_category": "Main Files",
+  "archive_root": "HavocEnemyDirector/",
+  "manual_extract_to": "Darktide/mods/"
+}

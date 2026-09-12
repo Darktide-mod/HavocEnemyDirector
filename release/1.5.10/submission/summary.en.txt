@@ -1,0 +1,1 @@
+Requires SoloPlay and Havoc Condition Manager; supports Realms. Edit grouped generators, pools and caps. Native mode now greys out inactive advanced settings and preserves the game's spawning. Includes three-language UI renders.

@@ -1,0 +1,25 @@
+{
+  "release_id": "1.5.10",
+  "status": "passed",
+  "archives": [
+    {
+      "mod": "HavocEnemyDirector",
+      "version": "1.5.10",
+      "file": "files/HavocEnemyDirector-1.5.10.zip",
+      "bytes": 47815,
+      "entries": 18,
+      "root": "HavocEnemyDirector/",
+      "nested_archives": 0
+    }
+  ],
+  "install_path_conflicts": 0,
+  "ui_images": 12,
+  "english_ui_images": 4,
+  "vortex_installer": {
+    "status": "passed",
+    "mods": 1,
+    "installed_paths": 18,
+    "unexpected_root_install_warnings": 0
+  },
+  "nexus_upload_performed": false
+}

@@ -1,0 +1,15 @@
+build/
+__pycache__/
+*.pyc
+
+# Local credentials, logs and editor state are not project sources.
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.hcm-new
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

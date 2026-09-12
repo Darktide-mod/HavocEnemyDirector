@@ -1,0 +1,21 @@
+Version 1.5.9
+
+- Paused ordinary native specialist slots before their update while the advanced director owns spawning. This avoids repeated disabler selection, foreshadow work and failed-spawn telemetry for suppressed slots.
+- Preserved native condition injections, already queued specialists, living-unit cleanup and extra-spawn switches. Temporary slot state is restored after the update, including on errors.
+- Added elapsed-time samples for director ticks and owned-specialist cleanup, each at most once per second, with summaries every thirty seconds and at mission end. These are sampled calls, not whole-game frame timings.
+- Preserved generator configurations, pools, multipliers, capacities and native Buff IDs. Recommended companion: Havoc Condition Manager 2.4.10. Fully exit and restart after updating; live-game FPS improvement remains unmeasured.
+
+Version 1.5.8
+
+- Reused population snapshots and cached breed metadata. Spawns and removals update counts immediately; deleted or paused ambient generators skip population checks.
+- Prepared weighted unit choices once per mission instead of sorting for every draw. Per-unit caps and patrol eligibility remain enforced.
+- Director-created specialists now use the original game's stuck and distance cleanup checks, staggered at up to two checks per frame. Native injections, mission actors, bosses and ritual actors are excluded.
+- Preserved condition effects, saved generators, multipliers, spawn parameters and capacity limits. Added regressions for shared caps, pool selection and native cleanup decisions.
+- Recommended companion: Havoc Condition Manager 2.4.9. Fully exit and restart after updating. No live-game FPS improvement has been measured.
+
+Version 1.5.7
+
+- Deleted custom generator numbers are now reused, starting with the lowest free number. Surviving generators keep their IDs; old saved counters are recalculated automatically.
+- Added an Add unit selection menu and per-row add/remove buttons. Added units start at weight 1. Removing a unit affects only the current pool; global bans remain separate.
+- Unit selection respects category, forced faction and condition replacement rules. Removed units cannot return through a source unit that conditions replace with them.
+- Reused IDs start without deleted overrides. Updated English, Simplified Chinese and Traditional Chinese controls and offline UI previews. Changes apply next mission.

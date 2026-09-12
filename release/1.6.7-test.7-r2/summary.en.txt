@@ -1,0 +1,1 @@
+Requires SoloPlay and Havoc Condition Manager; supports Realms. Customize generators, unit pools, weights, caps and extra-spawn rules. Name, save, load, import and share player templates, with a dedicated folder and confirmation before deletion.

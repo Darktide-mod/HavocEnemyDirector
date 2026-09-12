@@ -1,0 +1,7 @@
+Version 1.5.6
+
+- Fixed batch-count edits unintentionally changing the default interval and travel distance. Typed input, clicks and held buttons edit each parameter independently; scaled previews still update.
+- Scripted events now controls map-event waves, continuous reinforcements and event specialists, while preserving Rotten Armour, rituals and other condition effects.
+- Added an independent Twin ambush switch, on by default, for Havoc difficulty ambushes. Named mission twins and custom unit pools are unaffected.
+- Preserved all three switches through condition edits and generator resets. Added per-mission logs of their effective states and configuration revision.
+- Retained named mission actors and objective progression. Settings apply next mission.

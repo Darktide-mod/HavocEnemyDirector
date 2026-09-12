@@ -1,0 +1,7 @@
+{
+  "mod": "HavocEnemyDirector",
+  "release_id": "3.2.0",
+  "file_category": "Main Files",
+  "notes": "Add independent fixed-seed switches for HED scheduling and native roamer layout. Disabled inputs retain their saved integers while runtime follows the mission seed. Keep scheduling, roamer layout and HCM condition-event randomness separately owned and explain their exact scope in the interface. Advance preset format to four to preserve HCM condition-event seed settings as well as both HED seeds. Older presets remain readable and keep the current HCM seed when absent. Preserve current-mission snapshots and the independent native global random generator. Fixed seeds reproduce controlled choices, not the complete live battle.",
+  "stable_release": "3.2.0"
+}

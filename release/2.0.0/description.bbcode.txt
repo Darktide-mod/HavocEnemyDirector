@@ -1,0 +1,153 @@
+[size=5][b]English[/b][/size]
+
+[size=5][b]Havoc Enemy Director[/b][/size]
+
+Edit native enemy templates for SoloPlay and Realms from HCM's Native template editor page. HED supplies exact field overrides and trigger rules; HCM provides broad multipliers. Both use the game's existing spawn systems.
+
+[size=4][b]Editor controls[/b][/size]
+
+[color=#ff6666]Open Havoc Enemy Director in Mod Options, or use HCM's Native template editor page. Select a category, template and difficulty or event variant, then open a field group. The four tabs are Parameters, Composition & weights, Trigger conditions and Preset library.[/color]
+
+[list]
+[*]Parameters: edit supported numbers, ranges, booleans and options. See the native baseline and the value with your HCM/HED changes.
+[*]Composition & weights: edit eligible breeds, batch minimum/maximum counts and native selection weights. Native faction aliases and repeated pool entries retain their meaning.
+[*]Trigger conditions: attach rules to supported encounter entry points or coordinated-horde predicate lists.
+[*]Map population includes an optional map seed. Zero follows the mission seed; a chosen seed does not make the whole mission deterministic.
+[/list]
+
+Categories cover combat pacing and heat, map population, hordes and trickle waves, specialists, monsters and patrols, automatic combat events, condition mechanics and supported mission combat nodes. The available fields follow the current game's templates; selecting a template does not activate that source in your mission.
+
+Click a number to type or paste. Enter or clicking elsewhere confirms; Esc cancels. Hold + or − to repeat. Remove override follows HCM again; Override with native value pins the original field value. The preset library also offers a two-click reset of all HED edits and the map seed, retaining HCM values and saved files.
+
+[size=4][b]Trigger rules[/b][/size]
+
+Combine up to eight clauses using All or Any. Conditions cover capable-player count, pacing stage, combat load, active monsters/events/hordes, low coherency, main-path progress, time without forward progress, low-pressure duration and engaged ranged formations.
+
+New-encounter rules add requirements to native eligibility. Only supported coordinated-horde predicate lists offer replacement. Native placement limits and mission progression still apply. Gating an event delays its first spawn; an event that has already started can finish normally.
+
+[size=4][b]Interaction with HCM[/b][/size]
+
+HCM applies broad changes first; HED overrides individual fields afterward. Native difficulty, selected conditions and runtime scheduling can then modify those values. For mission combat nodes, the displayed budget is the base value: HCM's event-budget multiplier scales the final native budget and its cap.
+
+Settings save automatically and apply next mission. The running mission retains its initial configuration. DMF switches apply immediately in the hub and are deferred during play. HCM can run alone when HED is disabled.
+
+This editor replaces the previous custom-generator design. Old generator presets remain on disk and are reported as unsupported; they cannot be loaded as native-template presets. Custom spawn queues, derived total caps and the former Buff event-capacity control are no longer part of HED; those systems use game behavior.
+
+[size=4][b]Preset library[/b][/size]
+
+Presets store HCM multipliers, HED field overrides, trigger rules and the optional map seed. Mission, condition, faction and environment choices remain saved by SoloPlay. A preset stores changes, while native template data is read from the installed game.
+
+Folder: %APPDATA%/Fatshark/Darktide/HavocEnemyDirector/templates
+
+[list]
+[*]Save under a name of up to 64 characters. Existing files require overwrite confirmation.
+[*]Select a file, review its summary and load it for the next mission.
+[*]Share a JSON file or copy share data. Import from the clipboard, or place a file in the folder and refresh. Importing does not automatically load it.
+[*]Delete only after confirming the displayed name and filename. Cancel or Esc keeps the file; deletion does not reset the loaded setup.
+[/list]
+
+Files are limited to 256 KiB. Invalid fields, incompatible breeds, unsupported formats and unknown template IDs are rejected. Presets contain data rather than executable Lua. The folder is separate from the mod installation.
+
+[size=4][b]Requirements and compatibility[/b][/size]
+
+Requires Darktide Mod Loader, Darktide Mod Framework, SoloPlay and a compatible Havoc Condition Manager with the native template editor API. Realms is optional for co-op; the local host controls gameplay settings. English, Simplified Chinese and Traditional Chinese follow the game language. Native identifiers remain visible to distinguish exact templates and fields.
+
+Large populations and frequent encounters increase game workload. Other mods replacing the same templates or scheduling methods may conflict. Mission objectives, named actors and unsupported function-driven fields are not exposed as editable controls.
+
+[size=4][b]Vortex installation[/b][/size]
+
+[list]
+[*]Close the game and install the requirements. Import this ZIP with Install From File, enable it and select Deploy Mods.
+[*]Use Load Order: SoloPlay → HavocConditionManager → HavocEnemyDirector.
+[*]Restart the game and open Havoc Enemy Director from Mod Options.
+[/list]
+
+[size=4][b]Manual installation[/b][/size]
+
+[list]
+[*]Close the game. When upgrading, remove the previous HavocEnemyDirector installation folder before extracting the new ZIP. Saved settings and preset files are stored separately.
+[*]Extract into Darktide/mods, producing mods/HavocEnemyDirector.
+[*]Add HavocEnemyDirector after HavocConditionManager in mods/mod_load_order.txt, with SoloPlay before both.
+[*]Restart the game and open Havoc Enemy Director in Mod Options.
+[/list]
+
+[size=4][b]Credits[/b][/size]
+
+SoloPlay: deluxghost. Native game systems and assets: Fatshark. Game-source reference: Aussiemon/Darktide-Source-Code.
+
+[size=5][b]简体中文[/b][/size]
+
+[size=5][b]浩劫原版模板编辑器[/b][/size]
+
+在 HCM 的“原版模板精调”页编辑 SoloPlay 和 Realms 使用的原版敌人模板。HED 提供精确字段覆盖与触发规则，HCM 提供整体倍率，两者使用游戏已有的生成系统。
+
+[size=4][b]编辑器操作[/b][/size]
+
+[color=#ff6666]从模组选项打开 Havoc Enemy Director，或进入 HCM 的“原版模板精调”页。依次选择分类、模板、难度或事件变体，再展开字段分组。四个标签页分别为“参数”“编成与权重”“触发条件”和“方案库”。[/color]
+
+[list]
+[*]参数：修改支持的数值、范围、开关和选项，查看原版基准及应用 HCM／HED 后的值。
+[*]编成与权重：选择符合该来源用途的敌人，调整编成最小／最大数量及原版抽选权重。保留原版阵营别名和重复候选条目的含义。
+[*]触发条件：为支持的遭遇入口或协同尸潮条件函数列表设置规则。
+[*]地图敌群分类提供可选地图种子。零代表跟随任务；指定种子不等于固定整场任务的所有随机结果。
+[/list]
+
+分类涵盖战斗节奏与热度、地图敌群、尸潮与小股潮、特感、怪物与巡逻队、自动战斗事件、词条机制及支持的任务战斗节点。可编辑字段随当前游戏模板变化；选择一个模板进行编辑，不会自动让该来源在任务中启用。
+
+点击数字可输入或粘贴，回车或点击外部确认，Esc 取消；长按加减连续调整。“删除覆盖”重新跟随 HCM，“固定为原版模板值”则写入原版基准。方案库提供两次点击确认的 HED 全部重置，清除精调与地图种子，保留 HCM 设置和方案文件。
+
+[size=4][b]触发规则[/b][/size]
+
+每组最多八个条件，可要求“全部满足”或“满足任一”。支持有效玩家人数、节奏阶段、战斗负担、怪物／事件／尸潮状态、低协同、主路径推进距离、停止前进时长、低压持续时间和正在交战的射击阵位敌人数。
+
+新遭遇规则在原版准入判断上附加要求，只有支持的协同尸潮条件函数列表可选择替换。出生位置限制和任务流程仍由原版控制。事件门控延迟首次生成；已经开始的事件可正常完成后续过程。
+
+[size=4][b]与 HCM 的关系[/b][/size]
+
+先应用 HCM 整体变化，再由 HED 覆盖单个字段。原版难度、所选词条和运行时调度仍可能继续修正结果。任务战斗节点显示的是基础预算，HCM 事件预算倍率会继续调整原版最终预算和封顶。
+
+设置自动保存，下一局生效；当前任务保留开局配置。DMF 开关在大厅立即生效，任务中切换延后应用。关闭 HED 后，HCM 可以单独运行。
+
+此编辑器替代旧版自定义生成器设计。旧生成器方案仍保留在磁盘中并显示为格式不受支持，不能直接加载为原版模板方案。HED 不再包含旧生成队列、推导总容量或 Buff 事件容量控件，这些系统使用游戏自身行为。
+
+[size=4][b]方案库[/b][/size]
+
+方案保存 HCM 倍率、HED 字段覆盖、触发规则和可选地图种子。任务、词条、阵营与环境选择仍由 SoloPlay 保存。文件只保存修改，原版模板数据从当前安装的游戏读取。
+
+文件夹：%APPDATA%/Fatshark/Darktide/HavocEnemyDirector/templates
+
+[list]
+[*]名称最多 64 个字符，覆盖已有文件需要确认。
+[*]选择文件、查看摘要，再加载为下一局配置。
+[*]直接分享 JSON 文件或复制分享内容。可从剪贴板导入，也可将文件放入文件夹后刷新；导入不会自动加载。
+[*]删除前显示名称和文件名供确认。取消或 Esc 保留文件；删除文件不会重置已加载配置。
+[/list]
+
+文件上限 256 KiB。无效字段、不符合来源用途的敌人、旧格式和未知模板 ID 会被拒绝。方案保存数据，不执行 Lua 代码；方案文件夹独立于模组安装位置。
+
+[size=4][b]使用前提与兼容性[/b][/size]
+
+需要 Darktide Mod Loader、Darktide Mod Framework、SoloPlay，以及提供原版模板编辑接口的兼容 Havoc Condition Manager。Realms 为可选联机依赖，由本地主机控制游戏设置。英文、简体中文和繁体中文随游戏语言切换；保留必要的原版标识符以区分具体模板与字段。
+
+大量敌人和高频遭遇会增加游戏负担。其他替换同一模板或调度方法的模组可能冲突。任务目标、指定剧情角色及不支持的函数驱动字段不作为可编辑控件开放。
+
+[size=4][b]Vortex 安装[/b][/size]
+
+[list]
+[*]关闭游戏并安装前置。使用 Install From File 导入本 ZIP，启用后选择 Deploy Mods。
+[*]Load Order 顺序：SoloPlay → HavocConditionManager → HavocEnemyDirector。
+[*]重新启动游戏，从模组选项打开 Havoc Enemy Director。
+[/list]
+
+[size=4][b]手动安装[/b][/size]
+
+[list]
+[*]关闭游戏。升级时先移除旧 HavocEnemyDirector 安装文件夹，再解压新包；设置和方案文件存放在其他位置。
+[*]解压到 Darktide/mods，得到 mods/HavocEnemyDirector。
+[*]在 mods/mod_load_order.txt 中将 HavocEnemyDirector 排在 HavocConditionManager 后，SoloPlay 位于两者之前。
+[*]重新启动游戏，从模组选项打开 Havoc Enemy Director。
+[/list]
+
+[size=4][b]致谢[/b][/size]
+
+SoloPlay：deluxghost。原版游戏系统和资源：Fatshark。游戏源码参考：Aussiemon/Darktide-Source-Code。

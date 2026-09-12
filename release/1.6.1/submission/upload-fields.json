@@ -1,0 +1,64 @@
+{
+  "game": "Warhammer 40,000: Darktide",
+  "titles": {
+    "en": "Havoc Enemy Director - Advanced Spawning",
+    "zh-CN": "浩劫高级敌人生成器",
+    "zh-TW": "浩劫高階敵人生成器"
+  },
+  "version": "1.6.1",
+  "suggested_category": "Gameplay",
+  "required": [
+    "Darktide Mod Loader",
+    "Darktide Mod Framework",
+    "Solo Play",
+    "Havoc Condition Manager"
+  ],
+  "optional": [
+    "Realms — for player-hosted sessions"
+  ],
+  "languages": [
+    "English",
+    "Chinese (Simplified)",
+    "Chinese (Traditional)"
+  ],
+  "suggested_tags": [
+    "Gameplay",
+    "English",
+    "Chinese",
+    "Solo Play",
+    "Realms"
+  ],
+  "image_type": "UI layout renders with sample configurations; not gameplay screenshots",
+  "images": [
+    "images/01-director.en.png",
+    "images/02-number-input.en.png",
+    "images/03-add-unit.en.png",
+    "images/04-native-mode.en.png",
+    "images/05-templates.en.png",
+    "images/06-delete-template.en.png"
+  ],
+  "alternate_images": [
+    "images/01-director.zh-cn.png",
+    "images/01-director.zh-tw.png",
+    "images/02-number-input.zh-cn.png",
+    "images/02-number-input.zh-tw.png",
+    "images/03-add-unit.zh-cn.png",
+    "images/03-add-unit.zh-tw.png",
+    "images/04-native-mode.zh-cn.png",
+    "images/04-native-mode.zh-tw.png",
+    "images/05-templates.zh-cn.png",
+    "images/05-templates.zh-tw.png",
+    "images/06-delete-template.zh-cn.png",
+    "images/06-delete-template.zh-tw.png"
+  ],
+  "summaries": {
+    "en": "Requires SoloPlay and Havoc Condition Manager; supports Realms. Edit generators, pools and caps. Name, save, load and share player templates as JSON, with a dedicated folder and confirmation before deleting a template. English, Simplified Chinese and Traditional Chinese.",
+    "zh-CN": "以SoloPlay和浩劫词条管理器为前提，支持Realms。编辑生成器、池子与容量；新增玩家模板库，可命名保存、加载、通过JSON分享及导入，并在显示模板名称的弹窗中确认删除。提供英文、简体中文与繁体中文。",
+    "zh-TW": "以SoloPlay及浩劫詞條管理器為前提，支援Realms。編輯生成器、池子及容量；新增玩家範本庫，可命名儲存、載入、透過JSON分享及匯入，並在顯示範本名稱的彈窗中確認刪除。提供英文、簡體中文及繁體中文。"
+  },
+  "main_file": "../files/HavocEnemyDirector-1.6.1.zip",
+  "main_file_description": "Requires SoloPlay and Havoc Condition Manager; supports Realms. Edit generators, pools and caps. Name, save, load and share player templates as JSON, with a dedicated folder and confirmation before deleting a template. English, Simplified Chinese and Traditional Chinese.",
+  "file_category": "Main Files",
+  "archive_root": "HavocEnemyDirector/",
+  "manual_extract_to": "Darktide/mods/"
+}

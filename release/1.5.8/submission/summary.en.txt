@@ -1,0 +1,1 @@
+Requires SoloPlay and Havoc Condition Manager; also supports Realms sessions. Build grouped generators from selected conditions, edit unit pools, weights and caps, and toggle extra spawns while preserving condition-required spawning.

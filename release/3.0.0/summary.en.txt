@@ -1,0 +1,1 @@
+Build independent enemy formations and deployment rules for SoloPlay and Realms. Configure timing, conditions, quotas, weighted variants, adaptive pressure and separate seeds, with HCM-linked multipliers, native template editing and shareable presets.

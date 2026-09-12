@@ -1,0 +1,800 @@
+[
+  {
+    "mission": "cm_habs",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "cm_habs",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "cm_habs",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "cm_habs",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "cm_habs",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_habs",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_habs",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_raid",
+    "environment": "darkness_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_raid",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_raid",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "cm_raid",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "cm_raid",
+    "environment": "toxic_gas_01",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "cm_raid",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "cm_raid",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_forge",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "dm_forge",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "dm_forge",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "dm_forge",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "dm_forge",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_forge",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_forge",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_stockpile",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "dm_stockpile",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "dm_stockpile",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "dm_stockpile",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "dm_stockpile",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_stockpile",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_stockpile",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_armoury",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "fm_armoury",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "fm_armoury",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "fm_armoury",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "fm_armoury",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_armoury",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_armoury",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_cargo",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "fm_cargo",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "fm_cargo",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "fm_cargo",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "fm_cargo",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_cargo",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_cargo",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_cartel",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "hm_cartel",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "hm_cartel",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "hm_cartel",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "hm_cartel",
+    "environment": "toxic_gas_01",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "hm_cartel",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "hm_cartel",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "km_station",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "km_station",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "km_station",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "km_station",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "km_station",
+    "environment": "toxic_gas_01",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "km_station",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "km_station",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_rails",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "lm_rails",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "lm_rails",
+    "environment": "ventilation_purge_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "lm_rails",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": true,
+    "applied_theme": "ventilation_purge"
+  },
+  {
+    "mission": "lm_rails",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_rails",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_rails",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_resurgence",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "fm_resurgence",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "fm_resurgence",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_resurgence",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "fm_resurgence",
+    "environment": "toxic_gas_01",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "fm_resurgence",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "fm_resurgence",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_strain",
+    "environment": "darkness_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_strain",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_strain",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_strain",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_strain",
+    "environment": "toxic_gas_01",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "hm_strain",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "hm_strain",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_cooling",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "lm_cooling",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "lm_cooling",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_cooling",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_cooling",
+    "environment": "toxic_gas_01",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "lm_cooling",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": true,
+    "applied_theme": "toxic_gas"
+  },
+  {
+    "mission": "lm_cooling",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_archives",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "cm_archives",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "cm_archives",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_archives",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_archives",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_archives",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "cm_archives",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_propaganda",
+    "environment": "darkness_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_propaganda",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_propaganda",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_propaganda",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_propaganda",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_propaganda",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_propaganda",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_rise",
+    "environment": "darkness_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_rise",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_rise",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_rise",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_rise",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_rise",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "dm_rise",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_complex",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "hm_complex",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "hm_complex",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_complex",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_complex",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_complex",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "hm_complex",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "km_enforcer",
+    "environment": "darkness_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "km_enforcer",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": true,
+    "applied_theme": "darkness"
+  },
+  {
+    "mission": "km_enforcer",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "km_enforcer",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "km_enforcer",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "km_enforcer",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "km_enforcer",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_scavenge",
+    "environment": "darkness_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_scavenge",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_scavenge",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_scavenge",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_scavenge",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_scavenge",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "lm_scavenge",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "core_research",
+    "environment": "darkness_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "core_research",
+    "environment": "darkness_hunting_grounds_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "core_research",
+    "environment": "ventilation_purge_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "core_research",
+    "environment": "ventilation_purge_with_snipers_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "core_research",
+    "environment": "toxic_gas_01",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "core_research",
+    "environment": "toxic_gas_cultist_grenadier",
+    "compatible": false,
+    "applied_theme": "default"
+  },
+  {
+    "mission": "core_research",
+    "environment": "ember_01_havoc",
+    "compatible": false,
+    "applied_theme": "default"
+  }
+]

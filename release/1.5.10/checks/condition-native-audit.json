@@ -1,0 +1,2332 @@
+[
+  {
+    "id": "bolstering_minions_01",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_bolstering_minions",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_nurgle_blessing",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "common_minion_on_fire",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_common_minions_on_fire",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_havoc",
+        "fields": [
+          "class",
+          "init_modify_horde"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "more_old_rotten_armor",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_rotten_armor",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_visual_override",
+        "fields": [
+          "class",
+          "fx_overrides",
+          "random_spawn_buff_templates",
+          "template_name",
+          "ui"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "more_old_rotten_armor_trickle",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "name",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_encroaching_garden",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_encroaching_garden",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_nurgle_blessing",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_armored_infected",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_havoc_armored_infected",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_chaos_rituals",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_monster_spawner",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "force_horde_on_spawn",
+          "num_to_spawn_per_mission",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_no_witches",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_havoc_no_stagger_ritualist",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_nurgle_blessing",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_duplicating_enemies",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_duplicating_enemies",
+        "public_source": "unavailable"
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_enemies_corrupted",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_corrupted_enemies",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_nurgle_blessing",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates",
+          "ui"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_enemies_parasite_headshot",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_headshot_parasite_enemies",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_visual_override",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates",
+          "template_name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_enraged",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_havoc_enraged",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_nurgle_blessing",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_rotten_armor",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_rotten_armor",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_visual_override",
+        "fields": [
+          "class",
+          "fx_overrides",
+          "random_spawn_buff_templates",
+          "template_name",
+          "ui"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_rotten_armor_trickle_horde",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_sticky_poxbursters",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_havoc_sticky_poxburster",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_nurgle_warp",
+        "fields": [
+          "class",
+          "compositions",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_armored_bombers",
+        "public_source": "unavailable"
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_thorny_armor",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_havoc_thorny_armor",
+        "public_source": "unavailable"
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_havoc_tougher_skin",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_tough_skin_enemies",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_nurgle_blessing",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "mutator_stimmed_minions",
+    "category": "havoc",
+    "effects": [
+      {
+        "id": "mutator_stimmed_minions",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_stimmed_minions",
+        "fields": [
+          "breed_chances",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_high_intensity",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_add_resistance",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_auric_pacing",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_increase_terror_event_points",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_reduced_ramp_duration",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_auric_tension_modifier",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_waves",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_waves_of_specials",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_hounds",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_chaos_hounds",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_mutants",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_mutants",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_bombers",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_poxwalker_bombers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_snipers",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_snipers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_monsters",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_monster_specials",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_blessing",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_minion_nurgle_blessing",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_nurgle_blessing",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_patrols",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_more_boss_patrols",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_ogryns",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_more_ogryns",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_melee",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_only_melee_roamers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_melee_trickle_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_melee_terror_events",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_ranged",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_only_ranged_roamers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_ranged_trickle_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_traitor_guard",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_cultists",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_only_cultist_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "cultist",
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_no_encampments",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_no_encampments",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_cooldown",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_ability_cooldown_reduction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_positive",
+        "fields": [
+          "buff_templates",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_blitz",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "mutator_enchanced_grenade_ability",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_positive",
+        "fields": [
+          "buff_templates",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "hcm_auric_no_ammo",
+    "category": "maelstrom",
+    "effects": [],
+    "mission_override_fields": [
+      "pickup_settings"
+    ]
+  },
+  {
+    "id": "hcm_auric_barrels",
+    "category": "maelstrom",
+    "effects": [],
+    "mission_override_fields": [
+      "hazard_prop_settings"
+    ]
+  },
+  {
+    "id": "more_havoc_assault_force",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "more_havoc_assault_force",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing",
+          "name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "more_havoc_monster_specials",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "more_havoc_monster_specials",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "more_havoc_nurgle_blessing",
+    "category": "maelstrom",
+    "effects": [
+      {
+        "id": "more_havoc_nurgle_blessing",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_nurgle_blessing",
+        "fields": [
+          "class",
+          "name",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "abhuman_01",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_live_abhuman_trickle",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_abhuman_monster",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_abhuman_replacement",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "abhuman_explosions",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_live_abhuman_trickle",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_abhuman_monster",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_abhuman_explosions_replacement",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_ogryn_grenade_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_poxwalker_bombers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_extra_grenadiers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_abhuman_explosions_grenade_regen_on_elite_kill",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_player_buff",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "externally_controlled_buffs",
+          "trigger_on_events"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "hazard_prop_settings"
+    ]
+  },
+  {
+    "id": "barrel_grounds",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_extra_shocktrooper",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_extra_grenadiers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_poxwalker_bombers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_headshot_parasite_enemies",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_visual_override",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates",
+          "template_name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_shocktrooper_grenade_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "hazard_prop_settings"
+    ]
+  },
+  {
+    "id": "barren",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_live_event_barren_gameplay_lua",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_gameplay",
+        "fields": [
+          "activate_on_load",
+          "class",
+          "gameplay_template"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_barren_melee_elite_drops",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_barren_monstrosity_drops",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_barren_grenadier_drops",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_barren_ranged_elite_drops",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_barren_drop_small_metal_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_barren_drop_small_platinum_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "health_station",
+      "pickup_settings",
+      "stat_settings"
+    ]
+  },
+  {
+    "id": "barren_odin",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_gameplay_barren_odin",
+        "public_source": "unavailable"
+      }
+    ],
+    "mission_override_fields": [
+      "health_station",
+      "pickup_settings",
+      "stat_settings"
+    ]
+  },
+  {
+    "id": "broker_stimms",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_player_buff_broker_stimms_syringe_speed",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_player_buff",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "externally_controlled_buffs",
+          "trigger_on_events"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_player_buff_broker_stimms_syringe_heal_corruption",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_player_buff",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "externally_controlled_buffs",
+          "trigger_on_events"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_player_buff_broker_stimms_syringe_ability",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_player_buff",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "externally_controlled_buffs",
+          "trigger_on_events"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_player_buff_broker_stimms_syringe_power",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_player_buff",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "externally_controlled_buffs",
+          "trigger_on_events"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_player_buff_broker_stimms_broker_extra_buff",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_player_buff",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "externally_controlled_buffs",
+          "trigger_on_events"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_cultist_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "cultist",
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stimmed_minions",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_stimmed_minions",
+        "fields": [
+          "breed_chances",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_broker_stimms_crate_spawns",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_broker_stimms_more_tox_bombers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing",
+          "modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_broker_stimms_stat_trigger",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_stat_trigger",
+        "fields": [
+          "activate_on_load",
+          "class",
+          "team_stats"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_enable_twin_havoc_inventory",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "activate_on_load",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_broker_stimms_gameplay",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_gameplay",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "gameplay_template"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "pickup_settings",
+      "stat_settings"
+    ]
+  },
+  {
+    "id": "communication_hack_01",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_communication_hack_event",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_nurgle_warp",
+        "fields": [
+          "class",
+          "compositions"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "elite_army",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_no_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_reduced_ramp_duration_low",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_specials_required_challenge_rating",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_travel_distance_spawning_specials",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_move_specials_timer_when_monster_active",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_elite_army_less_roamers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_increase_terror_event_points",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_elite_army_override_roamer_pack",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_elite_terror_events",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_ignore_roamer_limits",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_no_encampments",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "endless_hordes",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_no_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_endless_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_gameplay",
+        "fields": [
+          "activate_on_load",
+          "class",
+          "gameplay_template"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_no_witches",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_no_boss_patrols",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "stat_settings"
+    ]
+  },
+  {
+    "id": "leftover",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_only_cultist_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "cultist",
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_leftover_gameplay_logic",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_gameplay",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "gameplay_template",
+          "side_notification"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_leftover_drop_large_pickups_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_leftover_loot_point_spawns",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "num_to_spawn",
+          "proximity_trigger_distance",
+          "size",
+          "spawn_locations",
+          "spawn_type",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "stat_settings"
+    ]
+  },
+  {
+    "id": "moebian_21st_01",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_havoc_armored_infected",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "more_havoc_abhuman",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      },
+      {
+        "id": "more_havoc_abhuman_replacement",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed",
+          "name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "more_havoc_abhuman_trickle",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "name",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "more_havoc_barrel_grounds",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_extra_shocktrooper",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_extra_grenadiers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_poxwalker_bombers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_shocktrooper_grenade_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "more_havoc_barrel_grounds",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "hazard_prop_settings"
+    ]
+  },
+  {
+    "id": "more_havoc_elite_army",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_no_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_ignore_roamer_limits",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_elite_army_less_roamers",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_elite_terror_events",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_elite_army_replacement",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "more_havoc_endless_hordes",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_no_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_endless_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_gameplay",
+        "fields": [
+          "activate_on_load",
+          "class",
+          "gameplay_template"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "nurgle_explosion_01",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_maelstrom_mutated_poxwalker",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_only_beast",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_headshot_parasite_enemies",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_visual_override",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates",
+          "template_name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "plasma_smugglers_default",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_attack_selection_template_override_plasma",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_plasma_gunner_replacement",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_plasma_smuggler_props",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "rations_core",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_small_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_medium_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_medium_many_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stat_trigger_stolen_rations_core",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_stat_trigger",
+        "fields": [
+          "activate_on_load",
+          "class",
+          "team_stats"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_enable_twin_havoc_inventory",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "activate_on_load",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stolen_rations_main_path_pickup_spawns",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "pickup_settings"
+    ]
+  },
+  {
+    "id": "rations_destroy",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_small_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_medium_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_medium_many_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stat_trigger_stolen_rations_core",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_stat_trigger",
+        "fields": [
+          "activate_on_load",
+          "class",
+          "team_stats"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_enable_twin_havoc_inventory",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "activate_on_load",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stolen_rations_main_path_pickup_spawns",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_more_hordes_relaxed",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_havoc_armored_infected",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_player_buff_stolen_rations_destroy",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_player_buff",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "externally_controlled_buffs",
+          "trigger_on_events"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "pickup_settings"
+    ]
+  },
+  {
+    "id": "rations_recover",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_small_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_medium_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_drop_stolen_rations_01_pickup_medium_many_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stat_trigger_stolen_rations_core",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_stat_trigger",
+        "fields": [
+          "activate_on_load",
+          "class",
+          "team_stats"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_enable_twin_havoc_inventory",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "activate_on_load",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stolen_rations_main_path_pickup_spawns",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_abhuman_replacement",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stolen_rations_headshot_parasite_enemies",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_visual_override",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates",
+          "template_name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_stolen_rations_recover_mutant_waves",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_player_buff_stolen_rations_recover",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_player_buff",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "externally_controlled_buffs",
+          "trigger_on_events"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "pickup_settings"
+    ]
+  },
+  {
+    "id": "rotten_armor",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_only_traitor_guard_faction",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "init_modify_pacing"
+        ],
+        "faction": "renegade",
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_rotten_armor",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_visual_override",
+        "fields": [
+          "class",
+          "fx_overrides",
+          "random_spawn_buff_templates",
+          "template_name",
+          "ui"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_rotten_armor_trickle_horde",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_extra_trickle_hordes",
+        "fields": [
+          "class",
+          "trickle_horde_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "saints_core",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_live_event_saints_shrine_spawns",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_enable_twin_havoc_inventory",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "activate_on_load",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_saints_main_path_pickup_spawns",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_saints_auto_events",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_saints_shrine_gameplay",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_gameplay",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "gameplay_template",
+          "side_notification"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_saints_horde_pacing",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_modify_pacing",
+        "fields": [
+          "class",
+          "modify_pacing"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_saints_headshot_parasite_enemies",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_minion_visual_override",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates",
+          "template_name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_saints_nurgle_hordes",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_replace_breed",
+        "fields": [
+          "class",
+          "init_replacement_breed"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "stat_settings"
+    ]
+  },
+  {
+    "id": "skulls_event_01",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_nurgle_totem",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "max_spawned_per_section",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_skulls_drop_single_skull_pickup_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_skulls_drop_many_skull_pickups_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_skulls_notification_feed",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_gameplay",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "gameplay_template",
+          "side_notification"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "pickup_settings"
+    ]
+  },
+  {
+    "id": "skulls_guns",
+    "category": "event",
+    "effects": [
+      {
+        "id": "mutator_enable_twin_havoc_inventory",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "activate_on_load",
+          "class"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_nurgle_totem_more",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_spawner",
+        "fields": [
+          "class",
+          "max_spawned_per_section",
+          "num_to_spawn",
+          "spawn_locations",
+          "spawners",
+          "trigger_distance"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_skulls_drop_single_skull_pickup_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_skulls_drop_many_skull_pickups_on_death",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "random_spawn_buff_templates"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      },
+      {
+        "id": "mutator_live_event_skulls_guns_full",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_gameplay",
+        "fields": [
+          "activate_on_load",
+          "asset_package",
+          "class",
+          "gameplay_template",
+          "side_notification"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": [
+      "stat_settings"
+    ]
+  },
+  {
+    "id": "more_faction_combined",
+    "category": "faction",
+    "effects": [
+      {
+        "id": "more_faction_combined",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  },
+  {
+    "id": "more_faction_switch",
+    "category": "faction",
+    "effects": [
+      {
+        "id": "more_faction_switch",
+        "engine_class": "scripts/managers/mutator/mutators/mutator_base",
+        "fields": [
+          "class",
+          "name"
+        ],
+        "faction": null,
+        "native_horde_override": null
+      }
+    ],
+    "mission_override_fields": []
+  }
+]

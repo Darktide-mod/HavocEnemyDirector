@@ -1,0 +1,31 @@
+{
+  "game": "Warhammer 40,000: Darktide",
+  "titles": {
+    "en": "Havoc Enemy Director - Configurable Encounters",
+    "zh-CN": "浩劫敌人导演",
+    "zh-TW": "浩劫敵人導演"
+  },
+  "version": "3.2.0",
+  "suggested_category": "Gameplay",
+  "required": [
+    "Darktide Mod Loader",
+    "Darktide Mod Framework",
+    "Solo Play",
+    "Havoc Condition Manager"
+  ],
+  "optional": [
+    "Realms — for player-hosted sessions"
+  ],
+  "languages": [
+    "English",
+    "Chinese (Simplified)",
+    "Chinese (Traditional)"
+  ],
+  "suggested_tags": [
+    "Gameplay",
+    "English",
+    "Chinese",
+    "Solo Play",
+    "Realms"
+  ]
+}

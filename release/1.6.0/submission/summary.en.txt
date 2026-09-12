@@ -1,0 +1,1 @@
+Requires SoloPlay and Havoc Condition Manager; supports Realms. Edit generators, pools and caps. Name, save, load and share player templates as JSON, with a dedicated folder and confirmation before deleting a template. English, Simplified Chinese and Traditional Chinese.
