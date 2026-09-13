@@ -1,0 +1,249 @@
+[size=5][b]English[/b][/size]
+
+[size=5][b]Havoc Enemy Director[/b][/size]
+
+Build named enemy formations, give each deployment its own schedule, and let an optional adaptive director vary the pressure in SoloPlay and Realms. HED also provides detailed editing of the game's native enemy templates and follows HCM's overall multipliers where you choose.
+
+[size=4][b]DIY condition and talent integration[/b][/size]
+
+Havoc Condition Manager DIY conditions and Mortis DIY talents can request an existing named formation or an allowed enemy breed. Requests enter the director's normal admission and spawning flow, following live capacity, placement, phase and pacing requirements. A successful request means it was queued; it does not guarantee every requested enemy will appear.
+
+The deployment editor and native-template rules support active condition IDs and named signals. Copy an ID, click the condition value and paste it. DIY pause actions can stop HED admission and pending creation; completion, expiration and mission cleanup release queued state. Requests have per-request, concurrent-state and mission limits to bound reinforcement chains.
+
+The installation includes a documented API, editable JSON examples and three-language guides in docs/diy. Install the current HCM and Mortis DIY releases for their respective integrations; HCM remains required for HED. Ordinary DIY units retain a distinct source label through the shared spawn path; specialist and monster paths keep their native registration.
+
+[size=4][b]Getting started[/b][/size]
+
+[color=#ff6666]Open Havoc Enemy Director from Mod Options, or open Detailed tuning in the local-game settings. The five sections are Director, Formation library, Deployment rules, Native templates, and Presets & changes.[/color]
+
+[list]
+[*]Create a formation and choose its enemy category, member types and count ranges.
+[*]Create a deployment rule that references it. Choose elapsed time, forward progress, or a condition becoming true as the trigger.
+[*]Set the earliest arrival, conditions and mission quota. Enable the extra director when the setup is ready.
+[/list]
+
+The extra director starts disabled. Native template editing remains available independently. Settings save automatically and apply next mission; the running mission retains its starting configuration.
+
+Click a number to type or paste, then press Enter or click outside to confirm. Esc cancels. Hold + or - for repeated adjustments. Click a formation or rule name to rename it; names support up to 48 characters. Lists and menus scroll when needed, and only the selected dropdown option is marked.
+
+[size=4][b]Formation library[/b][/size]
+
+Keep up to 32 independent formations, with up to 64 deployment rules. Categories include: horde groups, trickle groups, specialists, monsters or patrols. A formation has up to eight weighted variants, with up to sixteen member types per variant. One encounter draws one variant; a member's minimum and maximum are counts, while the variant weight controls selection.
+
+A formation can be called by several deployment rules. Duplicating a formation or rule creates a separate object. Each new deployment identity has its own random streams. A referenced formation must be unlinked by removing its deployment rules before it can be deleted.
+
+Each variant supports up to 300 ordinary troops, 16 specialists or 3 monsters before runtime scaling. Monster formations support Plague Ogryns, Beasts of Nurgle and Chaos Spawn; mission actors and scripted bosses remain outside this library.
+
+[size=4][b]Deployment rules[/b][/size]
+
+Each rule owns its first-arrival delay, later interval, cooldown, mission quota and active-encounter limit. Several rules can use the same formation without sharing these counters.
+
+[list]
+[*]Time: choose a minimum and maximum interval. The next interval starts with the first accepted member.
+[*]Progress: choose the initial main-path distance and the additional travel for another encounter. Crossing several thresholds at once does not create a backlog.
+[*]Condition edge: fire when the condition set becomes true. It must become false before it can trigger again.
+[*]A time window, wave count and wave gap can further shape the encounter.
+[/list]
+
+Combine up to eight conditions with All or Any. Conditions cover capable players, combat load, native pacing stage, monsters, mission events, native horde generation, coherency and route progress. By default they gate the start; continuing to check them after the first member arrives is optional. An encounter should not invalidate itself merely because its first monster has appeared.
+
+The mission quota counts encounters with at least one accepted member. Zero means unlimited encounters for that rule. Pending and living encounters both occupy active limits. These limits are separate from member count and wave count.
+
+When several rules qualify, choose priority followed by weight, or weight alone. Higher priority can keep lower-priority rules waiting. A phase requirement applies to the adaptive director.
+
+[size=4][b]Adaptive pressure and arrival limits[/b][/size]
+
+Rule-driven mode follows the configured rules. Adaptive mode cycles through Build, Pressure and Recovery, with independent duration ranges, member multipliers and frequency multipliers. High combat load or too few capable players can start recovery early. Recovery ends only after its duration and low-load requirement are satisfied. A phase frequency of zero pauses additional HED submissions.
+
+The director controls its extra formations. Native pacing and mission scripts continue to run. Global HED limits set admission spacing, active encounters, minimum capable players, combat load and whether extra arrivals may begin during mission events.
+
+Ordinary members arrive through paced native spawning and groups. Patrols use native patrol behavior; specialists occupy available native slots; monsters use native monster registration. Ordinary and monster placement uses HCM's distance, visibility and navigation checks. Native specialist placement and protection rules can delay or change specialist arrivals.
+
+One HED encounter is bounded to 256 ordinary troops, 16 specialists or 3 monsters across its waves. If the scaled force is too large, member counts are reduced proportionally; the number of waves is also bounded by this encounter budget. Waiting groups take turns. Unfulfilled requests expire instead of accumulating missed attacks. Already accepted native specialist slots keep their native lifecycle. HED-owned ordinary encounters stay outside HCM's automatic retirement/redeployment pool, preserving their independent active limits; native encounters retain HCM recovery.
+
+[size=4][b]HCM linkage and native templates[/b][/size]
+
+A deployment can follow HCM member and frequency multipliers, then apply its own multipliers. Ordinary horde and trickle members follow their respective size controls; elites follow Elite members per group. Specialists follow slot capacity and monsters follow encounter count. Ordinary patrol members start at one. Horde, trickle and specialist intervals follow their matching frequency controls; other categories start at one. First-arrival delays, cooldowns and explicit wave settings retain their own values.
+
+Native templates cover pacing and heat, roamers, hordes, specialists, monsters, automatic events, condition mechanics and supported mission combat nodes. Choose the family, mode and branch, then use Common, All or Edited fields. Resistance and challenge branches are labeled separately; they are not Havoc ranks.
+
+For a native numeric field, choose Follow HCM, Use a fixed value, or Multiply the HCM value. Separate readouts show the original value, the HCM result and the HED template result. Percentages are displayed as percentages. Native identifiers can be shown in details.
+
+Native encounter rules append to existing checks. Only supported coordinated-horde condition lists allow replacement. Selecting a template does not activate its source. Task objectives and unsupported function-driven fields remain under native control. The legacy concurrent-horde field is excluded from common controls because an active consumer was not confirmed in the audited source.
+
+Difficulty, active conditions and runtime modifiers may still change a template's effect. Mission-event point budgets are not enemy counts: HCM's event multiplier also applies to the final native budget and cap.
+
+[size=4][b]Seeds[/b][/size]
+
+The director seed and roamer-layout seed have separate fixed-seed switches. Off follows the mission seed; on enables integer input from 1 to 2147483646. Turning either switch off preserves its saved number. The director uses independent timer, variant and member-count streams for each stable deployment identity, without reseeding the game's global random generator.
+
+Matching seeds and matching inputs reproduce HED choices. Player movement, native random decisions, rule competition and available locations can still change the final battle. The layout seed controls roamer placement; it does not select the mission map or seed every native system.
+
+[size=4][b]Presets[/b][/size]
+
+Presets include HCM values, native fixed and relative overrides, native rules, formations, deployment rules, director settings, both HED seed switches and values, and the HCM condition-event seed setting. Older presets without the HCM seed keep its current setting. Mission, condition, faction and environment selections remain in SoloPlay.
+
+Folder: %APPDATA%/Fatshark/Darktide/HavocEnemyDirector/templates
+
+[list]
+[*]Save under a name of up to 64 characters; overwriting requires confirmation.
+[*]Select a file, review its summary and load it for the next mission.
+[*]Share a JSON file or copy its share data. Import from the clipboard, or place a file in the folder and refresh. Importing does not load it automatically.
+[*]Deleting a file requires confirmation and does not reset the currently loaded configuration.
+[/list]
+
+Files are limited to 256 KiB. Native-editor presets from the previous format are migrated; unsupported old generator presets remain on disk. Invalid fields and incompatible members are rejected. Presets contain data and never execute Lua.
+
+The library's full reset clears all HED settings, formations, rules and seeds, retaining HCM values and preset files. The director summary also has a separate reset for native overrides alone. Both resets require a second click.
+
+[size=4][b]Requirements and compatibility[/b][/size]
+
+Requires Darktide Mod Loader, Darktide Mod Framework, SoloPlay and the current Havoc Condition Manager with shared navigation support. Realms is optional for player-hosted sessions. The local host owns gameplay changes; English, Simplified Chinese and Traditional Chinese follow the game language.
+
+Use compatible companion versions and restart the game after installation. Other mods replacing the same native templates or scheduling methods may conflict. HCM can run alone when HED is disabled.
+
+[size=4][b]Vortex installation[/b][/size]
+
+[list]
+[*]Close the game and install the requirements. Import this ZIP with Install From File, enable it and select Deploy Mods.
+[*]Use Load Order: SoloPlay → HavocConditionManager → HavocEnemyDirector.
+[*]Restart the game and open Havoc Enemy Director from Mod Options.
+[/list]
+
+[size=4][b]Manual installation[/b][/size]
+
+[list]
+[*]Close the game. For an upgrade, remove the old HavocEnemyDirector installation folder before extracting the new ZIP. Saved settings and presets are stored separately.
+[*]Extract into Darktide/mods, producing mods/HavocEnemyDirector.
+[*]Add HavocEnemyDirector after HavocConditionManager in mods/mod_load_order.txt, with SoloPlay before both.
+[*]Restart the game and open Havoc Enemy Director from Mod Options.
+[/list]
+
+[size=4][b]Credits[/b][/size]
+
+SoloPlay: deluxghost. Native game systems and assets: Fatshark. Game-source reference: Aussiemon/Darktide-Source-Code.
+
+[size=5][b]简体中文[/b][/size]
+
+[size=5][b]浩劫敌人导演[/b][/size]
+
+为 SoloPlay 和 Realms 建立具名编队，让不同投放规则拥有独立时机，并通过可选的自适应导演调节压力。HED 同时保留原版敌人模板精调，可以按需跟随 HCM 的整体倍率。
+
+[size=4][b]DIY 词条与天赋联动[/b][/size]
+
+Havoc Condition Manager 的 DIY 词条和死灵 DIY 天赋可请求已有的具名编队或允许生成的敌人类型。请求进入导演原有的调度与刷怪流程，遵守当前容量、落点、阶段和节奏条件。请求成功表示已入队，不保证所有请求敌人都能生成。
+
+部署编辑器与原生模板规则支持检查生效词条 ID 和具名信号。复制 ID 后点击条件数值粘贴。DIY 暂停动作可同时阻止 HED 接纳新刷怪任务与继续生成队列成员，完成、过期及任务清理会释放队列状态。单次请求、并发状态及全局请求次数均有限制，约束连续增援链。
+
+docs/diy 包含接口说明、可编辑 JSON 示例与三语手册。对应联动需要当前 HCM 和死灵 DIY 版本；HCM 仍是 HED 的必要依赖。普通 DIY 敌人通过共用生成路径保留独立来源标记，特感与怪物保留各自原生注册流程。
+
+[size=4][b]开始使用[/b][/size]
+
+[color=#ff6666]从模组选项打开 Havoc Enemy Director，或进入本地游戏设置的“详细调节”页。界面分为“导演总览”“编队库”“投放规则”“原版模板”“方案与变更”五个区域。[/color]
+
+[list]
+[*]创建编队，选择敌人类别、成员兵种和人数范围。
+[*]建立调用该编队的投放规则，选择经过时间、向前推进或条件转为满足时触发。
+[*]设置首次到场时间、附加条件和整局额度，准备好后启用额外编队导演。
+[/list]
+
+额外导演默认关闭，原版模板编辑可独立使用。设置自动保存，下一局生效；当前任务保留开局配置。
+
+点击数字可输入或粘贴，回车或点击外部确认，Esc 取消；长按加减可连续调整。点击编队或规则名称即可重命名，最多 48 个字符。较长列表可滚动，下拉菜单只标记当前选中项。
+
+[size=4][b]编队库[/b][/size]
+
+最多保存 32 个编队与 64 条投放规则，同一类别可以建立多个独立编队，支持尸潮敌群、小股敌群、特感、怪物及巡逻编队。每个编队最多八个带权变体，每个变体最多十六种成员。一次遭遇抽取一个变体；成员的上下限表示人数，变体权重表示抽取倾向。
+
+同一编队可被多条规则调用。复制编队或规则会建立独立对象，投放规则副本拥有独立随机流。仍被投放规则引用的编队不能直接删除，需要先移除对应规则。
+
+每个变体在运行时缩放前最多配置 300 名普通敌人、16 名特感或 3 只怪物。怪物编队支持瘟疫欧格林、纳垢兽与混沌魔物；任务角色和剧情 Boss 不在此编队库中开放。
+
+[size=4][b]投放规则[/b][/size]
+
+每条规则独立保存首次到场时间、再次投放间隔、冷却、整局额度和同时活跃遭遇上限。多条规则调用同一编队，也不会共用这些计数。
+
+[list]
+[*]时间触发：指定最短、最长间隔；再次投放的间隔从首名成员被接纳后开始计算。
+[*]推进触发：指定首次主路径距离及下一次所需继续推进距离；一次跨过多个门槛不会积压补发。
+[*]条件触发：条件由不满足变为满足时执行一次；持续满足不会反复触发，须先变为不满足才能重新触发。
+[*]可进一步设置有效时间窗口、一次遭遇的波数及波间等待。
+[/list]
+
+每组最多八项条件，可要求全部满足或任意一项满足。条件包括有效玩家、战斗负担、原版节奏、怪物、任务事件、原版尸潮生成、协同状态和推进情况。默认只限制遭遇开始，也可选择在首名成员到场后继续检查，避免第一只怪物出现就使同编队的后续成员被自己的条件卡住。
+
+整局额度统计至少已有一名成员被接纳的遭遇；0 表示该规则不限次数。等待生成和仍有存活成员的遭遇都会占用活跃额度。遭遇次数、成员人数及波数分别计算。
+
+多条规则同时符合要求时，可以先比较优先级再按权重抽取，也可直接按权重抽取。高优先级可能让低优先级规则持续等待。要求某个 HED 阶段的规则需要自适应模式。
+
+[size=4][b]自适应压力与到场限制[/b][/size]
+
+规则模式按已配置规则运行。自适应模式经历蓄压、施压、恢复，各阶段具有独立时长范围、人数倍率及频率倍率。战斗负担过高或有效玩家过少时可提前进入恢复；恢复须同时达到规定时长与低负担条件才结束。阶段频率设为 0 会暂停 HED 的新增提交。
+
+导演控制额外编队，原版节奏和任务脚本继续运行。全局设置控制两次接纳间隔、活跃遭遇上限、最低有效玩家数、战斗负担门槛，以及是否允许在任务事件期间额外投放。
+
+普通成员分批使用原版生成与敌群管理；巡逻沿用原版巡逻行为，特感占用可用的原版槽位，怪物使用原版登记流程。普通敌人与怪物通过 HCM 检查出生距离、遮挡和实际可达性；特感沿用原版选点与保护机制，可能延后到场或被替换。
+
+每次 HED 遭遇的所有波次合计最多 256 名普通敌人、16 名特感或 3 只怪物。缩放后超过额度时，按成员比例缩减；波数也受遭遇总额度限制。等待中的编队轮流提交，过期请求取消，不积压成连续补发。已被原版槽位接纳的特感继续执行原版流程。HED 自定义普通编队不进入 HCM 的自动回收补投池，以保留独立活跃额度；原版敌群仍使用 HCM 回收。
+
+[size=4][b]HCM 联动与原版模板[/b][/size]
+
+投放规则可跟随 HCM 的人数和频率，再乘自己的倍率。普通尸潮、小股成员跟随对应人数控制，精英跟随“敌群精英人数”；特感跟随并行容量，怪物跟随遭遇数，巡逻普通成员从一倍开始。尸潮、小股潮、特感的再次间隔跟随对应频率，其他类别从一倍开始。首次时间、最短冷却及明确配置的波次仍使用本规则的数值。
+
+原版模板包括战斗节奏与热度、驻军、尸潮、特感、怪物、自动事件、词条机制和受支持的任务战斗节点。依次选择来源、模式与分支，可切换常用参数、全部字段、已修改字段。抗性分档与挑战分档分别标注，不等同于浩劫等级。
+
+数值字段可选择跟随 HCM、使用固定值，或在 HCM 结果上乘倍率。原版值、HCM 后的值和 HED 模板结果分别显示；概率按百分比输入，详情可展开原版标识。
+
+原版遭遇条件默认追加到现有检查上，只有支持的协同尸潮条件列表允许替换。选择一个模板不会自动启用该刷怪来源。任务目标及不支持的函数字段继续由原版控制。旧的“同时活跃尸潮上限”字段已从常用参数中排除，因为核对的源码未确认其实际读取位置。
+
+难度、已选词条及运行时修正仍可能影响模板效果。任务事件点数不是敌人人数；HCM 事件预算倍率还会作用于原版最终预算与封顶。
+
+[size=4][b]随机种子[/b][/size]
+
+导演种子与驻军布局种子分别提供「固定种子」开关。关闭时沿用任务种子，开启后可输入 1–2147483646 的整数，关闭会保留输入值。每条投放按稳定身份分别使用计时、变体、成员人数随机流，不重新设定游戏全局随机数。
+
+相同种子与相同输入可复现 HED 的选择。玩家移动、原版随机、规则竞争和可用出生点仍会影响实际战斗。布局种子用于驻军布置，不负责选择任务地图，也不会统一所有原版系统的随机性。
+
+[size=4][b]方案[/b][/size]
+
+方案保存 HCM 数值、原版固定值与相对倍率、原版条件、编队、投放规则、导演设置、两类 HED 种子的开关与数值，以及 HCM 词条事件种子；缺少 HCM 种子的旧方案保留当前该项设置。任务、词条、阵营和环境选择仍由 SoloPlay 保存。
+
+文件夹：%APPDATA%/Fatshark/Darktide/HavocEnemyDirector/templates
+
+[list]
+[*]名称最多 64 个字符；覆盖已有文件需要确认。
+[*]选择文件、查看摘要，再加载为下一局配置。
+[*]分享 JSON 文件或复制分享内容。可从剪贴板导入，也可放入文件夹后刷新；导入不会自动加载。
+[*]删除文件需要确认，也不会重置当前已加载配置。
+[/list]
+
+文件上限 256 KiB。上一版原版模板方案会迁移，无法兼容的早期生成器方案仍留在磁盘上。无效字段和不适配的成员会被拒绝；方案只保存数据，不执行 Lua。
+
+方案库的全部重置会清除 HED 设置、编队、规则和两类种子，保留 HCM 数值与方案文件。导演摘要另有仅清除原版覆盖的按钮，两种重置均需再次点击确认。
+
+[size=4][b]使用前提与兼容性[/b][/size]
+
+需要 Darktide Mod Loader、Darktide Mod Framework、SoloPlay，以及具备共享寻路支持的当前 Havoc Condition Manager。Realms 为可选的玩家主机联机依赖。游戏改动由本地主机执行，英文、简体中文和繁体中文随游戏语言切换。
+
+请使用兼容的配套版本，安装后重新启动游戏。其他替换相同原版模板或调度方法的模组可能冲突。关闭 HED 后，HCM 可以独立运行。
+
+[size=4][b]Vortex 安装[/b][/size]
+
+[list]
+[*]关闭游戏并安装前置。使用 Install From File 导入本 ZIP，启用后选择 Deploy Mods。
+[*]Load Order 顺序：SoloPlay → HavocConditionManager → HavocEnemyDirector。
+[*]重新启动游戏，从模组选项打开 Havoc Enemy Director。
+[/list]
+
+[size=4][b]手动安装[/b][/size]
+
+[list]
+[*]关闭游戏。升级时先移除旧 HavocEnemyDirector 安装文件夹，再解压新包；设置与方案存放在其他位置。
+[*]解压到 Darktide/mods，得到 mods/HavocEnemyDirector。
+[*]在 mods/mod_load_order.txt 中将 HavocEnemyDirector 排在 HavocConditionManager 后，SoloPlay 位于两者之前。
+[*]重新启动游戏，从模组选项打开 Havoc Enemy Director。
+[/list]
+
+[size=4][b]致谢[/b][/size]
+
+SoloPlay：deluxghost。原版游戏系统和资源：Fatshark。游戏源码参考：Aussiemon/Darktide-Source-Code。

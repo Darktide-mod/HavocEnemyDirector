@@ -1,0 +1,36 @@
+3.2.1
+- Fix file discovery failing with a FindFirstFileW structure conversion error when another mod loads first.
+- Isolate Windows FFI bindings, including the shared HCM/Mortis DIY reader and HED preset reader. No load-order workaround is required for the updated managers.
+- Verify real Unicode file and package I/O under every manager load order, pre-existing foreign declarations and repeated module loads.
+- Restart the game after updating to reload any mod that failed during startup. Gameplay and resource payloads are unchanged.
+
+3.2.0
+- Add independent fixed-seed switches for HED scheduling and native roamer layout. Disabled inputs retain their saved integers while runtime follows the mission seed.
+- Keep scheduling, roamer layout and HCM condition-event randomness separately owned and explain their exact scope in the interface.
+- Advance preset format to four to preserve HCM condition-event seed settings as well as both HED seeds. Older presets remain readable and keep the current HCM seed when absent.
+- Preserve current-mission snapshots and the independent native global random generator. Fixed seeds reproduce controlled choices, not the complete live battle.
+- Offline regression and installation checks cover these changes; live gameplay and multiplayer acceptance remain outstanding.
+
+3.1.0
+- Add a versioned DIY request API for existing formations and allowed breeds, admitted through the director scheduler and native placement/capacity checks.
+- Bound external requests to 32 retained states, 128 accepted requests per mission and a 120-second admission lifetime.
+- Add active DIY condition and signal predicates to deployment and native-template editors, plus shared pacing pauses and ordinary DIY spawn labels.
+- Cancel pending work after shutdown and release completed or expired external states without editing saved formations.
+- Include three-language guides, a full native identifier catalog and an explicit feasibility assessment covering all 120 image rows.
+- Native-method, lifecycle, network, UI and regression checks passed offline. Live gameplay and four-player acceptance testing remain outstanding.
+
+3.0.0 — Configurable encounter director
+
+- Add a library of independent formations with named members, count ranges and weighted variants.
+- Add independent time, progress and condition-edge deployment rules, with windows, cooldowns, quotas, active limits, priorities, weights and waves.
+- Add optional continuous condition checks after the first accepted member, while preserving start-only gating by default.
+- Add rule-driven and adaptive Build / Pressure / Recovery modes, global admission limits and per-phase size/frequency controls.
+- Add HCM-linked deployment multipliers and relative native field overrides alongside fixed values and inherited values.
+- Separate roamer-layout and director seeds, with per-deployment timer, variant and member streams that do not reseed native randomness.
+- Use paced native groups, patrol behavior, specialist slots and monster registration; retain native admission and shared HCM navigation checks.
+- Bound encounter budgets, preserve composition proportions, rotate pending submissions fairly and expire unfulfilled requests.
+- Reorganize the UI into Director, Formation library, Deployment rules, Native templates, and Presets & changes. Add readable categories, percent input, source/result readouts and a name editor; mark only selected dropdown options.
+- Migrate native-editor presets to the expanded data format while retaining unsupported legacy generator files. Save formations, rules, settings and both seeds.
+- Validate configuration, native method adapters, deterministic scheduling, migration, host authority, mission snapshots, UI callbacks and three-language layouts offline. This release does not include an in-game playtest or measured FPS claim.
+- Requires Havoc Condition Manager 3.6.11 or newer. HCM 3.6.11 source remains unchanged.
+- Contains no diagnostic subsystem. Install current companions and restart the game; remove the old HED installation folder before a manual upgrade.

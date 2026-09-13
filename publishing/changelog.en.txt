@@ -1,3 +1,9 @@
+3.2.1
+- Fix file discovery failing with a FindFirstFileW structure conversion error when another mod loads first.
+- Isolate Windows FFI bindings, including the shared HCM/Mortis DIY reader and HED preset reader. No load-order workaround is required for the updated managers.
+- Verify real Unicode file and package I/O under every manager load order, pre-existing foreign declarations and repeated module loads.
+- Restart the game after updating to reload any mod that failed during startup. Gameplay and resource payloads are unchanged.
+
 3.2.0
 - Add independent fixed-seed switches for HED scheduling and native roamer layout. Disabled inputs retain their saved integers while runtime follows the mission seed.
 - Keep scheduling, roamer layout and HCM condition-event randomness separately owned and explain their exact scope in the interface.
